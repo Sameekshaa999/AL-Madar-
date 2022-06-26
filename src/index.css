@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-card {
+  @apply flex flex-col justify-center items-center bg-white h-screen font-mono py-40;
+}
+
+.center-content {
+  @apply flex flex-col justify-center items-center;
+}
+
+.nav-items {
+  @apply p-2 text-black decoration-mpurple decoration-1 font-montserrat transition hover:font-medium hover:text-mpurple;
+}
+
+.team-items-text {
+  @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
+}
+.font-Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.bg-purple {
+  background: #25215c;
+}
+.bg-bluee{
+  background: #69C7ED;
+}
+.h-30vh {
+  height: 30vh;
+}
+
+.h-35vh {
+  height: 35vh;
+}
+
+.h-50vh {
+  height: 50vh;
+}
+.services-bg {
+  background: rgba(255, 255, 255, 0.58);
+}
+.about-gradient {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(111.35deg, #25215c 32.64%, #69c7ed 82.22%);
+}
+.serviceSection-gradient {
+  background: linear-gradient(180deg, #25215c 0%, #69c7ed 142.32%);
+}
+
+.meet-team-gradient {
+  background: linear-gradient(97.45deg, #25215c 1.12%, #69c7ed 125.76%);
+}
+
+.footer-gradient {
+  background: linear-gradient(93.8deg, #25215c 0%, #589ec9 126.65%);
+}
+.contact-gradient1 {
+  background: linear-gradient(95.29deg, #25215c -4.2%, #69c7ed 123.27%);
+}
+.contact-gradient2 {
+  background: linear-gradient(93.95deg, #25215c -1.92%, #69c7ed 140.46%);
+}
+
+.grad2 {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(37, 33, 92, 0.2),
+    rgba(37, 33, 92, 0.2)
+  );
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.h-screen-less {
+  height: calc(100vh - 5.7rem);
+}
