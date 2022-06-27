@@ -26,9 +26,6 @@
 .bg-purple {
   background: #25215c;
 }
-.bg-bluee{
-  background: #69C7ED;
-}
 .h-30vh {
   height: 30vh;
 }
@@ -54,6 +51,10 @@
 
 .meet-team-gradient {
   background: linear-gradient(97.45deg, #25215c 1.12%, #69c7ed 125.76%);
+}
+
+.our-properties-gradient {
+  background: linear-gradient(180deg, #25215c 0%, #69c7ed 195.05%);
 }
 
 .footer-gradient {

@@ -1,14 +1,12 @@
-
 import React from "react";
 import hexagons from "../Zimages/hexagons.svg";
 
 const About = () => {
   return (
-    
     <>
       <div className="about-gradient lg:h-screen">
         <div className="max-w-[1240px] mx-auto text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 relative gap-x-16 px-4 pt-16 lg:pt-32 font-montserrat">
+          <div className="grid grid-cols-1 lg:grid-cols-2 relative gap-x-16 px-4 pt-16 md:pt-40 lg:pt-32 font-montserrat">
             <div className="mx-auto lg:hidden">
               <img
                 className="mt-16 pb-4 h-35vh lg:h-50vh lg:pl-8"
@@ -40,7 +38,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

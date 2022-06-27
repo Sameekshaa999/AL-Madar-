@@ -24,7 +24,7 @@ const TM = () => {
           <img src={services1_TM} alt="tenancy Management" className="h-50vh"/>
         </div>
       </div>
-      <div className="flex-col  justify-end pl-60">
+      <div className="grid grid-row-3 ">
           <button className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">Make An Appointment</button>
           <div className="flex py-10 ">
               <img src={check} alt="check" className="h-7"/>
@@ -32,19 +32,19 @@ const TM = () => {
           </div>
           <div className="flex py-10">
               <img src={check} alt="check" className="h-7"/>
-              <p className="text-xl font-normal">Tenant Pooling</p>
+              <p className="text-xl font-normal">Manager Representative</p>
           </div>
           <div className="flex py-10">
               <img src={check} alt="check" className="h-7"/>
-              <p className="text-xl font-normal">Financial Services</p>
+              <p className="text-xl font-normal">Manager Representative</p>
           </div>
           <div className="flex py-10">
               <img src={check} alt="check" className="h-7"/>
-              <p className="text-xl font-normal">Lease Renewal</p>
+              <p className="text-xl font-normal">Manager Representative</p>
           </div>
           <div className="flex py-10">
               <img src={check} alt="check" className="h-7"/>
-              <p className="text-xl font-normal">Legal Procedures</p>
+              <p className="text-xl font-normal">Manager Representative</p>
           </div>
           <button className=" px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">More Info</button>
       </div>
