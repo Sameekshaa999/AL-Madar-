@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import hero from "../Zimages/1.1.jpg";
-// import heroMobile from "../Zimages/hero mobile.jpg";
+import heroMobile from "../Zimages/hero mobile.jpg";
 
 const Hero = () => {
   return (
@@ -11,11 +11,11 @@ const Hero = () => {
         alt="hero"
         className="hidden top-6.5 md:flex md:w-full md:h-full z-0"
       />
-      {/* <img
+      <img
         src={heroMobile}
         alt="hero"
         className="md:hidden top-6.5 w-full z-0"
-      /> */}
+      />
       <div className="mx-auto absolute mt-24">
         <h1 className="text-center text-mpurple font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-12 lg:mb-16">
           Exceeding Expectations <br></br>One Property at A Time
