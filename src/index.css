@@ -57,6 +57,11 @@
   background: linear-gradient(180deg, #25215c 0%, #69c7ed 195.05%);
 }
 
+.customer-review-gradient {
+  background: linear-gradient(181.91deg, #25215c 6.11%, #69c7ed 154.69%);
+  transform: rotate(-20deg) scaleX(1.5) scaleY(1.7) translate(-5%, 10%);
+}
+
 .footer-gradient {
   background: linear-gradient(93.8deg, #25215c 0%, #589ec9 126.65%);
 }

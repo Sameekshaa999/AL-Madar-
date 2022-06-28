@@ -7,7 +7,7 @@ import dubai2 from "../Zimages/dubai_ourproperties_small.png";
 
 const Properties = () => {
   return (
-    <div className="h-screen-less px-4 my-8 mx-auto flex flex-col font-montserrat relative">
+    <div className="h-screen-less px-4 my-10 py-4 mx-auto grid font-montserrat relative">
       <div className="mx-auto">
         <span className="justify-center inline-flex ">
           <img src={stripes} alt="" className="h-10 lg:h-20 -z-10" />
@@ -41,7 +41,7 @@ const Properties = () => {
             <img src={qatar2} alt="qatar property 2" className="h-full p-1" />
             <div className="p-1">
               <div className="our-properties-gradient w-full h-full">
-                <h4 className="flex items-center justify-center h-full text-white text-center text-3xl uppercase font-regular">
+                <h4 className="flex items-center justify-center h-full text-white text-center text-sm lg:text-3xl uppercase font-regular">
                   Properties <br />
                   in Qatar
                 </h4>
@@ -62,7 +62,7 @@ const Properties = () => {
             <img src={dubai2} alt="dubai property 1" className="p-1" />
             <div className="p-1">
               <div className="our-properties-gradient w-full h-full">
-                <h4 className="flex items-center justify-center h-full text-white text-center text-3xl uppercase font-regular">
+                <h4 className="flex items-center justify-center h-full text-white text-center text-sm lg:text-3xl uppercase font-regular">
                   Properties <br />
                   in Dubai
                 </h4>
