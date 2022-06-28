@@ -1,5 +1,8 @@
 import React from "react";
 import office from "../Zimages/Al-Madar-office.jpg";
+import customer1 from "../Zimages/customer1.png";
+import customer2 from "../Zimages/customer2.png";
+import customer3 from "../Zimages/customer3.png";
 
 const Section2 = () => {
   return (
@@ -49,7 +52,24 @@ const Section2 = () => {
             Send
           </button>
         </div>
-        <div></div>
+        <div>
+          <div>
+          <h1>Our Happy Customers</h1>
+            <img src={customer1} alt='1'/>
+            <h2>Anna Smith</h2>
+            <p>“I have given my property to them for rental management for the last 3 years and it has been a very satisfactory experience. The rentals have come on time and my property is also being maintained neatly. I would gladly recommend Al Madar to all”</p>
+          </div>
+          <div>
+            <img src={customer2} alt='2'/>
+            <h2>Mohammad Ali</h2>
+            <p>"My property is rented in a week and the whole process is taken care very professionally. Great Job and I am very pleased with the team's efforts !!"</p>
+          </div>
+          <div>
+            <img src={customer3} alt='3'/>
+            <h2>Sara Khan</h2>
+            <p>Fantastic working with these guys! They understood the requirements and taste for the kind of property we were looking and that saved a lot of time and effort. Highly recommended if anyone is looking for professional property consultants.</p>
+          </div>
+        </div>
       </div>
     </div>
   );
