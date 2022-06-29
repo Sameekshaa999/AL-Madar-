@@ -22,7 +22,7 @@ const PropertiesS1 = () => {
       </div>
       <div className="flex space-x-10 font-Montserrat text-mpurple font-semibold m-auto ">
         <ul className="flex justify-center space-x-10 ">
-          <li className="flex space-x-2 bg-purple p-2 rounded-sm text-white">
+          <li className="flex space-x-2 bg-mpurple p-2 rounded-sm text-white">
             <img src={Vector} alt="vector" className="h-5" />
             <p>Al Rayyan</p>
           </li>

@@ -9,7 +9,7 @@ const ServicesSection1 = () => {
           Our Services
         </h2>
         <h1 className="font-semibold text-6xl">People are <br/> our priority </h1>
-        <button className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">call : +974 44675405</button>
+        <button className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg">call : +974 44675405</button>
       </div>
     </div>
   );

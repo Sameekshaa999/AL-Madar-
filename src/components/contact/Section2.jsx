@@ -21,7 +21,7 @@ const Section2 = () => {
         </div>
       </div>
       <div className="flex justify-center space-x-20 m-auto py-5">
-        <div className="w-auto bg-purple rounded-xl p-5 ">
+        <div className="w-auto bg-mpurple rounded-xl p-5 ">
           <p className="font-Montserrat text-white text-2xl font-normal mb-3">
             Get In Touch
           </p>
@@ -57,7 +57,7 @@ const Section2 = () => {
             ></textarea>
           </form>
           <button
-            class="m-auto bg-bluee hover:bg-bluee font-Montserrat text-mpurple font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="m-auto bg-mblue hover:bg-mblue font-Montserrat text-mpurple font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
           >
             Send
