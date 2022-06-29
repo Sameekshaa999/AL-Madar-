@@ -2,6 +2,7 @@ import React from "react";
 import services1_TM from "../Zimages/services1_TM.svg";
 import TM_icon from "../Zimages/TM_icon.svg";
 import check from '../Zimages/check_icon.svg';
+import { Link } from "react-router-dom";
 
 const TM = () => {
   return (
@@ -46,7 +47,11 @@ const TM = () => {
               <img src={check} alt="check" className="h-7"/>
               <p className="text-xl font-normal">Manager Representative</p>
           </div>
-          <button className=" px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">More Info</button>
+          <Link
+          to="/services2"
+          className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg "
+        >More Info
+        </Link>
       </div>
     </div>
   );
