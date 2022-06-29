@@ -89,3 +89,13 @@
 .h-screen-less {
   height: calc(100vh - 5.7rem);
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-2);
+}
+
+.swiper-slide {
+  background: transparent;
+}
