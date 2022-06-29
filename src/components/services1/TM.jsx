@@ -26,7 +26,7 @@ const TM = () => {
         </div>
       </div>
       <div className="grid grid-row-3 ">
-          <button className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">Make An Appointment</button>
+          <button className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg">Make An Appointment</button>
           <div className="flex py-10 ">
               <img src={check} alt="check" className="h-7"/>
               <p className="text-xl font-normal">Manager Representative</p>
@@ -49,7 +49,7 @@ const TM = () => {
           </div>
           <Link
           to="/services2"
-          className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg "
+          className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg "
         >More Info
         </Link>
       </div>

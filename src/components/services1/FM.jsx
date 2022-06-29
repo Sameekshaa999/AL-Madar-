@@ -32,7 +32,7 @@ const FM = () => {
         </div>
       </div>
       <div className=" flex flex-col flex items-center">
-        <button className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg">
+        <button className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg">
           Make An Appointment
         </button>
         <div className="flex py-10 divide-y-2 divide-black ">
@@ -57,7 +57,7 @@ const FM = () => {
         </div>
         <Link
           to="/services2"
-          className="px-4 py-4 bg-purple text-white font-Montserrat font-light text-lg "
+          className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg "
         >More Info
         </Link>
       </div>
