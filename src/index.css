@@ -90,7 +90,7 @@
 .border-3 {
   border-width: 3px;
 }
-.box-shadow{
+.box-shadow {
   box-shadow: -5px 8px 40px 2px rgba(0, 0, 0, 0.25);
 }
 .h-screen-less {
@@ -105,4 +105,9 @@
 
 .swiper-slide {
   background: transparent;
+}
+
+.fit-content {
+  width: fit-content;
+  height: fit-content;
 }
