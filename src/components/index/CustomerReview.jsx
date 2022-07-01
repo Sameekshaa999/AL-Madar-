@@ -19,7 +19,7 @@ import quotes from "../Zimages/quotes.png";
 const CustomerReview = () => {
   return (
     <>
-      <div className="h-screen-less px-4 py-4 mx-auto grid font-montserrat bg-s relative overflow-clip">
+      <div className="h-screen px-4 py-4 mx-auto grid font-montserrat bg-s relative overflow-clip">
         <div className="customer-review-gradient w-[50%] z-0"></div>
         <img
           src={quotes}

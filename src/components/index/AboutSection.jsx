@@ -29,7 +29,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="overflow-clip h-screen-less -z-10">
+            <div className="overflow-clip h-screen -z-10">
               <img className="lg:scale-y-110" src={Group} alt="/" />
             </div>
           </div>

@@ -7,7 +7,7 @@ import dubai2 from "../Zimages/dubai_ourproperties_small.png";
 
 const Properties = () => {
   return (
-    <div className="h-screen-less px-4 my-10 py-4 mx-auto grid font-montserrat relative">
+    <div className="h-screen px-4 my-10 py-4 mx-auto grid font-montserrat relative">
       <div className="mx-auto">
         <span className="justify-center inline-flex ">
           <img src={stripes} alt="" className="h-10 lg:h-20 -z-10" />

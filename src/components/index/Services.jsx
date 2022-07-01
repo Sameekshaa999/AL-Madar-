@@ -4,9 +4,9 @@ import map from "../Zimages/qatar_map.png";
 
 const Services = () => {
   return (
-    <div className="h-screen-less mx-auto font-montserrat">
+    <div className="h-screen mx-auto font-montserrat">
       <div className="flex flex-col md:flex-row justify-end">
-        <div className="order-2 md:order-1 basis-1/2 relative serviceSection-gradient h-screen-less text-white">
+        <div className="order-2 md:order-1 basis-1/2 relative serviceSection-gradient h-screen text-white">
           <h2 className="mt-8 lg:mt-24 mr-4 font-bold text-lg lg:text-5xl text-center md:text-right">
             Worried about <br /> managing your property?
           </h2>
