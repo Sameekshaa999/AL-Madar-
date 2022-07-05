@@ -114,7 +114,7 @@
 
 .spinner:before {
   transform: rotateX(85deg) rotateY(150deg) rotateZ(130deg);
-  animation: 600ms rotateBefore infinite linear;
+  animation: 500ms rotateBefore infinite linear;
   z-index: 0;
 
   /* transform: rotateX(240deg) rotateY(0deg) rotateZ(90deg);
@@ -122,7 +122,7 @@
 }
 .spinner:after {
   transform: rotateX(240deg) rotateY(0deg) rotateZ(90deg);
-  animation: 400ms rotateAfter infinite linear;
+  animation: 500ms rotateAfter infinite linear;
   z-index: 20;
 }
 .spinner:before,
@@ -147,7 +147,7 @@
 }
 @keyframes rotateBefore {
   0% {
-    transform: rotateX(85deg) rotateY(150deg) rotateZ(0deg);
+    transform: rotateX(87deg) rotateY(150deg) rotateZ(0deg);
     /* z-index: 20; */
   }
   /* 50% {
@@ -155,21 +155,21 @@
   } */
 
   100% {
-    transform: rotateX(85deg) rotateY(150deg) rotateZ(360deg);
+    transform: rotateX(87deg) rotateY(150deg) rotateZ(360deg);
     /* z-index: 20; */
   }
 }
 
 @keyframes rotateAfter {
   0% {
-    transform: rotateX(85deg) rotateY(150deg) rotateZ(0deg);
+    transform: rotateX(87deg) rotateY(150deg) rotateZ(0deg);
     z-index: 0;
   }
   90% {
     z-index: 20;
   }
   100% {
-    transform: rotateX(85deg) rotateY(150deg) rotateZ(360deg);
+    transform: rotateX(87deg) rotateY(150deg) rotateZ(360deg);
     z-index: 0;
   }
 }
