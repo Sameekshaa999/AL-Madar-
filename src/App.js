@@ -13,7 +13,7 @@ import Services2 from "./pages/services2";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/properties" element={<Properties />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
