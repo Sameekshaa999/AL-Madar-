@@ -27,8 +27,8 @@ function PropertyCard(props) {
 const PropertiesS2 = () => {
   return (
     <>
-      <div className="max-w-[1100px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-8">
-        <div className="flex flex-col space-y-0">
+      <div className="max-w-[1150px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-8">
+        <div className="flex flex-col">
           <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
             Popular Properties
           </h1>
@@ -278,142 +278,6 @@ const PropertiesS2 = () => {
         </div>
       </div>
     </>
-    // <div className="relative flex h-screen w-screen font-montserrat text-mpurple">
-    //   <div className="flex">
-    //     <div className="flex flex-col">
-    //       <h1 className="text-3xl font-bold ">POPULAR PROPERTIES</h1>
-
-    //       <div className="flex justify-center">
-    //         <div className="absolute px-2 top-24 w-5/6 h-[90%]">
-    // <Swiper
-    //   slidesPerView={4}
-    //   spaceBetween={30}
-    //   centeredSlides={false}
-    //   autoplay={{
-    //     delay: 3000,
-    //   }}
-    //   // pagination={{}}
-    //   modules={[Autoplay, Pagination]}
-    //   className="border-1"
-    // >
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="1"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="2"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="3"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="4"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="5"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    //   <SwiperSlide id="client 1">
-    //     <PropertyCard
-    //       image={property1}
-    //       name="6"
-    //       rooms="2 BHK"
-    //       price="4,950 QAR"
-    //     />
-    //   </SwiperSlide>
-    // </Swiper>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-
-    //   <li className="my-10">
-    //       <h1 className="mx-40 my-5 font-Montserrat text-mpurple text-3xl font-bold">
-    //         QATAR PROPERTIES
-    //       </h1>
-    //       <ul className="flex space-x-10 mx-40">
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //       </ul>
-    //     </li>
-
-    //     <li className="my-10">
-    //       <h1 className="mx-40 my-5 font-Montserrat text-mpurple text-3xl font-bold">
-    //         DUBAI PROPERTIES
-    //       </h1>
-    //       <ul className="flex space-x-10 mx-40">
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //         <PropertyCard
-    //           image={property1}
-    //           name="Fully furnished"
-    //           rooms="2 BHK"
-    //           price="4,950 QAR"
-    //         />
-    //       </ul>
-    //     </li>
-    // </div>
   );
 };
 
