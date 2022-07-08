@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const FM = () => {
   return (
-    <div className="flex font-Montserrat text-mpurple px-20 pt-10">
+    <div className="flex font-Montserrat text-mpurple px-20 pt-10 space-x-40">
       <div className=" flex-col">
         <div className=" flex">
           <img src={FM_icon} alt="icon" className="h-32" />
@@ -31,29 +31,29 @@ const FM = () => {
           />
         </div>
       </div>
-      <div className=" flex flex-col flex items-center">
+      <div className="flex flex-col justify-center  ">
         <button className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg">
           Make An Appointment
         </button>
-        <div className="flex py-10 divide-y-2 divide-black ">
+        <div className="flex py-10 ">
           <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal ">Manager Representative</p>
+          <p className="text-xl font-normal ">Administrative Services</p>
         </div>
         <div className="flex py-10">
           <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Manager Representative</p>
+          <p className="text-xl font-normal">Regular Maintenence</p>
         </div>
         <div className="flex py-10">
           <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Manager Representative</p>
+          <p className="text-xl font-normal">Utility Bills</p>
         </div>
         <div className="flex py-10">
           <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Manager Representative</p>
+          <p className="text-xl font-normal">Control of Maintence Costs</p>
         </div>
         <div className="flex py-10">
           <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Manager Representative</p>
+          <p className="text-xl font-normal">Monthly Reports</p>
         </div>
         <Link
           to="/services2"

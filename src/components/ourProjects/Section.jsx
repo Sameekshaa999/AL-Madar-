@@ -9,18 +9,15 @@ import project6 from "../Zimages/project6.svg";
 
 const Section = () => {
   return (
-    <div className="px-20">
-      <div className="pt-24 flex-col w-full flex ">
-        <span className="inline-flex ">
-            <img src={stripes} alt="" className="h-16 -z-10" />
-            <h2 className="text-3xl font-Montserrat font-semibold text-mpurple mt-7 -ml-5 lg:text-5xl lg:text-left ">
-              Our
+    <div className="">
+      <div className="pt-24 flex-col m-auto justify-evenly items-center text-center">
+        <div className="flex justify-start items-center">
+            <img src={stripes} alt="" className="h-6 -z-10 md:h-16 md:-z-10" />
+            <h2 className="text-lg md:text-3xl font-Montserrat text-center font-semibold text-mpurple mt-7 -ml-5 lg:text-5xl lg:text-left ">
+              Our <span className="text-mblue"> Projects</span>
             </h2>
-            <h2 className="lg:mx-0 text-3xl font-Montserrat font-semibold text-mblue mt-7 -ml-5 lg:text-5xl  lg:text-left ">
-              Projects
-            </h2>
-          </span>
-          <p className="text-lg font-Montserrat font-normal text-mpurple">
+          </div>
+          <p className="text-sm md:text-base font-Montserrat font-normal text-mpurple mx-20">
           Al Madar Property Management currently manages the following assets,
           with great client satisfaction in the property management services
           offered and an occupancy rate of above 90%. As a result, we have a
@@ -28,16 +25,16 @@ const Section = () => {
           buildings, yet we are expanding.
         </p>
       </div>
-      <div>
-        <div className="flex justify-between">
-          <img src={project1} alt="project1" className="h-80 px-5 py-5" />
-          <img src={project2} alt="project2" className="h-80 px-5 py-5" />
-          <img src={project3} alt="project3" className="h-80 px-5 py-5" />
+      <div className="flex-col space-y-10 py-10">
+        <div className="md:flex md:justify-evenly ">
+          <img src={project1} alt="project1" className=" w-56 lg:w-80 " />
+          <img src={project2} alt="project2" className=" w-56 lg:w-80 " />
+          <img src={project3} alt="project3" className=" w-56 lg:w-80 " />
         </div>
-        <div className="flex justify-between">
-          <img src={project4} alt="project4" className="h-80 px-5 py-5" />
-          <img src={project5} alt="project5" className="h-80 px-5 py-5" />
-          <img src={project6} alt="project6" className="h-80 px-5 py-5" />
+        <div className="md:flex md:justify-evenly">
+          <img src={project4} alt="project4" className=" w-56 lg:w-80 " />
+          <img src={project5} alt="project5" className=" w-56 lg:w-80 " />
+          <img src={project6} alt="project6" className=" w-56 lg:w-80 " />
         </div>
       </div>
     </div>

@@ -7,48 +7,48 @@ import customer3 from "../Zimages/customer3.png";
 const Section2 = () => {
   return (
     <div className="">
-      <div className="contact-gradient2 flex justify-center text-white m-auto py-5">
-        <img src={office} alt="office" className="h-30vh rounded-xl " />
-        <div className="flex-col p-10">
-          <p className="font-Montserrat text-white">
+      <div className="contact-gradient2 md:flex md:justify-center text-center md:text-left text-white m-auto py-3 md:py-5">
+        <img src={office} alt="office" className="h-40 md:h-60 ml-32 md:mx-0 rounded-xl" />
+        <div className="flex-col p-3 px-5 md:p-10">
+          <p className="font-Montserrat text-white text-sm md:text-base">
             Bldg. No. 161 - Al Muntazah St. <br /> 330 <br /> Al Hilal Area 41 -
             P.O.Box: 2329 <br />
             Doha, Qatar
           </p>
-          <button className="border-2 rounded-md mt-4 px-3 font-Montserrat text-white">
+          <button className="border-2 rounded-md mt-3 md:mt-4 p-1 px-2 md:px-3 font-Montserrat text-white text-xs md:text-base">
             View on Map
           </button>
         </div>
       </div>
-      <div className="flex justify-center space-x-20 m-auto py-5">
+      <div className="md:flex md:justify-center md:space-x-20 m-auto mx-10 md:mx-0 py-3 md:py-5">
         <div className="w-auto bg-mpurple rounded-xl p-5 ">
-          <p className="font-Montserrat text-white text-2xl font-normal mb-3">
+          <p className="font-Montserrat text-white text-lg md:text-2xl font-normal mb-3">
             Get In Touch
           </p>
           <form className="flex-col justify-evenly">
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
               placeholder="Name *"
             />
             <br />
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="text"
               placeholder="Email *"
             />
             <br />
             <input
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="number"
               type="Number"
               placeholder="Number *"
             />
             <br />
             <textarea
-              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               name="message"
               rows="7"
               cols="47"
@@ -57,20 +57,20 @@ const Section2 = () => {
             ></textarea>
           </form>
           <button
-            class="m-auto bg-mblue hover:bg-mblue font-Montserrat text-mpurple font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="m-auto bg-mblue hover:bg-mblue font-Montserrat text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
           >
             Send
           </button>
         </div>
-        <div className="font-Montserrat text-mpurple">
-          <h1 className="font-medium text-3xl">Our Happy Customers</h1>
+        <div className="mt-5 md:mt-0 font-Montserrat text-mpurple">
+          <h1 className="font-medium text-lg md:text-2xl">Our Happy Customers</h1>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer1} alt="1" className="w-16" />
+              <img src={customer1} alt="1" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Anna Smith</h2>
             </div>
-            <p className="text-sm">
+            <p className="text-xs md:text-sm">
               “I have given my property to them for rental management for the
               last 3 <br /> years and it has been a very satisfactory
               experience. The rentals have come <br /> on time and my property
@@ -80,10 +80,10 @@ const Section2 = () => {
           </div>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer2} alt="2" className="w-16" />
+              <img src={customer2} alt="2" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Mohammad Ali</h2>
             </div>
-            <p className="text-sm">
+            <p className="text-xs md:text-sm">
               "My property is rented in a week and the whole process is taken
               care very <br /> professionally. Great Job and I am very pleased
               with the team's efforts !!"
@@ -91,10 +91,10 @@ const Section2 = () => {
           </div>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer3} alt="3" className="w-16" />
+              <img src={customer3} alt="3" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Sara Khan</h2>
             </div>
-            <p className="text-sm">
+            <p className="text-xs md:text-sm">
               Fantastic working with these guys! They understood the
               requirements and <br /> taste for the kind of property we were
               looking and that saved a lot of time <br /> and effort. Highly
