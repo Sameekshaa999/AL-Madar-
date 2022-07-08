@@ -4,7 +4,7 @@ import team from "../Zimages/team.png";
 
 const Team = () => {
   return (
-    <div className="h-screen-less mx-auto flex flex-col font-montserrat relative">
+    <div className="h-screen mx-auto flex flex-col font-montserrat relative">
       <div className="basis-2/3">
         <img
           src={team}
