@@ -1,5 +1,6 @@
 import React from "react";
 import AllServices from "../components/services2/AllServices";
+import Download from "../components/services2/Download";
 import Services21 from "../components/services2/services2.1";
 
 const Services2 = () => {
@@ -7,6 +8,7 @@ const Services2 = () => {
     <>
       <Services21 />
       <AllServices />
+      <Download />
     </>
   );
 };

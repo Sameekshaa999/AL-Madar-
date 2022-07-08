@@ -7,13 +7,14 @@ import broom from "../Zimages/flying-broom.png"
 
 const AllServices = () => {
   return (
-    <div className='xl:flex xl:justify-evenly  my-10'>
-        <div className='relative border-2 w-max'>
-            <img src={polygon} alt='' className=''/>
-            <div className='absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center'>
-                <img src={homeinsurance} alt='' className='h-14'/>
+    <div className='xl:flex xl:justify-evenly my-10'>
+        <div className='relative border-2 w-max '>
+            <img src={polygon} alt='' className=' md:w-[21.5rem] md:h-[9.438rem]'/>
+            <h1 className='absolute top-10 left-14 font-Montserrat text-base md:text-xl text-white font-bold'>Tenancy Management</h1>
+            <div className='absolute top-28 left-36 md:top-20 md:left-[7.5rem] bg-[#25215c] rounded-full w-12 md:w-24 h-12 md:h-24 flex justify-center items-center'>
+                <img src={homeinsurance} alt='' className='h-7 md:h-14'/>
             </div>
-            <ul className='mt-10 mb-5 ml-20 list-disc' >
+            <ul className='mt-10 mb-5 md:ml-20 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc' >
                 <li>Property Manager</li>
                 <li>Tenant profiling</li>
                 <li>Rent collection  renewals</li>
@@ -35,10 +36,11 @@ const AllServices = () => {
         </div>
         <div className='relative border-2 w-max '>
             <img src={polygon} alt='' className=''/>
+            <h1 className='absolute top-10 left-16 font-Montserrat text-xl text-white font-bold'>Facility Management</h1>
             <div className='absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center'>
                 <img src={settings} alt='' className='h-14'/>
             </div>
-            <ul className='mt-10 mb-5 ml-20 list-disc'>
+            <ul className='mt-10 mb-5 ml-20 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc'>
                 <li>Energy management <br/> services</li>
                 <li>Preventive maintenance</li>
                 <li>24x7 call centre</li>
@@ -58,10 +60,11 @@ const AllServices = () => {
         </div>
         <div className='relative border-2 w-max'>
             <img src={polygon} alt='' className=''/>
+            <h1 className='absolute top-10 left-24 font-Montserrat text-xl text-white font-bold'>Other Services</h1>
             <div className='absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center'>
                 <img src={broom} alt='' className='h-14'/>
             </div>
-            <ul className='mt-10 mb-5 ml-20 list-disc'>
+            <ul className='mt-10 mb-5 ml-20 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc'>
                 <li>Mechanical, Electrical and <br/> Plumbing</li>
                 <li>Heating. Ventilation and Air <br/> Conditioning</li>
                 <li>Minor Civil Works</li>

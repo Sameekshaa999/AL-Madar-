@@ -20,7 +20,7 @@ const Section2 = () => {
           </button>
         </div>
       </div>
-      <div className="md:flex md:justify-center md:space-x-20 m-auto mx-10 md:mx-0 py-3 md:py-5">
+      <div className="lg:flex lg:justify-center lg:space-x-20 m-auto mx-10 lg:mx-0 py-3 lg:py-5">
         <div className="w-auto bg-mpurple rounded-xl p-5 ">
           <p className="font-Montserrat text-white text-lg md:text-2xl font-normal mb-3">
             Get In Touch
@@ -63,18 +63,18 @@ const Section2 = () => {
             Send
           </button>
         </div>
-        <div className="mt-5 md:mt-0 font-Montserrat text-mpurple">
+        <div className="mt-5 md:mt-0 font-Montserrat text-mpurple inline-block lg:w-1/3">
           <h1 className="font-medium text-lg md:text-2xl">Our Happy Customers</h1>
           <div className="mt-3">
             <div className="flex">
               <img src={customer1} alt="1" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Anna Smith</h2>
             </div>
-            <p className="text-xs md:text-sm">
+            <p className="text-xs md:text-sm ">
               “I have given my property to them for rental management for the
-              last 3 <br /> years and it has been a very satisfactory
-              experience. The rentals have come <br /> on time and my property
-              is also being maintained neatly. I would gladly <br /> recommend
+              last 3 years and it has been a very satisfactory
+              experience. The rentals have come on time and my property
+              is also being maintained neatly. I would gladly recommend
               Al Madar to all”
             </p>
           </div>
@@ -85,7 +85,7 @@ const Section2 = () => {
             </div>
             <p className="text-xs md:text-sm">
               "My property is rented in a week and the whole process is taken
-              care very <br /> professionally. Great Job and I am very pleased
+              care very professionally. Great Job and I am very pleased
               with the team's efforts !!"
             </p>
           </div>
@@ -96,9 +96,9 @@ const Section2 = () => {
             </div>
             <p className="text-xs md:text-sm">
               Fantastic working with these guys! They understood the
-              requirements and <br /> taste for the kind of property we were
-              looking and that saved a lot of time <br /> and effort. Highly
-              recommended if anyone is looking for professional <br /> property
+              requirements and  taste for the kind of property we were
+              looking and that saved a lot of time  and effort. Highly
+              recommended if anyone is looking for professional  property
               consultants.
             </p>
           </div>

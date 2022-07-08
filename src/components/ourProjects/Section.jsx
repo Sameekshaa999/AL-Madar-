@@ -11,7 +11,7 @@ const Section = () => {
   return (
     <div className="">
       <div className="pt-24 flex-col m-auto justify-evenly items-center text-center">
-        <div className="flex justify-start items-center">
+        <div className="flex justify-start items-center mx-20 mb-7">
             <img src={stripes} alt="" className="h-6 -z-10 md:h-16 md:-z-10" />
             <h2 className="text-lg md:text-3xl font-Montserrat text-center font-semibold text-mpurple mt-7 -ml-5 lg:text-5xl lg:text-left ">
               Our <span className="text-mblue"> Projects</span>
@@ -26,15 +26,15 @@ const Section = () => {
         </p>
       </div>
       <div className="flex-col space-y-10 py-10">
-        <div className="md:flex md:justify-evenly ">
-          <img src={project1} alt="project1" className=" w-56 lg:w-80 " />
-          <img src={project2} alt="project2" className=" w-56 lg:w-80 " />
-          <img src={project3} alt="project3" className=" w-56 lg:w-80 " />
+        <div className=" md:flex md:justify-evenly ">
+          <img src={project1} alt="project1" className="md:w-56 lg:w-80 " />
+          <img src={project2} alt="project2" className="md:w-56 lg:w-80 " />
+          <img src={project3} alt="project3" className="md:w-56 lg:w-80 " />
         </div>
         <div className="md:flex md:justify-evenly">
-          <img src={project4} alt="project4" className=" w-56 lg:w-80 " />
-          <img src={project5} alt="project5" className=" w-56 lg:w-80 " />
-          <img src={project6} alt="project6" className=" w-56 lg:w-80 " />
+          <img src={project4} alt="project4" className="md:w-56 lg:w-80 " />
+          <img src={project5} alt="project5" className="md:w-56 lg:w-80 " />
+          <img src={project6} alt="project6" className="md:w-56 lg:w-80 " />
         </div>
       </div>
     </div>
