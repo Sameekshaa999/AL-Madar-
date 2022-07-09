@@ -6,22 +6,22 @@ import { Link } from "react-router-dom";
 
 const FM = () => {
   return (
-    <div className="flex font-Montserrat text-mpurple px-20 pt-10 space-x-40">
-      <div className=" flex-col">
+    <div className="flex font-Montserrat text-mpurple px-20 pt-10 space-x-20">
+      <div className="flex-col w-1/2 ">
         <div className=" flex">
           <img src={FM_icon} alt="icon" className="h-32" />
-          <h1 className="font-semibold text-3xl align-middle">
+          <h1 className="pt-10 pl-5 font-semibold text-3xl align-middle">
             Facility <br /> Management
           </h1>
         </div>
-        <div className="flex-col">
-          <p className="font-light text-lg text-justify ">
-            Our service guarantees that the property is in top shape <br /> at
-            all times. The in-house buying department will <br /> guarantee that
-            the best rates and businesses are used for <br /> the work, while
-            also maximising the speed with which <br /> the work is finished in
-            order to maximise rental income, <br /> outstanding property
-            condition, and tenant happiness. <br />
+        <div className="flex-col inline-block">
+          <p className="mt-5 font-light text-lg text-justify ">
+            Our service guarantees that the property is in top shape at
+            all times. The in-house buying department will guarantee that
+            the best rates and businesses are used for the work, while
+            also maximising the speed with which the work is finished in
+            order to maximise rental income, outstanding property
+            condition, and tenant happiness.
             Among the services provided include, but are not limited to:
           </p>
           <img
@@ -31,35 +31,40 @@ const FM = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center  ">
-        <button className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg">
+      <div className="w-1/2">
+        <button className="ml-60 px-4 py-4 bg-mpurple text-white w-96 font-Montserrat font-light text-lg">
           Make An Appointment
         </button>
-        <div className="flex py-10 ">
-          <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal ">Administrative Services</p>
+        <div className="flex flex-col justify-center ml-20 my-16 ">
+          <div className="flex space-x-2 py-7 border-b-2 border-mpurple">
+            <img src={check} alt="check" className="h-7" />
+            <p className="text-xl font-normal ">Administrative Services</p>
+          </div>
+          <div className="flex space-x-2 py-7 border-b-2 border-mpurple">
+            <img src={check} alt="check" className="h-7" />
+            <p className="text-xl font-normal">Regular Maintenence</p>
+          </div>
+          <div className="flex space-x-2 py-7 border-b-2 border-mpurple">
+            <img src={check} alt="check" className="h-7" />
+            <p className="text-xl font-normal">Utility Bills</p>
+          </div>
+          <div className="flex space-x-2 py-7 border-b-2 border-mpurple">
+            <img src={check} alt="check" className="h-7" />
+            <p className="text-xl font-normal">Control of Maintence Costs</p>
+          </div>
+          <div className="flex space-x-2 py-7 border-b-2 border-mpurple">
+            <img src={check} alt="check" className="h-7" />
+            <p className="text-xl font-normal">Monthly Reports</p>
+          </div>
         </div>
-        <div className="flex py-10">
-          <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Regular Maintenence</p>
-        </div>
-        <div className="flex py-10">
-          <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Utility Bills</p>
-        </div>
-        <div className="flex py-10">
-          <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Control of Maintence Costs</p>
-        </div>
-        <div className="flex py-10">
-          <img src={check} alt="check" className="h-7" />
-          <p className="text-xl font-normal">Monthly Reports</p>
-        </div>
+        <div className="">
         <Link
           to="/services2"
-          className="px-4 py-4 bg-mpurple text-white font-Montserrat font-light text-lg "
-        >More Info
+          className="float-right px-4 py-4 bg-mpurple w-1/3 justify-end text-white font-Montserrat font-light text-lg text-center"
+        >
+          More Info
         </Link>
+        </div>
       </div>
     </div>
   );
