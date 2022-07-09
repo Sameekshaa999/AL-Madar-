@@ -30,6 +30,8 @@ const Footer = () => {
               <div className="flex flex-col space-y-2">
                 <a
                   href="https://www.google.com/maps/place/Al+Madar+Holding/@25.2556694,51.522565,17z/data=!3m1!4b1!4m5!3m4!1s0x3e45cffa11911a65:0x32a2632a55fc537c!8m2!3d25.2556694!4d51.5247537"
+                  rel="noreferrer"
+                  target="_blank"
                   className="sm:p-2 pl-4"
                   alt="location"
                 >
@@ -192,7 +194,7 @@ const Footer = () => {
                 src={Brochure}
                 alt="brochure"
               />
-              <div className="mx-5  absolute rounded-xl text-mpurple font-semibold sm:font-bold text-xs lg:text-sm bg-white-800 hover:-translate-y-1 transition ">
+              <button className="mx-5  absolute rounded-xl text-mpurple font-semibold sm:font-bold text-xs lg:text-sm bg-white-800 hover:-translate-y-1 transition ">
                 <div className="inline-flex justify-center items-center">
                   <img
                     className="ml-2 h-4"
@@ -203,7 +205,7 @@ const Footer = () => {
                     Download
                   </Link>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
