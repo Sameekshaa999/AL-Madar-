@@ -6,7 +6,6 @@ import Services from "../components/index/Services";
 import MV from "../components/index/MV";
 import AboutSection from "../components/index/AboutSection";
 import Hero from "../components/index/Hero";
-import Spinner from "../components/spinner";
 
 const Home = () => {
   return (
@@ -18,7 +17,6 @@ const Home = () => {
       <Team />
       <Properties />
       <CustomerReview />
-      {/* <Spinner /> */}
     </>
   );
 };
