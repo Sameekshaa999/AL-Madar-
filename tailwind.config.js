@@ -18,7 +18,6 @@ module.exports = {
         mpurple: "#25215c",
         mblue: "#69c7ed",
         mgrey: "#231f20",
-        mwhite: "rgba(255, 255, 255, 0.82);"
       },
       fontFamily: {
         montserrat: ["Montserrat"],

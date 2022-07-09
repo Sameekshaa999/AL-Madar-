@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Brochure from "../components/Zimages/brochure.png";
-import Download from "../components/Zimages/download_icon.png";
 import Logo from "../components/Zimages/almadar-logo.jpg";
 import Time from "../components/Zimages/time_footer.png";
 import Phone from "../components/Zimages/phone_footer.png";
@@ -30,8 +29,6 @@ const Footer = () => {
               <div className="flex flex-col space-y-2">
                 <a
                   href="https://www.google.com/maps/place/Al+Madar+Holding/@25.2556694,51.522565,17z/data=!3m1!4b1!4m5!3m4!1s0x3e45cffa11911a65:0x32a2632a55fc537c!8m2!3d25.2556694!4d51.5247537"
-                  rel="noreferrer"
-                  target="_blank"
                   className="sm:p-2 pl-4"
                   alt="location"
                 >
@@ -194,14 +191,23 @@ const Footer = () => {
                 src={Brochure}
                 alt="brochure"
               />
-              <button className="mx-5  absolute rounded-xl text-mpurple font-semibold sm:font-bold text-xs lg:text-sm bg-white-800 hover:-translate-y-1 transition ">
-                <div className="inline-flex justify-center items-center">
-                  <img
-                    className="ml-2 h-4"
-                    src={Download}
-                    alt="download icon"
-                  />
-                  <Link to="/" className="text-center px-2 py-2">
+              <button className="mx-5 absolute rounded-xl text-black font-semibold sm:font-bold text-xs lg:text-sm bg-white-800 hover:-translate-y-1 transition ">
+                <div className="inline-flex justify-center items-center px-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="m-0.5 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    />
+                  </svg>
+                  <Link to="/" className="text-center py-2">
                     Download
                   </Link>
                 </div>

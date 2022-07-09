@@ -1,5 +1,5 @@
 import React from "react";
-import download from "../Zimages/downloadimg.png";
+import download from "../Zimages/brochure.png";
 
 const Download = () => {
   return (
@@ -7,7 +7,7 @@ const Download = () => {
       <img src={download} alt="img" className="h-1/4 w-1/4 m-auto" />
       <div
         typeof="button"
-        className=" absolute mx-20 my-20 py-2 px-5 font-Montserrat font-semibold flex justify-center items-center rounded-3xl bg-mwhite animate-bounce"
+        className=" absolute mx-20 my-20 py-2 px-5 font-Montserrat font-semibold flex justify-center items-center rounded-3xl bg-white-800 animate-bounce"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +32,9 @@ const Download = () => {
           benefits of outsourcing – such as efficiency savings and improved
           performance – whilst ensuring you the same degree of control,
           commitment and accountability you’d have if you delivered it all
-          in-house 
+          in-house
           <span className="font-bold">
-             .     For more details please download our brochure.
+            . For more details please download our brochure.
           </span>
         </p>
       </div>
