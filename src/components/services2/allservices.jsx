@@ -8,14 +8,14 @@ import broom from "../Zimages/flying-broom.png";
 
 const AllServices = () => {
   return (
-    <div className=" my-10 flex flex-col md:flex-row space-y-6 sm:space-x-6 justify-center items-center">
-      <div className="relative border-2 w-max md:mt-6 ml-5 md:ml-0">
+    <div className=" my-10 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 justify-center items-center">
+      <div className="relative border-2 w-max  md:ml-0">
         <img src={polygon} alt="" className="" />
         <h1 className="absolute top-10 left-16 font-Montserrat text-xl text-white font-bold">
           Tenancy Management
         </h1>
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
-          <img src={settings} alt="" className="h-14" />
+          <img src={homeinsurance} alt="" className="h-14" />
         </div>
         <ul className="mt-10 mb-5 ml-16 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc">
           <li>Property Manager</li>

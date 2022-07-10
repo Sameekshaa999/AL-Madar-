@@ -27,7 +27,7 @@ const FM = () => {
           <img src={services1_FM} alt="tenancy Management" className="my-7 h-42 md:78" />
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row space-y-6 sm:space-x-6 items-center lg:w-1/2">
+      <div className="flex flex-col  space-y-6 sm:space-x-6 items-center lg:w-1/2">
         <button className="lg:ml-60 px-16 py-4 bg-mpurple lg:w-96 text-white font-Montserrat font-light text-lg">
           Make An Appointment
         </button>
