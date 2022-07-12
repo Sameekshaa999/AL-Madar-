@@ -27,7 +27,7 @@ function PropertyCard(props) {
 const PropertiesS2 = () => {
   return (
     <>
-      <div className="max-w-[1150px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-8">
+      <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-10">
         <div className="flex flex-col">
           <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
             Popular Properties
