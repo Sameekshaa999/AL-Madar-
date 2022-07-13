@@ -29,7 +29,7 @@ const PropertiesS2 = () => {
 
   function PropertyCard(props) {
     return (
-      <li className="flex flex-col justify-start items-start font-Montserrat text-mpurple font-normal shadow-xl p-0">
+      <li className="flex flex-col justify-start items-start font-montserrat text-mpurple font-normal shadow-xl p-0">
         <img src={props.image} alt="Property1" className="" />
         <img
           onClick={handleOpen}
@@ -89,7 +89,7 @@ const PropertiesS2 = () => {
                     </Swiper>
                   </div>
                 </div>
-                <div class="basis-1/6">
+                {/* <div class="basis-1/6">
                   <div class="h-full w-full">
                     <Swiper
                       onSwiper={setThumbsSwiper}
@@ -125,7 +125,7 @@ const PropertiesS2 = () => {
                       </SwiperSlide>
                     </Swiper>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="flex justify-center">
                   <button

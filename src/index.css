@@ -20,16 +20,6 @@
 .team-items-text {
   @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
 }
-.font-Montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-/* .bg-mpurple {
-  background: #25215c;
-} */
-
-/* .bg-mblue{
-    background: #69C7ED;
-  } */
 
 .h-30vh {
   height: 30vh;

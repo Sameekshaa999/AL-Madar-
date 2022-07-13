@@ -11,16 +11,16 @@ const AllServices = () => {
     <div className=" my-10 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 justify-center items-center">
       <div className="relative border-2 w-max  md:ml-0">
         <img src={polygon} alt="" className="" />
-        <h1 className="absolute top-10 left-16 font-Montserrat text-xl text-white font-bold">
+        <h1 className="absolute top-10 left-16 font-montserrat text-xl text-white font-bold">
           Tenancy Management
         </h1>
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={homeinsurance} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
           <li>Property Manager</li>
           <li>Tenant profiling</li>
-          <li>Rent collection  renewals</li>
+          <li>Rent collection renewals</li>
           <li>Legal procedures</li>
           <li>Marketing</li>
           <li>Property staging</li>
@@ -28,12 +28,10 @@ const AllServices = () => {
           <li>Preparation of vacant units</li>
           <li>Tenant exit inspection</li>
           <li>
-          Supervision of in-unit <br/> maintenance
+            Supervision of in-unit <br /> maintenance
           </li>
           <li>Monthly Reports</li>
-          <li>
-          Conditional Audits
-          </li>
+          <li>Conditional Audits</li>
           <li>Defects Liability Management</li>
           <li>3rd Party Testing</li>
           <li>Building Handover Process</li>
@@ -43,13 +41,13 @@ const AllServices = () => {
       </div>
       <div className="relative border-2 w-max ">
         <img src={polygon} alt="" className="" />
-        <h1 className="absolute top-10 left-16 font-Montserrat text-xl text-white font-bold">
+        <h1 className="absolute top-10 left-16 font-montserrat text-xl text-white font-bold">
           Facility Management
         </h1>
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={settings} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
           <li>
             Energy management <br /> services
           </li>
@@ -61,7 +59,9 @@ const AllServices = () => {
           <li>Call Center & Helpdesk</li>
           <li>Contract Management</li>
           <li>AFM System Integration</li>
-          <li>Utilities & Infrastructure <br /> Management</li>
+          <li>
+            Utilities & Infrastructure <br /> Management
+          </li>
           <li>Life Cycle Management</li>
           <li>
             HSEQ Compliance and <br /> Management
@@ -73,17 +73,24 @@ const AllServices = () => {
       </div>
       <div className="relative border-2 w-max">
         <img src={polygon} alt="" className="" />
-        <h1 className="absolute top-10 left-24 font-Montserrat text-xl text-white font-bold">
+        <h1 className="absolute top-10 left-24 font-montserrat text-xl text-white font-bold">
           Other Services
         </h1>
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={broom} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-Montserrat text-mpurple text-sm md:text-base font-normal list-disc">
-          <li> Mechanical, Electrical and <br /> Plumbing</li>
-          <li>Heating. Ventilation and Air <br /> Conditioning</li>
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+          <li>
+            {" "}
+            Mechanical, Electrical and <br /> Plumbing
+          </li>
+          <li>
+            Heating. Ventilation and Air <br /> Conditioning
+          </li>
           <li>Minor Civil Works</li>
-          <li>Fire Control & Detection <br /> Management</li>
+          <li>
+            Fire Control & Detection <br /> Management
+          </li>
           <li>CCTV & Access Control</li>
           <li>Specialized Services</li>
           <li>Janitorial Services</li>
