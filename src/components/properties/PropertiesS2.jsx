@@ -15,12 +15,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import { Autoplay, Pagination, FreeMode, Navigation, Thumbs } from "swiper";
+import {
+  Autoplay,
+  Pagination,
+  EffectCoverflow,
+  FreeMode,
+  Navigation,
+  Thumbs,
+} from "swiper";
 
 const PropertiesS2 = () => {
   const [open, setOpen] = useState(false);
@@ -47,93 +55,106 @@ const PropertiesS2 = () => {
   function GalleryModal(props) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
-      <div>
+      <div className="font-montserrat">
         <div class="relative z-50" role="dialog" aria-modal="true">
           {/* dark overlay */}
-          <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"></div>
+          <div
+            class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"
+            onClick={handleClose}
+          ></div>
 
           {/* gallery */}
-          <div class="fixed z-10 inset-0 overflow-y-auto">
-            <div class="flex items-end sm:items-center justify-center h-screen w-screen p-4 text-center sm:p-0">
-              <div class="flex flex-col bg-white bg-opacity-80 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:w-2/3 sm:h-2/3">
-                <div class="basis-5/6">
+          <div class="fixed z-10 inset-0 bg-white bg-opacity-70">
+            <div class="flex justify-center h-screen">
+              <div class="flex flex-col overflow-hidden sm:w-full sm:h-full">
+                <div class="basis-11/12 my-4">
                   <div class="h-full w-full">
                     <Swiper
                       loop={true}
-                      spaceBetween={10}
+                      slidesPerView={1}
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1,
+                        },
+
+                        768: {
+                          slidesPerView: 3,
+                        },
+
+                        1024: {
+                          slidesPerView: 3,
+                        },
+                      }}
                       navigation={true}
-                      thumbs={{ swiper: thumbsSwiper }}
-                      modules={[FreeMode, Navigation, Thumbs]}
+                      effect={"coverflow"}
+                      coverflowEffect={{
+                        rotate: 60,
+                        stretch: 0,
+                        depth: 100,
+                        scale: 0.7,
+                        modifier: 1,
+                        slideShadows: false,
+                      }}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                      }}
+                      pagination={{
+                        clickable: true,
+                        type: "fraction",
+                      }}
+                      // thumbs={{ swiper: thumbsSwiper }}
+                      modules={[
+                        EffectCoverflow,
+                        Autoplay,
+                        Pagination,
+                        FreeMode,
+                        Navigation,
+                        Thumbs,
+                      ]}
                       className=""
                     >
                       <SwiperSlide id="client 1">
-                        <div className="flex justify-center">
-                          <img src={project1} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project1} className="lg:h-2/3" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
-                        <img src={project2} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project2} className="lg:h-2/3" alt="" />
+                        </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
-                        <img src={project3} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project3} className="lg:h-2/3" alt="" />
+                        </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
-                        <img src={project4} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project4} className="lg:h-2/3" alt="" />
+                        </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
-                        <img src={project5} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project5} className="lg:h-2/3" alt="" />
+                        </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
-                        <img src={project6} className="w-1/3" alt="" />
+                        <div className="property-gallery-item">
+                          <img src={project6} className="" alt="" />
+                        </div>
                       </SwiperSlide>
                     </Swiper>
                   </div>
                 </div>
-                {/* <div class="basis-1/6">
-                  <div class="h-full w-full">
-                    <Swiper
-                      onSwiper={setThumbsSwiper}
-                      loop={true}
-                      spaceBetween={10}
-                      slidesPerView={4}
-                      freeMode={true}
-                      watchSlidesProgress={true}
-                      modules={[FreeMode, Navigation, Thumbs]}
-                      className=""
-                    >
-                      <SwiperSlide id="client 1">
-                        <img
-                          src={project1}
-                          className="h-1/3 w-full stretch"
-                          alt=""
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide id="client 1">
-                        <img src={project2} className="w-1/3" alt="" />
-                      </SwiperSlide>
-                      <SwiperSlide id="client 1">
-                        <img src={project3} className="w-1/3" alt="" />
-                      </SwiperSlide>
-                      <SwiperSlide id="client 1">
-                        <img src={project4} className="w-1/3" alt="" />
-                      </SwiperSlide>
-                      <SwiperSlide id="client 1">
-                        <img src={project5} className="w-1/3" alt="" />
-                      </SwiperSlide>
-                      <SwiperSlide id="client 1">
-                        <img src={project6} className="w-1/3" alt="" />
-                      </SwiperSlide>
-                    </Swiper>
-                  </div>
-                </div> */}
 
-                <div class="flex justify-center">
+                <div class="basis-1/12 flex items-center justify-center my-8">
                   <button
                     onClick={handleClose}
                     type="button"
-                    class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                    class="w-full inline-flex justify-center rounded px-4 py-2 bg-mpurple text-base font-medium text-white hover:scale-110 transition sm:ml-3 sm:w-auto sm:text-sm"
                   >
-                    Deactivate
+                    Close
                   </button>
                 </div>
               </div>

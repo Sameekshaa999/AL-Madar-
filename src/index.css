@@ -21,6 +21,10 @@
   @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
 }
 
+.property-gallery-item {
+  @apply flex h-full w-full justify-center items-center;
+}
+
 .h-30vh {
   height: 30vh;
 }
