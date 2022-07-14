@@ -116,27 +116,27 @@ const PropertiesS2 = () => {
                     >
                       <SwiperSlide id="client 1">
                         <div className="property-gallery-item">
-                          <img src={project1} className="lg:h-2/3" alt="" />
+                          <img src={project1} className="" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
                         <div className="property-gallery-item">
-                          <img src={project2} className="lg:h-2/3" alt="" />
+                          <img src={project2} className="" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
                         <div className="property-gallery-item">
-                          <img src={project3} className="lg:h-2/3" alt="" />
+                          <img src={project3} className="" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
                         <div className="property-gallery-item">
-                          <img src={project4} className="lg:h-2/3" alt="" />
+                          <img src={project4} className="" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
                         <div className="property-gallery-item">
-                          <img src={project5} className="lg:h-2/3" alt="" />
+                          <img src={project5} className="" alt="" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide id="client 1">
