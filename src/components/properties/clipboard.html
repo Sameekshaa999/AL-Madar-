@@ -1,3 +1,21 @@
+<!-- Projects section -->
+function Projects(props) { return (
+<div class="relative flex mx-auto fit-content font-montserrat">
+  <div
+    class="flex flex-col absolute inset-0 pl-4 pb-4 z-10 bg-black text-white justify-end opacity-0 hover:opacity-100 bg-opacity-60 duration-300"
+  >
+    <h3 class="font-semibold text-base sm:text-sm">{props.service}</h3>
+    <h4 class="font-light text-base sm:text-sm">{props.name}</h4>
+    <h4 class="mt-2 font-light text-base sm:text-sm">{props.location}</h4>
+  </div>
+  <div class="relative">
+    <div class="">
+      <img src="{props.image}" alt="project" className="max-h-72 sm:h-auto" />
+    </div>
+  </div>
+</div>
+); }
+
 <!-- THUMBs Gallery -->
 
 <div class="basis-1/6">
