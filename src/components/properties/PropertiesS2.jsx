@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { FaBed, FaBath } from "react-icons/fa";
+import { BsGridFill } from "react-icons/bs";
+import { GoVerified } from "react-icons/go";
+
+import propertiesData from "./propertiesData.tsx";
 
 import propertyIcon from "../Zimages/propertyIcon.png";
-import property1 from "../Zimages/Property1.png";
 
 import project1 from "../Zimages/project1.png";
 import project2 from "../Zimages/project2.png";
@@ -31,44 +35,135 @@ import {
 } from "swiper";
 
 const PropertiesS2 = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [galleryid, setGalleryid] = useState(null);
+  console.log(galleryid);
 
-  function PropertyCard(props) {
+  function PropertySlide(props) {
     return (
-      <li className="flex flex-col justify-start items-start font-montserrat text-mpurple font-normal shadow-xl p-0">
-        <img src={props.image} alt="Property1" className="" />
-        <img
-          onClick={handleOpen}
-          src={propertyIcon}
-          alt="Icon"
-          className="absolute w-10 ml-2 mt-2"
-        />
-        <p className="font-medium text-2xl p-2">{props.name}</p>
-        <p className="text-xl pl-2">{props.rooms}</p>
-        <p className="font-bold text-xl p-2">{props.price}</p>
-      </li>
+      <>
+        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
+          {props.category}
+        </h1>
+        <div className="h-[17rem] md:h-[29rem] lg:h-[31rem] font-montserrat">
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              // when window width is >= 480px
+              640: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 70,
+              },
+            }}
+            centeredSlides={false}
+            // autoplay={{
+            //   delay: 3000,
+            // }}
+            pagination={{}}
+            modules={[Autoplay, Pagination]}
+            className="border-1"
+          >
+            {propertiesData.map((item) => (
+              <SwiperSlide id={item.id}>
+                <div className="group relative">
+                  <div className="relative w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 md:aspect-none">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                    />
+                  </div>
+
+                  <div className="flex flex-col w-full mt-4">
+                    <h3 className="text-xl font-extrabold text-mgrey">
+                      QAR {item.price}
+                    </h3>
+                    <div className="flex flex-row p-1 text-mpurple text-base font-mono font-semibold relative">
+                      <div className="flex flex-row items-center">
+                        <span className="mr-2 text-black">{item.bedrooms}</span>
+                        <span className="scale-125">
+                          <FaBed />
+                        </span>
+                        <span className="mx-2 text-xl text-black">|</span>
+                      </div>
+
+                      <div className="flex flex-row items-center">
+                        <span className="mr-2 text-black">
+                          {item.bathrooms}
+                        </span>
+                        <span className="scale-125">
+                          <FaBath />
+                        </span>
+                        <span className="mx-2 text-xl text-black">|</span>
+                      </div>
+
+                      <div className="flex flex-row items-center">
+                        <span className="mr-2 text-black">
+                          {item.area} sqm.
+                        </span>
+                        <span className="scale-125">
+                          <BsGridFill />
+                        </span>
+                      </div>
+
+                      <div className="absolute inline-flex right-0 top-0">
+                        <div
+                          onClick={() => setGalleryid(item.itemNumber)}
+                          className="flex flex-row items-center animate-pulse hover:cursor-pointer"
+                        >
+                          Gallery
+                          <img
+                            src={propertyIcon}
+                            alt="Icon"
+                            className="ml-2 w-8 h-8 hover:scale-90 transition"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold text-mgrey">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+                {/* <li className="flex flex-col justify-start items-start font-montserrat text-mpurple font-normal shadow-xl p-0">
+                  <img src={item.image} alt="Property1" className="" />
+                  <img
+                    onClick={handleOpen}
+                    src={propertyIcon}
+                    alt="Icon"
+                    className="absolute w-10 ml-2 mt-2"
+                  />
+                  <p className="font-medium text-2xl p-2">{item.title}</p>
+                  <p className="text-xl pl-2">{item.rooms}</p>
+                  <p className="font-bold text-xl p-2">{item.price}</p>
+                </li> */}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </>
     );
   }
 
   function GalleryModal(props) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    console.log(galleryid);
     return (
       <div className="font-montserrat">
-        <div class="relative z-50" role="dialog" aria-modal="true">
+        <div className="relative z-50" role="dialog" aria-modal="true">
           {/* dark overlay */}
-          <div
-            class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"
-            onClick={handleClose}
-          ></div>
+          <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"></div>
 
           {/* gallery */}
-          <div class="fixed z-10 inset-0 bg-white bg-opacity-70 ">
-            {/* <div class="flex justify-center h-screen"> */}
-            <div class="flex flex-col space-y-8 overflow-hidden sm:w-full sm:h-screen">
-              <div class="basis-5/6">
-                <div class="h-2/3 md:h-full w-full">
+          <div className="fixed z-10 inset-0 bg-black bg-opacity-70 transition-opacity">
+            {/* <div className="flex justify-center h-screen"> */}
+            <div className="flex flex-col space-y-8 overflow-hidden sm:w-full sm:h-screen">
+              <div className="basis-5/6">
+                <div className="h-2/3 md:h-full w-full text-white">
                   <Swiper
                     loop={true}
                     slidesPerView={1}
@@ -110,69 +205,26 @@ const PropertiesS2 = () => {
                     ]}
                     className="top-[20%] md:top-[5%]"
                   >
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project1}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project2}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project3}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project4}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project5}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide id="client 1">
-                      <div className="property-gallery-item">
-                        <img
-                          src={project6}
-                          className="h-2/3 md:h-auto"
-                          alt=""
-                        />
-                      </div>
-                    </SwiperSlide>
+                    {propertiesData[galleryid - 1].gallery.map((item) => (
+                      <SwiperSlide key={item}>
+                        <div className="property-gallery-item">
+                          <img
+                            src={item}
+                            className="h-2/3 md:h-auto object-cover"
+                            alt=""
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
               </div>
 
-              <div class="basis-1/6 flex items-center justify-center md:my-8">
+              <div className="basis-1/6 flex items-center justify-center md:my-8">
                 <button
-                  onClick={handleClose}
+                  onClick={() => setGalleryid(null)}
                   type="button"
-                  class="inline-flex justify-center rounded px-6 py-2 bg-mpurple font-semibold text-white hover:scale-110 transition"
+                  className="inline-flex justify-center rounded px-6 py-2 bg-mpurple font-semibold text-white hover:scale-110 transition"
                 >
                   Close
                 </button>
@@ -188,12 +240,11 @@ const PropertiesS2 = () => {
   return (
     <>
       <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-10">
-        {open ? <GalleryModal /> : <div></div>}
+        {galleryid ? <GalleryModal /> : <div></div>}
         <div className="flex flex-col">
-          <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
-            Popular Properties
-          </h1>
-          <div className="h-[17rem] sm:h-[25rem] md:h-96">
+          <PropertySlide category="Popular Properties" />
+
+          {/* <div className="h-[17rem] sm:h-[25rem] md:h-96">
             <Swiper
               spaceBetween={20}
               slidesPerView={2}
@@ -225,7 +276,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="1"
+                  title="1"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -233,7 +284,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="2"
+                  title="2"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -241,7 +292,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="3"
+                  title="3"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -249,7 +300,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="4"
+                  title="4"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -257,7 +308,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="5"
+                  title="5"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -265,14 +316,15 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="6"
+                  title="6"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
               </SwiperSlide>
             </Swiper>
-          </div>
-          <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
+          </div> */}
+
+          {/* <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
             Qatar Properties
           </h1>
           <div className="h-[17rem] sm:h-[25rem] md:h-96">
@@ -307,7 +359,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="1"
+                  title="1"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -315,7 +367,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="2"
+                  title="2"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -323,7 +375,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="3"
+                  title="3"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -331,7 +383,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="4"
+                  title="4"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -339,7 +391,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="5"
+                  title="5"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -347,13 +399,14 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="6"
+                  title="6"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
               </SwiperSlide>
             </Swiper>
           </div>
+
           <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
             Dubai Properties
           </h1>
@@ -389,7 +442,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="1"
+                  title="1"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -397,7 +450,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="2"
+                  title="2"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -405,7 +458,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="3"
+                  title="3"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -413,7 +466,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="4"
+                  title="4"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -421,7 +474,7 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="5"
+                  title="5"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
@@ -429,13 +482,13 @@ const PropertiesS2 = () => {
               <SwiperSlide id="client 1">
                 <PropertyCard
                   image={property1}
-                  name="6"
+                  title="6"
                   rooms="2 BHK"
                   price="4,950 QAR"
                 />
               </SwiperSlide>
             </Swiper>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

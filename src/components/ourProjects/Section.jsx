@@ -1,26 +1,26 @@
 import React from "react";
-import data from "./projectsData.tsx";
+import projectsData from "./projectsData.tsx";
 import Headings from "../Headings";
 import defaultImage from "../Zimages/default.png";
 
 function Projects(props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-6 sm:px-6 md:px-10 lg:px-14 my-12">
-      {data.map((item) => (
-        <div class="relative flex mx-auto fit-content font-montserrat">
-          <div class="flex flex-col absolute inset-0 pl-4 pb-4 z-10 bg-black text-white justify-end opacity-0 hover:opacity-100 bg-opacity-60 duration-300">
-            <h3 class="font-semibold text-base sm:text-sm">
+      {projectsData.map((item) => (
+        <div className="relative flex mx-auto fit-content font-montserrat">
+          <div className="flex flex-col absolute inset-0 pl-4 pb-4 z-10 bg-black text-white justify-end opacity-0 hover:opacity-100 bg-opacity-60 duration-300">
+            <h3 className="font-semibold text-base sm:text-sm">
               {item.service ? item.service : props.service}
             </h3>
-            <h4 class="font-light text-base sm:text-sm">
+            <h4 className="font-light text-base sm:text-sm">
               {item.name ? item.name : props.name}
             </h4>
-            <h4 class="mt-2 font-light text-base sm:text-sm">
+            <h4 className="mt-2 font-light text-base sm:text-sm">
               {item.location ? item.location : props.location}
             </h4>
           </div>
-          <div class="relative">
-            <div class="">
+          <div className="relative">
+            <div className="">
               <img
                 src={item.image ? item.image : props.image}
                 alt="project"

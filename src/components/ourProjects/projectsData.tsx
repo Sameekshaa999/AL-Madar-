@@ -5,7 +5,7 @@ import project4 from "../Zimages/project4.png";
 import project5 from "../Zimages/project5.png";
 import project6 from "../Zimages/project6.png";
 
-const data = [
+const projectsData = [
   {
     id: "1",
     service: "Facilities Management",
@@ -89,4 +89,4 @@ const data = [
               
 ];
 
-export default data
+export default projectsData
