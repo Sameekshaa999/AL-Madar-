@@ -1,30 +1,11 @@
 import React, { useState } from "react";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
+import { IoMdPhotos } from "react-icons/io";
 
 import propertiesData from "./propertiesData.tsx";
 
-import propertyIcon from "../Zimages/propertyIcon.png";
-
-import project1 from "../Zimages/project1.png";
-import project2 from "../Zimages/project2.png";
-import project3 from "../Zimages/project3.png";
-import project4 from "../Zimages/project4.png";
-import project5 from "../Zimages/project5.png";
-import project6 from "../Zimages/project6.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
-// import required modules
+// Import Swiper components
 import {
   Autoplay,
   Pagination,
@@ -34,9 +15,17 @@ import {
   Thumbs,
 } from "swiper";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
 const PropertiesS2 = () => {
   const [galleryid, setGalleryid] = useState(null);
-  console.log(galleryid);
 
   function PropertySlide(props) {
     return (
@@ -44,37 +33,36 @@ const PropertiesS2 = () => {
         <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
           {props.category}
         </h1>
-        <div className="h-[17rem] md:h-[29rem] lg:h-[31rem] font-montserrat">
+        <div className="h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
-              // when window width is >= 480px
-              640: {
-                slidesPerView: 1,
-              },
-              // when window width is >= 640px
+              // when window width is >= 768px
               768: {
                 slidesPerView: 2,
                 spaceBetween: 70,
               },
             }}
             centeredSlides={false}
-            // autoplay={{
-            //   delay: 3000,
-            // }}
-            pagination={{}}
+            autoplay={{
+              disableOnInteraction: true,
+              delay: 4000,
+            }}
+            pagination={{
+              type: "bullets",
+            }}
             modules={[Autoplay, Pagination]}
-            className="border-1"
+            className=""
           >
             {propertiesData.map((item) => (
               <SwiperSlide id={item.id}>
                 <div className="group relative">
-                  <div className="relative w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 md:aspect-none">
+                  <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                     <img
                       src={item.image}
                       alt=""
-                      className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                      className="object-center object-cover lg:w-full lg:h-full"
                     />
                   </div>
 
@@ -110,17 +98,16 @@ const PropertiesS2 = () => {
                         </span>
                       </div>
 
-                      <div className="absolute inline-flex right-0 top-0">
+                      <div className="absolute inline-flex right-1 top-0">
                         <div
                           onClick={() => setGalleryid(item.itemNumber)}
-                          className="flex flex-row items-center animate-pulse hover:cursor-pointer"
+                          className="flex flex-row items-center hover:cursor-pointer"
                         >
-                          Gallery
-                          <img
-                            src={propertyIcon}
-                            alt="Icon"
-                            className="ml-2 w-8 h-8 hover:scale-90 transition"
-                          />
+                          {/* Gallery */}
+                          <span className="mr-2">{item.gallery.length}</span>
+                          <span className="animate-pulse scale-[1.8] hover:scale-[1.6] transition">
+                            <IoMdPhotos />
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -129,18 +116,6 @@ const PropertiesS2 = () => {
                     </h3>
                   </div>
                 </div>
-                {/* <li className="flex flex-col justify-start items-start font-montserrat text-mpurple font-normal shadow-xl p-0">
-                  <img src={item.image} alt="Property1" className="" />
-                  <img
-                    onClick={handleOpen}
-                    src={propertyIcon}
-                    alt="Icon"
-                    className="absolute w-10 ml-2 mt-2"
-                  />
-                  <p className="font-medium text-2xl p-2">{item.title}</p>
-                  <p className="text-xl pl-2">{item.rooms}</p>
-                  <p className="font-bold text-xl p-2">{item.price}</p>
-                </li> */}
               </SwiperSlide>
             ))}
           </Swiper>
@@ -239,256 +214,11 @@ const PropertiesS2 = () => {
 
   return (
     <>
-      <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-16 lg:px-10">
+      <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-4 md:px-10">
         {galleryid ? <GalleryModal /> : <div></div>}
         <div className="flex flex-col">
-          <PropertySlide category="Popular Properties" />
-
-          {/* <div className="h-[17rem] sm:h-[25rem] md:h-96">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={2}
-              breakpoints={{
-                // when window width is >= 480px
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // when window width is >= 640px
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                // when window width is >= 480px
-                1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-              }}
-              centeredSlides={false}
-              autoplay={{
-                delay: 3000,
-              }}
-              // pagination={{}}
-              modules={[Autoplay, Pagination]}
-              className="border-1"
-            >
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="1"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="2"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="3"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="4"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="5"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="6"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div> */}
-
-          {/* <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
-            Qatar Properties
-          </h1>
-          <div className="h-[17rem] sm:h-[25rem] md:h-96">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={2}
-              breakpoints={{
-                // when window width is >= 480px
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // when window width is >= 640px
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                // when window width is >= 480px
-                1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-              }}
-              centeredSlides={false}
-              autoplay={{
-                delay: 3000,
-              }}
-              // pagination={{}}
-              modules={[Autoplay, Pagination]}
-              className="border-1"
-            >
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="1"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="2"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="3"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="4"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="5"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="6"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-
-          <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
-            Dubai Properties
-          </h1>
-          <div className="h-[17rem] sm:h-[25rem] md:h-96">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={2}
-              breakpoints={{
-                // when window width is >= 480px
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                // when window width is >= 640px
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                // when window width is >= 480px
-                1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-              }}
-              centeredSlides={false}
-              autoplay={{
-                delay: 3000,
-              }}
-              // pagination={{}}
-              modules={[Autoplay, Pagination]}
-              className="border-1"
-            >
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="1"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="2"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="3"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="4"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="5"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-              <SwiperSlide id="client 1">
-                <PropertyCard
-                  image={property1}
-                  title="6"
-                  rooms="2 BHK"
-                  price="4,950 QAR"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div> */}
+          <PropertySlide category="Qatar Properties" />
+          <PropertySlide category="Dubai Properties" />
         </div>
       </div>
     </>

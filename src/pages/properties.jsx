@@ -6,8 +6,8 @@ import PropertiesS3 from "../components/properties/PropertiesS3";
 const Properties = () => {
   return (
     <>
-      {/* <PropertiesS1 /> */}
-      <div className="pt-24"></div>
+      <PropertiesS1 />
+      {/* <div className="pt-24"></div> */}
       <PropertiesS2 />
       {/* <PropertiesS3 /> */}
     </>
