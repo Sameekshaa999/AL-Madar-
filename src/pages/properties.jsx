@@ -7,8 +7,9 @@ const Properties = () => {
   return (
     <>
       <PropertiesS1 />
+      {/* <div className="pt-24"></div> */}
       <PropertiesS2 />
-      <PropertiesS3 />
+      {/* <PropertiesS3 /> */}
     </>
   );
 };

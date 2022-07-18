@@ -20,19 +20,14 @@
 .team-items-text {
   @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
 }
+
 .team-bg {
   box-shadow: 11px 14px 16px rgba(0, 0, 0, 0.26);
 }
-.font-Montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-/* .bg-mpurple {
-  background: #25215c;
-} */
 
-/* .bg-mblue{
-    background: #69C7ED;
-  } */
+.property-gallery-item {
+  @apply flex h-full w-full justify-center items-center;
+}
 
 .h-30vh {
   height: 30vh;
