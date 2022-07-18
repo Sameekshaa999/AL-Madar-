@@ -21,6 +21,10 @@
   @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
 }
 
+.team-bg {
+  box-shadow: 11px 14px 16px rgba(0, 0, 0, 0.26);
+}
+
 .property-gallery-item {
   @apply flex h-full w-full justify-center items-center;
 }
