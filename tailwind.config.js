@@ -11,6 +11,10 @@ module.exports = {
         "5/6": "83.333334%",
       },
       colors: {
+        white: {
+          DEFAULT: "#fff",
+          800: "rgba(255, 255, 255, 0.80)",
+        },
         mpurple: "#25215c",
         mblue: "#69c7ed",
         mgrey: "#231f20",
@@ -20,5 +24,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

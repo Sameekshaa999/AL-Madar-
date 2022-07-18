@@ -9,8 +9,8 @@ const Navbar = () => {
   // responsive toggle function
 
   return (
-    <nav className="bg-white font-montserrat h-18 w-full fixed z-50">
-      <div className="justify-around px-2 lg:px-10">
+    <nav className="bg-white font-montserrat h-18 w-screen fixed z-50">
+      <div className="justify-around px-2 lg:px-10 mx-auto max-w-[1225px]">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
