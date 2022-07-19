@@ -21,8 +21,15 @@
   @apply text-lg font-light lg:font-normal text-mpurple lg:text-4xl ml-7 lg:text-left;
 }
 
-.team-bg {
+.ourTeam-bg {
   box-shadow: 11px 14px 16px rgba(0, 0, 0, 0.26);
+}
+.team-gradient {
+  background: linear-gradient(97.45deg, #25215C 1.12%, #69C7ED 125.76%);
+}
+.team-bg {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
 }
 
 .property-gallery-item {
@@ -62,7 +69,10 @@
 
 .customer-review-gradient {
   background: linear-gradient(181.91deg, #25215c 6.11%, #69c7ed 154.69%);
-  transform: rotate(-20deg) scaleX(1.5) scaleY(1.7) translate(-5%, 10%);
+  /* transform: rotate(-20deg) scaleX(1.5) scaleY(1.7) translate(-5%, 10%); */
+}
+.parallelogram {
+  transform: skew(20deg);
 }
 
 .footer-gradient {
