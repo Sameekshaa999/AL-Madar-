@@ -82,15 +82,15 @@ const propertiesDeep = () => {
       searchDict.furnished.semi = false;
       searchDict.furnished.none = false;
     } else if (input === "< 2,000") {
-      searchDict.price = 2000;
+      searchDict.price = [0, 2000];
     } else if (input === "2,000 - 4,000") {
-      searchDict.price = 4000;
+      searchDict.price = [2000, 4000];
     } else if (input === "4,000 - 7,000") {
-      searchDict.price = 7000;
+      searchDict.price = [4000, 7000];
     } else if (input === "7,000 - 10,000") {
-      searchDict.price = 10000;
+      searchDict.price = [7000, 10000];
     } else if (input === "> 10,000") {
-      searchDict.price = 10001;
+      searchDict.price = [10000, 30000];
     } else if (input === "--Price Range--") {
       searchDict.price = null;
     } else {
@@ -125,21 +125,30 @@ const propertiesDeep = () => {
 
     for (let x in searchDict) {
       console.log("x\n", x);
+      console.log("searchDict[x]\n", searchDict[x]);
+
       if (searchDict[x] === null) {
         console.log(x + " is null");
         continue;
       }
-      // console.log("i shouldn't run");
+
       if (x === "furnished") {
         for (let y in searchDict[x]) {
-          if (searchDict[x][y] === sample[x][y]) {
+          if (searchDict[x][y] === true && searchDict[x][y] !== sample[x][y]) {
             result = false;
             console.log(x + " failed " + y);
             break;
           }
         }
-        if (result) {
-          continue;
+
+        if (!result) {
+          break;
+        }
+      } else if (x === "price") {
+        if (!(searchDict[x][0] < sample[x] && sample[x] <= searchDict[x][1])) {
+          result = false;
+          console.log(x + " failed");
+          break;
         }
       } else if (searchDict[x] !== sample[x]) {
         result = false;
