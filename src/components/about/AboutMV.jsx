@@ -5,9 +5,9 @@ const AboutMV = () => {
     <div className=" flex justify-center px-4 py-4 font-montserrat relative">
       <div className="my-16 md:my-0 md:items-center md:inline-flex">
         <div className="h-[17rem] md:h-[35rem] w-[17rem] md:w-[35rem] mx-auto md:mx-0 bg-mpurple rounded-full z-0">
-          <h2 className="text-mblue text-lg md:text-4xl font-bold text-center md:text-left pt-8 md:pt-0 md:mt-32 md:ml-28">
+          <h3 className="text-mblue text-lg md:text-4xl font-bold text-center md:text-left pt-8 md:pt-0 md:mt-32 md:ml-28">
             vision
-          </h2>
+          </h3> 
           <span className="flex mx-auto md:mx-0 w-[14rem] md:w-[25rem]">
             <p className="text-white text-center md:text-left text-[12px] md:text-lg leading-relaxed mt-2 md:mt-4 md:ml-24">
               Our Vision is to achieve our future goals by closely adhering to
