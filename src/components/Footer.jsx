@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-gradient font-montserrat tracking-wide text-sm text-white">
-        <div className="grid md:flex grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-8 sm:gap-x-4 sm:justify-items-center md:flex-row md:space-x-8 md:justify-between max-w-[1150px] mx-auto py-8 px-10">
+        <div className="grid md:flex grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-8 sm:gap-x-4 sm:justify-items-center md:flex-row md:space-x-8 md:justify-between max-w-[1200px] mx-auto py-8 px-10">
           <div className="flex flex-col md:space-y-2">
             <span className="tracking-wider font-semibold sm:font-bold text-white uppercase">
               Al-Madar Property Management

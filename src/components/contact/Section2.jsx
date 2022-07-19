@@ -7,19 +7,6 @@ import customer3 from "../Zimages/customer3.png";
 const Section2 = () => {
   return (
     <div className="font-montserrat">
-      {/* <div className="contact-gradient2 md:flex md:justify-center text-center md:text-left text-white m-auto py-3 md:py-5">
-        <img src={office} alt="office" className="h-40 md:h-60 ml-32 md:mx-0 rounded-xl" />
-        <div className="flex-col p-3 px-5 md:p-10">
-          <p className="font-Montserrat text-white text-sm md:text-base">
-            Bldg. No. 161 - Al Muntazah St. <br /> 330 <br /> Al Hilal Area 41 -
-            P.O.Box: 2329 <br />
-            Doha, Qatar
-          </p>
-          <button className="border-2 rounded-md mt-3 md:mt-4 p-1 px-2 md:px-3 font-Montserrat text-white text-xs md:text-base">
-            View on Map
-          </button>
-        </div>
-      </div> */}
       <div className="contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
         <div>
           <img
@@ -84,7 +71,7 @@ const Section2 = () => {
             ></textarea>
           </form>
           <button
-            class="m-auto bg-mblue hover:bg-mblue text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="m-auto bg-mblue hover:bg-mblue text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
           >
             Send

@@ -1,0 +1,246 @@
+import React, { useState } from "react";
+
+import skyline2 from "../Zimages/doha-skyline-hd.png";
+import { HiChevronDown } from "react-icons/hi";
+
+import skyline from "../Zimages/doha-skyline.png";
+import vector from "../Zimages/Vector.png";
+import Vector from "../Zimages/WhiteVector.png";
+import Arrow from "../Zimages/Arrow.png";
+
+const PropertiesS1 = () => {
+  const [location, setLocation] = useState(false);
+  const [type, setType] = useState(false);
+  const [furniture, setFurniture] = useState(false);
+  const [bedrooms, setBedrooms] = useState(false);
+  const [rate, setRate] = useState(false);
+
+  function closeAll() {
+    if (location) {
+      setLocation(false);
+    }
+    if (type) {
+      setType(false);
+    }
+    if (furniture) {
+      setFurniture(false);
+    }
+    if (bedrooms) {
+      setBedrooms(false);
+    }
+    if (rate) {
+      setRate(false);
+    }
+  }
+
+  function DropdownMenu(props) {
+    return (
+      <div className="relative inline-block text-left">
+        <div onClick={() => setLocation(!location)}>
+          <button
+            type="button"
+            className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-semibold text-mgrey hover:bg-gray-50"
+            id="menu-button"
+            aria-expanded="true"
+            aria-haspopup="true"
+          >
+            {String(location)}
+            {/* <!-- Heroicon name: solid/chevron-down --> */}
+            <HiChevronDown className="-mr-1 ml-2 h-5 w-5" />
+          </button>
+        </div>
+        <div
+          className="origin-top-left absolute left-0 mt-2 w-40 rounded-md rounded-t-none shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          role={props.category}
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+          tabindex="-1"
+        >
+          <div className="py-1" role="none">
+            {props.list.map((text) => (
+              <span className="font-normal text-mgrey block px-4 py-2 text-sm hover:bg-gray-300 hover:text-black">
+                {text}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="pt-24 w-screen font-montserrat" onClick={closeAll}>
+      <header
+        className="w-full h-full bg-origin-border bg-left md:bg-center bg-cover"
+        style={{ backgroundImage: `url(${skyline2})` }}
+      >
+        <div className="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-20 py-20">
+          <div className="text-center">
+            <div className="flex px-4 justify-center">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="mt-8 mb-6 text-4xl lg:text-5xl font-bold text-gray-100 uppercase">
+                  Your search starts here
+                </h2>
+                {/* <!-- This example requires Tailwind CSS v2.0+ --> */}
+                <div className="flex flex-row space-x-4 justify-center">
+                  <div className="relative inline-block text-left">
+                    <div onClick={() => setLocation(!location)}>
+                      <button
+                        type="button"
+                        className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-semibold text-mgrey hover:bg-gray-50"
+                        id="menu-button"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                      >
+                        Location
+                    
+                        <HiChevronDown className="-mr-1 ml-2 h-5 w-5" />
+                      </button>
+                    </div>
+                    <div
+                      className={
+                        location
+                          ? "transition ease-out duration-100 transform opacity-100 scale-100"
+                          : "transition ease-in duration-75 transform opacity-0 scale-95"
+                      }
+                    >
+                      <DropdownMenu
+                        category={location}
+                        list={["Wakrah", "Lusail"]}
+                      />
+                    </div>
+                  </div>
+                  <div className="relative inline-block text-left">
+                    <div onClick={() => setType(!type)}>
+                      <button
+                        type="button"
+                        className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-semibold text-mgrey hover:bg-gray-50"
+                        id="menu-button"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                      >
+                        Type
+                        {/* <!-- Heroicon name: solid/chevron-down --> */}
+                        <HiChevronDown className="-mr-1 ml-2 h-5 w-5" />
+                      </button>
+                    </div>
+                    <div
+                      className={
+                        type
+                          ? "transition ease-out duration-100 transform opacity-100 scale-100"
+                          : "transition ease-in duration-75 transform opacity-0 scale-95"
+                      }
+                    >
+                      <DropdownMenu
+                        category="unit type"
+                        list={["Commercial", "Office", "Apartment", "Villa"]}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* <img src={skyline} alt="doha sky-line" className="object-cover top-6.5" />
+      <div className="absolute">
+        <h1 className="font-montserrat text-white text-5xl font-medium tracking-widest p-3">
+          YOUR SEARCH STARTS HERE
+        </h1>
+        <div className="flex space-x-3 justify-center items-center">
+          <input
+            className="w-10/12 bg-white rounded-xl p-3"
+            type="text"
+            placeholder="Begin typing, your search will appear below.."
+            name="search"
+          />
+          <button className="w-auto bg-white rounded-xl py-2 px-4 font-montserrat text-mpurple text-2xl font-normal">
+            Find
+          </button>
+        </div>
+      </div> */}
+      {/* <div className="flex space-x-10 font-montserrat text-mpurple font-semibold m-auto ">
+        <ul className="flex justify-center space-x-10 ">
+          <li className="flex space-x-2 bg-mpurple p-2 rounded-sm text-white">
+            <img src={Vector} alt="vector" className="h-5" />
+            <p>Al Rayyan</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Al Wukair</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Doha</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Dukhan</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Mesaieed</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Al Wakrah</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Lusail</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={vector} alt="vector" className="h-5" />
+            <p>Al Khor</p>
+          </li>
+          <li className="flex space-x-2 py-2">
+            <img src={Arrow} alt="vector" className="h-5" />
+          </li>
+        </ul>
+      </div> */}
+    </div>
+  );
+};
+
+export default PropertiesS1;
+
+
+<!-- THUMBs Gallery -->
+
+<div className="basis-1/6">
+  <div className="h-full w-full">
+    <Swiper
+      onSwiper="{setThumbsSwiper}"
+      loop="{true}"
+      spaceBetween="{10}"
+      slidesPerView="{4}"
+      freeMode="{true}"
+      watchSlidesProgress="{true}"
+      modules="{[FreeMode,"
+      Navigation,
+      Thumbs]}
+      className=""
+    >
+      <SwiperSlide id="client 1">
+        <img src="{project1}" className="h-1/3 w-full stretch" alt="" />
+      </SwiperSlide>
+      <SwiperSlide id="client 1">
+        <img src="{project2}" className="w-1/3" alt="" />
+      </SwiperSlide>
+      <SwiperSlide id="client 1">
+        <img src="{project3}" className="w-1/3" alt="" />
+      </SwiperSlide>
+      <SwiperSlide id="client 1">
+        <img src="{project4}" className="w-1/3" alt="" />
+      </SwiperSlide>
+      <SwiperSlide id="client 1">
+        <img src="{project5}" className="w-1/3" alt="" />
+      </SwiperSlide>
+      <SwiperSlide id="client 1">
+        <img src="{project6}" className="w-1/3" alt="" />
+      </SwiperSlide>
+    </Swiper>
+  </div>
+</div>

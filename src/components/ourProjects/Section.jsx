@@ -1,23 +1,53 @@
 import React from "react";
-import stripes from "../Zimages/heading_stripes.svg";
-import project1 from "../Zimages/project1.svg";
-import project2 from "../Zimages/project2.svg";
-import project3 from "../Zimages/project3.svg";
-import project4 from "../Zimages/project4.svg";
-import project5 from "../Zimages/project5.svg";
-import project6 from "../Zimages/project6.svg";
+import projectsData from "./projectsData.tsx";
+import Headings from "../Headings";
+import defaultImage from "../Zimages/default.png";
+
+function Projects(props) {
+  console.log(projectsData[0].location);
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-6 sm:px-6 md:px-10 lg:px-14 my-12">
+      {projectsData.map((item) => (
+        <div className="relative flex mx-auto fit-content font-montserrat">
+          <div className="flex flex-col absolute inset-0 pl-4 pb-4 z-10 bg-black text-white justify-end opacity-0 hover:opacity-100 bg-opacity-60 duration-300">
+            <h3 className="font-semibold text-base sm:text-sm">
+              {item.service ? item.service : props.service}
+            </h3>
+            <h4 className="font-light text-base sm:text-sm">
+              {item.name ? item.name : props.name}
+            </h4>
+            <h4 className="mt-2 font-light text-base sm:text-sm">
+              {item.location ? item.location : props.location}
+            </h4>
+          </div>
+          <div className="relative">
+            <div className="">
+              <img
+                src={item.image ? item.image : props.image}
+                alt="project"
+                className="max-h-72 sm:h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+Projects.defaultProps = {
+  service: "Service Type",
+  name: "Project Name",
+  location: "Location",
+  image: defaultImage,
+};
 
 const Section = () => {
   return (
-    <div className="">
-      <div className="pt-24 flex-col m-auto justify-evenly items-center text-center font-Montserrat text-mpurple">
-        <div className="flex justify-start items-center mx-20 mb-7">
-          <img src={stripes} alt="" className="h-10 md:h-20" />
-          <h2 className="text-2xl md:text-4xl text-center font-bold md:text-left mt-2 md:mt-7">
-            Our <span className="text-mblue"> Team</span>
-          </h2>
-        </div>
-        <p className="text-sm md:text-base font-Montserrat font-normal text-mpurple mx-20">
+    <div className="max-w-[1200px] mx-auto font-montserrat pt-24 px-10">
+      <div className="flex flex-col pt-8">
+        <Headings first="Our" second="Projects" />
+        <p className="text-sm md:text-sm lg:text-base text-justify md:text-left text-mpurple mt-6 sm:mx-6 md:mx-10 lg:mx-14">
           Al Madar Property Management currently manages the following assets,
           with great client satisfaction in the property management services
           offered and an occupancy rate of above 90%. As a result, we have a
@@ -25,18 +55,8 @@ const Section = () => {
           buildings, yet we are expanding.
         </p>
       </div>
-      <div className="flex-col space-y-10 py-10">
-        <div className=" md:flex md:justify-evenly ">
-          <img src={project1} alt="project1" className="md:w-56 lg:w-80 " />
-          <img src={project2} alt="project2" className="md:w-56 lg:w-80 " />
-          <img src={project3} alt="project3" className="md:w-56 lg:w-80 " />
-        </div>
-        <div className="md:flex md:justify-evenly">
-          <img src={project4} alt="project4" className="md:w-56 lg:w-80 " />
-          <img src={project5} alt="project5" className="md:w-56 lg:w-80 " />
-          <img src={project6} alt="project6" className="md:w-56 lg:w-80 " />
-        </div>
-      </div>
+
+      <Projects />
     </div>
   );
 };
