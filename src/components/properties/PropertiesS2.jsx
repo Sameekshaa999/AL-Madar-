@@ -3,7 +3,7 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { IoMdPhotos } from "react-icons/io";
 
-import propertiesData from "./propertiesData.tsx";
+import qatarPropertiesData from "./qatarPropertiesData.tsx";
 
 // Import Swiper components
 import {
@@ -55,7 +55,7 @@ const PropertiesS2 = () => {
             modules={[Autoplay, Pagination]}
             className=""
           >
-            {propertiesData.map((item) => (
+            {qatarPropertiesData.map((item) => (
               <SwiperSlide id={item.id}>
                 <div className="group relative">
                   <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
@@ -180,7 +180,7 @@ const PropertiesS2 = () => {
                     ]}
                     className="top-[20%] md:top-[5%]"
                   >
-                    {propertiesData[galleryid - 1].gallery.map((item) => (
+                    {qatarPropertiesData[galleryid - 1].gallery.map((item) => (
                       <SwiperSlide key={item}>
                         <div className="property-gallery-item">
                           <img
