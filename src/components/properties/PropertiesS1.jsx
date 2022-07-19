@@ -94,8 +94,6 @@ const PropertiesS1 = () => {
   }
 
   function DropdownMenu(props) {
-    // const [search, setSearch] = useState(null);
-
     return (
       <div className="relative justify-center block rounded-lg text-sm text-mgrey">
         <select
