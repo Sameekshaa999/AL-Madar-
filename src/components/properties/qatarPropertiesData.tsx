@@ -146,6 +146,7 @@ const qatarPropertiesData = [
     gallery: [prop_3_img_1, prop_3_img_2, prop_3_img_3, prop_3_img_4, prop_3_img_5, 
               prop_3_img_6, prop_3_img_7, prop_3_img_8, prop_3_img_9, prop_3_img_10],
   },
+
 ];
 
 export default qatarPropertiesData
