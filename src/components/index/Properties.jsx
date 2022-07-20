@@ -1,9 +1,9 @@
 import React from "react";
-import stripes from "../Zimages/heading_stripes.svg";
-import qatar1 from "../Zimages/qatar_ourproperties_big.png";
-import qatar2 from "../Zimages/qatar_ourproperties_small.png";
-import dubai1 from "../Zimages/dubai_ourproperties_big.png";
-import dubai2 from "../Zimages/dubai_ourproperties_small.png";
+import stripes from "../Zimages/index/heading_stripes.svg";
+import qatar1 from "../Zimages/index/qatar_ourproperties_big.png";
+import qatar2 from "../Zimages/index/qatar_ourproperties_small.png";
+import dubai1 from "../Zimages/index/dubai_ourproperties_big.png";
+import dubai2 from "../Zimages/index/dubai_ourproperties_small.png";
 
 const Properties = () => {
   return (

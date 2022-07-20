@@ -1,5 +1,5 @@
 import React from "react";
-import services1_bg from "../Zimages/services1_bg.svg";
+import services1_bg from "../Zimages/services1/services1_bg.jpg";
 const ServicesSection1 = () => {
   return (
     <div className="pt-24 w-full flex flex-col justify-center ">

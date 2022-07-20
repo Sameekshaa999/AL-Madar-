@@ -1,6 +1,6 @@
 import React from "react";
-import contactHome from "../Zimages/contactHome.svg";
-import contactArrow from "../Zimages/contactArrow.svg";
+import contactHome from "../Zimages/contact/contactHome.jpg";
+import contactArrow from "../Zimages/contact/arrow.jpg";
 
 const Section1 = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../components/Zimages/almadar-logo.jpg";
-import FB from "../components/Zimages/facebook.png";
-import Insta from "../components/Zimages/instagram.png";
-import Twitter from "../components/Zimages/twitter.png";
-import Linkedin from "../components/Zimages/linkedin.png";
+import Logo from "../components/Zimages/navbar/almadar-logo.jpg";
+import FB from "../components/Zimages/navbar/facebook.jpg";
+import Insta from "../components/Zimages/navbar/instagram.jpg";
+import Twitter from "../components/Zimages/navbar/twitter.jpg";
+import Linkedin from "../components/Zimages/navbar/linkedin.jpg";
 const Navbar = () => {
   // responsive toggle function
 

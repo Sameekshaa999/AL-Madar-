@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Brochure from "../components/Zimages/brochure.png";
-import Logo from "../components/Zimages/almadar-logo.jpg";
-import Time from "../components/Zimages/time_footer.png";
-import Phone from "../components/Zimages/phone_footer.png";
-import Email from "../components/Zimages/email_footer.png";
-import Help from "../components/Zimages/help_footer.png";
-import FB from "../components/Zimages/facebook.png";
-import Insta from "../components/Zimages/instagram.png";
-import Twitter from "../components/Zimages/twitter.png";
-import Linkedin from "../components/Zimages/linkedin.png";
+import Brochure from "../components/Zimages/services2/brochure.jpg";
+import Logo from "../components/Zimages/navbar/almadar-logo.jpg";
+import Time from "../components/Zimages/footer/time_footer.png";
+import Phone from "../components/Zimages/footer/phone_footer.png";
+import Email from "../components/Zimages/footer/email_footer.png";
+import Help from "../components/Zimages/footer/help_footer.png";
+import FB from "../components/Zimages/navbar/facebook.jpg";
+import Insta from "../components/Zimages/navbar/instagram.jpg";
+import Twitter from "../components/Zimages/navbar/twitter.jpg";
+import Linkedin from "../components/Zimages/navbar/linkedin.jpg";
 
 const Footer = () => {
   return (

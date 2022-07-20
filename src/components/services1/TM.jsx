@@ -1,7 +1,7 @@
 import React from "react";
-import services1_TM from "../Zimages/services1_TM.svg";
-import TM_icon from "../Zimages/TM_icon.svg";
-import check from "../Zimages/check_icon.svg";
+import services1_TM from "../Zimages/services1/services1_TM.jpg";
+import TM_icon from "../Zimages/services1/TM_icon.jpg";
+import check from "../Zimages/services1/check_icon.jpg";
 import { Link } from "react-router-dom";
 
 const TM = () => {

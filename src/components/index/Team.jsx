@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import team from "../Zimages/team.jpg";
+import team from "../Zimages/index/team.jpg";
 
 const Team = () => {
   return (

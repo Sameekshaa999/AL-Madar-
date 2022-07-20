@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hero from "../Zimages/1.1.jpg";
-import heroMobile from "../Zimages/hero mobile.jpg";
+import hero from "../Zimages/index/1.1.jpg";
+import heroMobile from "../Zimages/index/hero_mobile.jpg";
 
 const Hero = () => {
   return (

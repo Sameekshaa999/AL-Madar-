@@ -1,5 +1,5 @@
 import React from "react";
-import hexagons from "../Zimages/hexagons.svg";
+import hexagons from "../Zimages/about/hexagons.svg";
 
 const About = () => {
   return (

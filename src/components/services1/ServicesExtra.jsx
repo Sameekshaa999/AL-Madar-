@@ -1,7 +1,7 @@
 import React from "react";
-import office_building from "../Zimages/office_building.png";
-import telephone from "../Zimages/telephone.png";
-import email from "../Zimages/email.png";
+import office_building from "../Zimages/services1/office_building.jpg";
+import telephone from "../Zimages/services1/telephone.jpg";
+import email from "../Zimages/services1/email.jpg";
 
 const ServicesExtra = () => {
   return (

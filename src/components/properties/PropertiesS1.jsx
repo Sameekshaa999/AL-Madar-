@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import propertiesData from "./propertiesData.tsx";
-
-import skyline2 from "../Zimages/doha-skyline-hd.png";
-
-import skyline from "../Zimages/doha-skyline.png";
-import vector from "../Zimages/Vector.png";
-import Vector from "../Zimages/WhiteVector.png";
-import Arrow from "../Zimages/Arrow.png";
+import skyline2 from "../Zimages/properties/doha-skyline-hd.png";
 
 const PropertiesS1 = () => {
   const locations = [
