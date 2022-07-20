@@ -1,17 +1,27 @@
-import React from "react";
-import propertiesData from "./propertiesData.tsx";
-import skyline2 from "../Zimages/properties/doha-skyline-hd.png";
+import React, { useState } from "react";
+import qatarPropertiesData from "./qatarPropertiesData.tsx";
+import skyline2 from "../Zimages/doha-skyline-hd.png";
+
+
 
 const PropertiesS1 = () => {
   const locations = [
-    ...new Set(propertiesData.map((item) => item.location)),
+    ...new Set(qatarPropertiesData.map((item) => item.location)),
   ].sort();
   const unitTypes = [
-    ...new Set(propertiesData.map((item) => item.type)),
+    ...new Set(qatarPropertiesData.map((item) => item.type)),
   ].sort();
   const bedrooms = [
-    ...new Set(propertiesData.map((item) => item.bedrooms)),
+    ...new Set(qatarPropertiesData.map((item) => item.bedrooms)),
   ].sort();
+  const furnishings = ["Full", "Semi", "None"];
+  const pricings = [
+    "< 2,000",
+    "2,000 - 4,000",
+    "4,000 - 7,000",
+    "7,000 - 10,000",
+    "> 10,000",
+  ];
 
   var searchDict = {
     location: null,
@@ -22,6 +32,7 @@ const PropertiesS1 = () => {
       semi: false,
       none: false,
     },
+    price: null,
   };
   console.log(searchDict);
 
@@ -45,6 +56,16 @@ const PropertiesS1 = () => {
       searchDict.furnished.full = false;
       searchDict.furnished.semi = false;
       searchDict.furnished.none = true;
+    } else if (input === "< 2,000") {
+      searchDict.price = 2000;
+    } else if (input === "2,000 - 4,000") {
+      searchDict.price = 4000;
+    } else if (input === "4,000 - 7,000") {
+      searchDict.price = 7000;
+    } else if (input === "7,000 - 10,000") {
+      searchDict.price = 10000;
+    } else if (input === "> 10,000") {
+      searchDict.price = 10001;
     } else {
       console.log("search update error");
     }
@@ -62,14 +83,13 @@ const PropertiesS1 = () => {
         semi: false,
         none: false,
       },
+      price: null,
     };
     console.log(searchDict);
     return searchDict;
   }
 
   function DropdownMenu(props) {
-    // const [search, setSearch] = useState(null);
-
     return (
       <div className="relative justify-center block rounded-lg text-sm text-mgrey">
         <select
@@ -107,15 +127,9 @@ const PropertiesS1 = () => {
 
                   <DropdownMenu category="Rooms" list={bedrooms} />
 
-                  <DropdownMenu
-                    category="Furnishings"
-                    list={["Full", "Semi", "None"]}
-                  />
+                  <DropdownMenu category="Furnishings" list={furnishings} />
 
-                  {/* <DropdownMenu
-                    category="Price Range"
-                    list={["range1", "range2", "range3"]}
-                  /> */}
+                  <DropdownMenu category="Price Range" list={pricings} />
                   <button
                     className="relative justify-center block rounded-lg text-sm text-mgrey"
                     onClick={ResetSearchQuery}
