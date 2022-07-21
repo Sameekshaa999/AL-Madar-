@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import qatarPropertiesData from "./qatarPropertiesData.tsx";
 
 //images and icons
-import skyline2 from "../Zimages/doha-skyline-hd.png";
+import skyline2 from "../Zimages/properties/doha-skyline-hd.png";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { IoMdPhotos } from "react-icons/io";

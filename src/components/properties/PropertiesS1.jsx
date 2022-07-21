@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import qatarPropertiesData from "./qatarPropertiesData.tsx";
-import skyline2 from "../Zimages/doha-skyline-hd.png";
+import skyline2 from "../Zimages/properties/doha-skyline-hd.png";
 
 
 
