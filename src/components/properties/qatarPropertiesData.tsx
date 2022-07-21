@@ -38,9 +38,9 @@ const qatarPropertiesData = [
                   none: false
                },
     area: 50,
-    bedrooms: 3,
+    bedrooms: 1,
     bathrooms: 2,
-    price: 4950,
+    price: 1950,
     location: "wakrah",
     image: prop_1_img_1,
     gallery: [prop_1_img_1, prop_1_img_2, prop_1_img_3, prop_1_img_4, prop_1_img_5,
@@ -58,7 +58,7 @@ const qatarPropertiesData = [
                   none: false
                },
     area: 100,
-    bedrooms: 1,
+    bedrooms: 2,
     bathrooms: 1,
     price: 2950,
     location: "doha",
@@ -78,7 +78,7 @@ const qatarPropertiesData = [
                   none: true
                },
     area: 70,
-    bedrooms: 2,
+    bedrooms: 3,
     bathrooms: 1,
     price: 3950,
     location: "lusail",
@@ -90,63 +90,45 @@ const qatarPropertiesData = [
   {
     itemNumber: 4,
     refID: "4",
-    title: "wakrah villa fully-furnished 500sqm 1bed 2bath",
-    type: "villa",
+    title: "abu hamour office semi-furnished 503sqm 4bed 2bath",
+    type: "research facility",
+    furnished: { 
+                  full: false, 
+                  semi: true, 
+                  none: false
+               },
+    area: 503,
+    bedrooms: 4,
+    bathrooms: 2,
+    price: 4950,
+    location: "abu hamour",
+    image: prop_1_img_2,
+    gallery: [prop_1_img_1, prop_1_img_2, prop_1_img_3, prop_1_img_4, prop_1_img_5,
+              prop_1_img_6],
+  },
+
+  {
+    itemNumber: 5,
+    refID: "5",
+    title: "wakrah hotel fully-furnished 504sqm 3bed 2bath",
+    type: "hotel",
     furnished: { 
                   full: true, 
                   semi: false, 
                   none: false
                },
-    area: 500,
-    bedrooms: 1,
+    area: 504,
+    bedrooms: 3,
     bathrooms: 2,
-    price: 4950,
+    price: 10950,
     location: "wakrah",
-    image: prop_1_img_1,
+    image: prop_1_img_3,
     gallery: [prop_1_img_1, prop_1_img_2, prop_1_img_3, prop_1_img_4, prop_1_img_5,
               prop_1_img_6],
   },
-  
-  {
-    itemNumber: 5,
-    refID: "5",
-    title: "mesaieed office none-furnished 100sqm 1bed 1bath",
-    type: "office",
-    furnished: { 
-                  full: false, 
-                  semi: false, 
-                  none: true
-               },
-    area: 100,
-    bedrooms: 1,
-    bathrooms: 1,
-    price: 4950,
-    location: "mesaieed",
-    image: prop_2_img_1,
-    gallery: [prop_2_img_1, prop_2_img_2, prop_2_img_3, prop_2_img_4, prop_2_img_5, 
-              prop_2_img_6],
-  },
-  
-  {
-    itemNumber: 6,
-    refID: "6",
-    title: "lusail duplex not-furnished 70sqm 5bed 3bath",
-    type: "duplex",
-    furnished: { 
-                  full: false, 
-                  semi: false, 
-                  none: true
-               },
-    area: 70,
-    bedrooms: 5,
-    bathrooms: 3,
-    price: 3950,
-    location: "lusail",
-    image: prop_3_img_1,
-    gallery: [prop_3_img_1, prop_3_img_2, prop_3_img_3, prop_3_img_4, prop_3_img_5, 
-              prop_3_img_6, prop_3_img_7, prop_3_img_8, prop_3_img_9, prop_3_img_10],
-  },
 
+  
+  
 ];
 
 export default qatarPropertiesData

@@ -167,18 +167,13 @@ function PropertiesDeep() {
 
   function RenderProperties() {
     console.log("render properties called");
-
     if (JSON.stringify(searchDict) === JSON.stringify(defaultSearchQuery)) {
       console.log("default search ON");
-      return qatarPropertiesData;
+      return <div>Haha</div>;
+    } else {
+      console.log("searching query");
+      return <div>{render}</div>;
     }
-
-    console.log("searching query");
-    var searchData = qatarPropertiesData
-      .map((item) => Search(item))
-      .filter(Boolean);
-    console.log("searchData refined\n", searchData);
-    return searchData;
   }
 
   function DropdownMenu(props) {
@@ -359,70 +354,7 @@ function PropertiesDeep() {
             className=""
           >
             {console.log("render works", render)}
-            {console.log("to be rendered", RenderProperties())}
-            {RenderProperties().map((item) => (
-              <SwiperSlide id={item.id}>
-                <div className="group relative">
-                  <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="object-center object-cover lg:w-full lg:h-full"
-                    />
-                  </div>
-
-                  <div className="flex flex-col w-full mt-4">
-                    <h3 className="text-xl font-extrabold text-mgrey">
-                      QAR {item.price}
-                    </h3>
-                    <div className="flex flex-row p-1 text-mpurple text-base font-mono font-semibold relative">
-                      <div className="flex flex-row items-center">
-                        <span className="mr-2 text-black">{item.bedrooms}</span>
-                        <span className="scale-125">
-                          <FaBed />
-                        </span>
-                        <span className="mx-2 text-xl text-black">|</span>
-                      </div>
-
-                      <div className="flex flex-row items-center">
-                        <span className="mr-2 text-black">
-                          {item.bathrooms}
-                        </span>
-                        <span className="scale-125">
-                          <FaBath />
-                        </span>
-                        <span className="mx-2 text-xl text-black">|</span>
-                      </div>
-
-                      <div className="flex flex-row items-center">
-                        <span className="mr-2 text-black">
-                          {item.area} sqm.
-                        </span>
-                        <span className="scale-125">
-                          <BsGridFill />
-                        </span>
-                      </div>
-
-                      <div className="absolute inline-flex right-1 top-0">
-                        <div
-                          onClick={() => setGalleryid(item.itemNumber)}
-                          className="flex flex-row items-center hover:cursor-pointer"
-                        >
-                          {/* Gallery */}
-                          <span className="mr-2">{item.gallery.length}</span>
-                          <span className="animate-pulse scale-[1.8] hover:scale-[1.6] transition">
-                            <IoMdPhotos />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-semibold text-mgrey">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+            {RenderProperties()}
           </Swiper>
         </div>
         {galleryid ? <GalleryModal /> : <div></div>}
