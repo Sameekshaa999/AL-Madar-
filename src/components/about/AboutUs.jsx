@@ -16,7 +16,7 @@ const About = () => {
           master plan land developments.
         </p>
       </div>
-      <img src={hexagons} alt="hexagons" className="w-2/5 mt-10"/>
+      <img src={hexagons} alt="hexagons" className=" md:w-2/5 md:mt-10"/>
     </div>
   );
 };
