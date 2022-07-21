@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../components/Zimages/loading_logo.png";
+import logo from "../components/Zimages/index/loading_logo.png";
 
 const Spinner = () => {
   return (

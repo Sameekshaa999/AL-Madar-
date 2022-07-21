@@ -1,8 +1,8 @@
 import React from "react";
-import office from "../Zimages/Al-Madar-office.jpg";
-import customer1 from "../Zimages/customer1.png";
-import customer2 from "../Zimages/customer2.png";
-import customer3 from "../Zimages/customer3.png";
+import office from "../Zimages/contact/Al-Madar-office.jpg";
+import client2 from "../Zimages/index/client2.png";
+import client3 from "../Zimages/index/client3.png";
+import client4 from "../Zimages/index/client4.png";
 
 const Section2 = () => {
   return (
@@ -83,7 +83,7 @@ const Section2 = () => {
           </h1>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer1} alt="1" className="w-12 h-12 md:w-14" />
+              <img src={client2} alt="1" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Anna Smith</h2>
             </div>
             <p className="text-xs md:text-sm ">
@@ -95,7 +95,7 @@ const Section2 = () => {
           </div>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer2} alt="2" className="w-12 h-12 md:w-14" />
+              <img src={client3} alt="2" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Mohammad Ali</h2>
             </div>
             <p className="text-xs md:text-sm">
@@ -106,7 +106,7 @@ const Section2 = () => {
           </div>
           <div className="mt-3">
             <div className="flex">
-              <img src={customer3} alt="3" className="w-12 h-12 md:w-14" />
+              <img src={client4} alt="3" className="w-12 h-12 md:w-14" />
               <h2 className="m-4">Sara Khan</h2>
             </div>
             <p className="text-xs md:text-sm">

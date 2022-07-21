@@ -1,7 +1,7 @@
 import React from "react";
-import choose from "../Zimages/whychooseus.png";
-import project from "../Zimages/featuredprojects.png";
-import place from "../Zimages/findyourplace.png";
+import choose from "../Zimages/properties/whychooseus.jpg";
+import project from "../Zimages/properties/featuredprojects.jpg";
+import place from "../Zimages/properties/findyourplace.jpg";
 
 const PropertiesS3 = () => {
   return (

@@ -9,11 +9,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 
-import stars from "../Zimages/review_stars.png";
-import client1 from "../Zimages/client1.png";
-import client2 from "../Zimages/customer1.png";
-import client3 from "../Zimages/customer2.png";
-import client4 from "../Zimages/customer3.png";
+import stars from "../Zimages/index/review_stars.png";
+import client1 from "../Zimages/index/client1.png";
+import client2 from "../Zimages/index/client2.png";
+import client3 from "../Zimages/index/client3.png";
+import client4 from "../Zimages/index/client4.png";
 // import quotes from "../Zimages/quotes.png";
 
 const CustomerReview = () => {

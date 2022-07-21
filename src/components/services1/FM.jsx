@@ -1,7 +1,7 @@
 import React from "react";
-import services1_FM from "../Zimages/services1_FM.svg";
-import FM_icon from "../Zimages/FM_icon.svg";
-import check from "../Zimages/check_icon.svg";
+import services1_FM from "../Zimages/services1/services1_FM.jpg";
+import FM_icon from "../Zimages/services1/FM_icon.jpg";
+import check from "../Zimages/services1/check_icon.jpg";
 import { Link } from "react-router-dom";
 
 const FM = () => {

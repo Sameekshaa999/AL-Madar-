@@ -1,13 +1,13 @@
 import React from "react";
-import stripes from "../Zimages/heading_stripes.svg";
-import managers from "../Zimages/property_managers.svg";
-import legal from "../Zimages/legal_team.svg";
-import marketing from "../Zimages/marketing_team.svg";
-import analysts from "../Zimages/property_analysts.svg";
-import guards from "../Zimages/security_guards.svg";
-import cleaners from "../Zimages/cleaners.svg";
-import safety from "../Zimages/safety_managers.svg";
-import other from "../Zimages/other_staff.svg";
+import stripes from "../Zimages/index/heading_stripes.svg";
+import managers from "../Zimages/about/property_managers.jpg";
+import legal from "../Zimages/about/legal_team.jpg";
+import marketing from "../Zimages/about/marketing_team.jpg";
+import analysts from "../Zimages/about/property_analyst.jpg";
+import guards from "../Zimages/about/security_guards.jpg";
+import cleaners from "../Zimages/about/cleaners.jpg";
+import safety from "../Zimages/about/safety_managers.jpg";
+import other from "../Zimages/about/other_staff.jpg";
 
 const OurTeam = () => {
   return (

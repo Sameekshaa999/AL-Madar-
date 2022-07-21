@@ -1,5 +1,5 @@
 import React from "react";
-import stripes from "./Zimages/heading_stripes.svg";
+import stripes from "../components/Zimages/index/heading_stripes.svg";
 
 function Headings(props) {
   return (

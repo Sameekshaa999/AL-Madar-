@@ -1,6 +1,6 @@
 import React from "react";
-import Group from "../Zimages/Group-78.svg";
-import stripes from "../Zimages/heading_stripes.svg";
+import Group from "../Zimages/index/Group-78.svg";
+import stripes from "../Zimages/index/heading_stripes.svg";
 
 const AboutSection = () => {
   return (

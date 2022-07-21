@@ -1,9 +1,9 @@
 import React from "react";
-import mv1 from "../Zimages/mv1.png";
-import mv2 from "../Zimages/mv2.jpg";
-import mv3 from "../Zimages/mv3.jpg";
-import target from "../Zimages/target.png";
-import vision from "../Zimages/vision.png";
+import mv1 from "../Zimages/index/mv1.png";
+import mv2 from "../Zimages/index/mv2.jpg";
+import mv3 from "../Zimages/index/mv3.jpg";
+import target from "../Zimages/index/target.png";
+import vision from "../Zimages/index/vision.png";
 
 const MV = () => {
   return (

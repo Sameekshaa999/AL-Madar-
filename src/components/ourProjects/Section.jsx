@@ -1,7 +1,7 @@
 import React from "react";
 import projectsData from "./projectsData.tsx";
 import Headings from "../Headings";
-import defaultImage from "../Zimages/default.png";
+import defaultImage from "../Zimages/projects/default.jpg";
 
 function Projects(props) {
   console.log(projectsData[0].location);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import map from "../Zimages/qatarmap.png";
+import map from "../Zimages/index/qatarmap.png";
 
 const Services = () => {
   return (

@@ -1,16 +1,15 @@
 import React from "react";
-import polygon from "../Zimages/Polygon.png";
-import homeinsurance from "../Zimages/home-insurance.png";
-import rectangle from "../Zimages/Rectangle.png";
-import settings from "../Zimages/settings-gears.png";
-import broom from "../Zimages/flying-broom.png";
-//lol
+import polygon from "../Zimages/services2/Polygon.png";
+import homeinsurance from "../Zimages/services2/home-insurance.png";
+import rectangle from "../Zimages/services2/Rectangle.png";
+import settings from "../Zimages/services2/settings-gears.png";
+import broom from "../Zimages/services2/flying-broom.png";
 
 const AllServices = () => {
   return (
     <div className=" my-10 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 justify-center items-center">
       <div className="relative border-2 w-max  md:ml-0">
-        <img src={polygon} alt="" className="" />
+        <img src={polygon} alt="polygon" className="" />
         <h1 className="absolute top-10 left-16 font-montserrat text-xl text-white font-bold">
           Tenancy Management
         </h1>

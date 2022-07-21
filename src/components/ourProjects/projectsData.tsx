@@ -1,9 +1,9 @@
-import project1 from "../Zimages/project1.png";
-import project2 from "../Zimages/project2.png";
-import project3 from "../Zimages/project3.png";
-import project4 from "../Zimages/project4.png";
-import project5 from "../Zimages/project5.png";
-import project6 from "../Zimages/project6.png";
+import project1 from "../Zimages/projects/project1.jpg";
+import project2 from "../Zimages/projects/project2.jpg";
+import project3 from "../Zimages/projects/project3.jpg";
+import project4 from "../Zimages/projects/project4.jpg";
+import project5 from "../Zimages/projects/project5.jpg";
+import project6 from "../Zimages/projects/project6.jpg";
 
 const projectsData = [
   {

@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import qatarPropertiesData from "./qatarPropertiesData.tsx";
-
 import skyline2 from "../Zimages/doha-skyline-hd.png";
 
-import skyline from "../Zimages/doha-skyline.png";
-// import vector from "../Zimages/Vector.png";
-// import Vector from "../Zimages/WhiteVector.png";
-// import Arrow from "../Zimages/Arrow.png";
+
 
 const PropertiesS1 = () => {
   const locations = [
