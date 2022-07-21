@@ -61,7 +61,7 @@ const searchDict = {
   price: null,
 };
 
-function PropertiesDeep() {
+const PropertiesDeep = () => {
   console.log("default user search\n", searchDict);
   const [galleryid, setGalleryid] = useState(null);
   const [render, setRender] = useState(0);
@@ -429,6 +429,6 @@ function PropertiesDeep() {
       </div>
     </>
   );
-}
+};
 
 export default PropertiesDeep;
