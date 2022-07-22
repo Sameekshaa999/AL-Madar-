@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //data file
 import qatarPropertiesData from "./qatarPropertiesData.tsx";
@@ -6,6 +6,8 @@ import qatarPropertiesData from "./qatarPropertiesData.tsx";
 //images and icons
 import skyline from "../Zimages/properties/doha-skyline-hd.png";
 import { FaBed, FaBath } from "react-icons/fa";
+import { ImSpinner2 } from "react-icons/im";
+import { GoSearch } from "react-icons/go";
 import { BsGridFill } from "react-icons/bs";
 import { IoMdPhotos } from "react-icons/io";
 
@@ -19,102 +21,131 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
+const locations = [
+  ...new Set(qatarPropertiesData.map((item) => item.location)),
+].sort();
+const unitTypes = [
+  ...new Set(qatarPropertiesData.map((item) => item.type)),
+].sort();
+const bedrooms = [
+  ...new Set(qatarPropertiesData.map((item) => item.bedrooms)),
+].sort();
+const furnishings = ["Full", "Semi", "None"];
+const pricings = [
+  "< 2,000",
+  "2,000 - 4,000",
+  "4,000 - 7,000",
+  "7,000 - 10,000",
+  "> 10,000",
+];
+
+const defaultSearchQuery = {
+  location: null,
+  type: null,
+  bedrooms: null,
+  furnished: {
+    full: false,
+    semi: false,
+    none: false,
+  },
+  price: null,
+};
+
+const searchDict = {
+  location: null,
+  type: null,
+  bedrooms: null,
+  furnished: {
+    full: false,
+    semi: false,
+    none: false,
+  },
+  price: null,
+};
+
+function DropdownMenu(props) {
+  return (
+    <div className="relative justify-center block rounded-lg text-sm font-bold text-white">
+      <select
+        id={props.category}
+        onChange={(e) => UpdateSearchQuery(e.target.value)}
+        className="rounded-lg bg-mpurple border-8 border-mpurple"
+      >
+        <option value={null}>--{props.category}--</option>
+        {props.list.map((text) => (
+          <option
+            key={props.category + "|" + props.list.indexOf(text)}
+            value={text}
+          >
+            {text}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+function UpdateSearchQuery(input) {
+  console.log(input);
+  if (locations.includes(input)) {
+    searchDict.location = input;
+  } else if (input === "--Location--") {
+    searchDict.location = null;
+  } else if (unitTypes.includes(input)) {
+    searchDict.type = input;
+  } else if (input === "--Type--") {
+    searchDict.type = null;
+  } else if (bedrooms.includes(Number(input))) {
+    searchDict.bedrooms = Number(input);
+  } else if (input === "--Rooms--") {
+    searchDict.bedrooms = null;
+  } else if (input === "Full") {
+    searchDict.furnished.full = true;
+    searchDict.furnished.semi = false;
+    searchDict.furnished.none = false;
+  } else if (input === "Semi") {
+    searchDict.furnished.full = false;
+    searchDict.furnished.semi = true;
+    searchDict.furnished.none = false;
+  } else if (input === "None") {
+    searchDict.furnished.full = false;
+    searchDict.furnished.semi = false;
+    searchDict.furnished.none = true;
+  } else if (input === "--Furnishings--") {
+    searchDict.furnished.full = false;
+    searchDict.furnished.semi = false;
+    searchDict.furnished.none = false;
+  } else if (input === "< 2,000") {
+    searchDict.price = [0, 2000];
+  } else if (input === "2,000 - 4,000") {
+    searchDict.price = [2000, 4000];
+  } else if (input === "4,000 - 7,000") {
+    searchDict.price = [4000, 7000];
+  } else if (input === "7,000 - 10,000") {
+    searchDict.price = [7000, 10000];
+  } else if (input === "> 10,000") {
+    searchDict.price = [10000, 30000];
+  } else if (input === "--Price Range--") {
+    searchDict.price = null;
+  } else {
+    console.log("search update error");
+  }
+
+  console.log("user search\n", searchDict);
+  return searchDict;
+}
+
 const PropertiesS2 = () => {
-  const locations = [
-    ...new Set(qatarPropertiesData.map((item) => item.location)),
-  ].sort();
-  const unitTypes = [
-    ...new Set(qatarPropertiesData.map((item) => item.type)),
-  ].sort();
-  const bedrooms = [
-    ...new Set(qatarPropertiesData.map((item) => item.bedrooms)),
-  ].sort();
-  const furnishings = ["Full", "Semi", "None"];
-  const pricings = [
-    "< 2,000",
-    "2,000 - 4,000",
-    "4,000 - 7,000",
-    "7,000 - 10,000",
-    "> 10,000",
-  ];
-
-  const defaultSearchQuery = {
-    location: null,
-    type: null,
-    bedrooms: null,
-    furnished: {
-      full: false,
-      semi: false,
-      none: false,
-    },
-    price: null,
-  };
-
-  const searchDict = {
-    location: null,
-    type: null,
-    bedrooms: null,
-    furnished: {
-      full: false,
-      semi: false,
-      none: false,
-    },
-    price: null,
-  };
-
   function PropertyPage() {
     console.log("default user search\n", searchDict);
     const [galleryid, setGalleryid] = useState(null);
     const [render, setRender] = useState(0);
-    function UpdateSearchQuery(input) {
-      console.log(input);
-      if (locations.includes(input)) {
-        searchDict.location = input;
-      } else if (input === "--Location--") {
-        searchDict.location = null;
-      } else if (unitTypes.includes(input)) {
-        searchDict.type = input;
-      } else if (input === "--Type--") {
-        searchDict.type = null;
-      } else if (bedrooms.includes(Number(input))) {
-        searchDict.bedrooms = Number(input);
-      } else if (input === "--Rooms--") {
-        searchDict.bedrooms = null;
-      } else if (input === "Full") {
-        searchDict.furnished.full = true;
-        searchDict.furnished.semi = false;
-        searchDict.furnished.none = false;
-      } else if (input === "Semi") {
-        searchDict.furnished.full = false;
-        searchDict.furnished.semi = true;
-        searchDict.furnished.none = false;
-      } else if (input === "None") {
-        searchDict.furnished.full = false;
-        searchDict.furnished.semi = false;
-        searchDict.furnished.none = true;
-      } else if (input === "--Furnishings--") {
-        searchDict.furnished.full = false;
-        searchDict.furnished.semi = false;
-        searchDict.furnished.none = false;
-      } else if (input === "< 2,000") {
-        searchDict.price = [0, 2000];
-      } else if (input === "2,000 - 4,000") {
-        searchDict.price = [2000, 4000];
-      } else if (input === "4,000 - 7,000") {
-        searchDict.price = [4000, 7000];
-      } else if (input === "7,000 - 10,000") {
-        searchDict.price = [7000, 10000];
-      } else if (input === "> 10,000") {
-        searchDict.price = [10000, 30000];
-      } else if (input === "--Price Range--") {
-        searchDict.price = null;
-      } else {
-        console.log("search update error");
-      }
 
-      console.log("user search\n", searchDict);
-      return searchDict;
-    }
+    useEffect(() => {
+      setTimeout(() => {
+        setRender(0);
+      }, 1000);
+    });
 
     function Search(property) {
       var result = true;
@@ -171,6 +202,7 @@ const PropertiesS2 = () => {
 
       if (JSON.stringify(searchDict) === JSON.stringify(defaultSearchQuery)) {
         console.log("default search ON");
+
         return qatarPropertiesData;
       }
 
@@ -178,33 +210,12 @@ const PropertiesS2 = () => {
       var searchData = qatarPropertiesData
         .map((item) => Search(item))
         .filter(Boolean);
+      // setRender(render - 1);
       console.log("searchData refined\n", searchData);
       return searchData;
     }
 
-    function DropdownMenu(props) {
-      return (
-        <div className="relative justify-center block rounded-lg text-sm font-bold text-white">
-          <select
-            id={props.category}
-            onChange={(e) => UpdateSearchQuery(e.target.value)}
-            className="rounded-lg bg-mpurple border-8 border-mpurple"
-          >
-            <option value={null}>--{props.category}--</option>
-            {props.list.map((text) => (
-              <option
-                key={props.category + "|" + props.list.indexOf(text)}
-                value={text}
-              >
-                {text}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
-
-    function GalleryModal(props) {
+    function GalleryModal() {
       console.log(galleryid);
       return (
         <div className="font-montserrat">
@@ -322,14 +333,19 @@ const PropertiesS2 = () => {
             <DropdownMenu category="Price Range" list={pricings} />
 
             <button
-              className="relative justify-center block rounded-lg text-sm font-bold text-white"
+              className="relative justify-center block rounded-lg text-sm font-semibold text-white"
               onClick={() => {
                 setRender(render + 1);
                 console.log(render);
               }}
             >
-              <span className="rounded-lg bg-mpurple border-8 border-mpurple">
+              <span className="inline-flex rounded-lg bg-mpurple border-2 py-1.5 hover:border-mblue pl-4">
                 Search
+                {render ? (
+                  <ImSpinner2 className="m-1 mb-0 animate-spin" />
+                ) : (
+                  <GoSearch className="m-1 mb-0" />
+                )}
               </span>
             </button>
           </div>
@@ -363,6 +379,7 @@ const PropertiesS2 = () => {
             >
               {console.log("render works", render)}
               {console.log("to be rendered", RenderProperties())}
+
               {RenderProperties().map((item) => (
                 <SwiperSlide id={item.id}>
                   <div className="group relative">
