@@ -31,9 +31,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-items underline decoration-mpurple "
-                  : "nav-items"
+                isActive ? "nav-items-active" : "nav-items"
               }
             >
               Home
@@ -41,9 +39,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-items underline decoration-mpurple decoration-1"
-                  : "nav-items"
+                isActive ? "nav-items-active" : "nav-items"
               }
             >
               About
@@ -51,9 +47,7 @@ const Navbar = () => {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-items underline decoration-mpurple decoration-1"
-                  : "nav-items"
+                isActive ? "nav-items-active" : "nav-items"
               }
             >
               Services
@@ -61,9 +55,7 @@ const Navbar = () => {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-items underline decoration-mpurple decoration-1"
-                  : "nav-items"
+                isActive ? "nav-items-active" : "nav-items"
               }
             >
               Projects
@@ -71,9 +63,7 @@ const Navbar = () => {
             <NavLink
               to="/properties"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-items underline decoration-mpurple decoration-1"
-                  : "nav-items"
+                isActive ? "nav-items-active" : "nav-items"
               }
             >
               Properties
