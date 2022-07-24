@@ -29,18 +29,18 @@ const OurTeam = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center space-x-40 my-5">
-        <div className="flex justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={managers} alt="p" className="w-60" />
-          <div className="mx-10">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-40 my-5">
+        <div className="flex justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={managers} alt="p" className="h-36 w-48" />
+          <div className="w-48 ">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Property <br /> Managers{" "}
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse md:flex-row justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={legal} alt="p" className="w-60" />
-          <div className="mx-10">
+        <div className="flex flex-row-reverse md:flex-row justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={legal} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Legal <br /> Team{" "}
             </h1>
@@ -48,18 +48,18 @@ const OurTeam = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center space-x-40 my-5">
-        <div className="flex flex-row md:flex-row-reverse justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={marketing} alt="p" className="w-60" />
-          <div className="mx-10">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-40 my-5">
+        <div className="flex flex-row md:flex-row-reverse justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={marketing} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Marketing <br /> Team{" "}
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={analysts} alt="p" className="w-60" />
-          <div className="mx-10">
+        <div className="flex flex-row-reverse justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={analysts} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Property <br /> Analysts{" "}
             </h1>
@@ -67,18 +67,18 @@ const OurTeam = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center space-x-40 my-5">
-        <div className="flex justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={guards} alt="p" className="w-60" />
-          <div className="mx-10">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-40 my-5">
+        <div className="flex justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={guards} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Security <br /> Guards{" "}
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse md:flex-row justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={cleaners} alt="p" className="w-60" />
-          <div className="mx-10">
+        <div className="flex flex-row-reverse md:flex-row justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={cleaners} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Repairers And <br /> Cleaners{" "}
             </h1>
@@ -86,18 +86,18 @@ const OurTeam = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center space-x-40 my-5 ">
-        <div className="flex flex-row md:flex-row-reverse justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={safety} alt="p" className="w-60" />
-          <div className="mx-10">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-40 my-5 ">
+        <div className="flex flex-row md:flex-row-reverse justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={safety} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Safety <br /> Managers
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse  justify-between items-center ourTeam-bg w-3/5 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
-          <img src={other} alt="p" className="w-60" />
-          <div className="mx-10">
+        <div className="flex flex-row-reverse  justify-between items-center space-x-4 ourTeam-bg w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
+          <img src={other} alt="p" className="h-36 w-48" />
+          <div className="w-48">
             <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-xl py-2 mx-7 ml-0 lg:text-left  ">
               And Many <br /> More
             </h1>
