@@ -1,5 +1,5 @@
 import React from "react";
-import download from "../Zimages/services2/brochure.jpg";
+import download from "../Zimages/services2/brochure.png";
 
 const Download = () => {
   return (
