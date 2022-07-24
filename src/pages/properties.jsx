@@ -6,7 +6,6 @@ const Properties = () => {
   return (
     <>
       <PropertiesS1 />
-
       <PropertiesS3 />
     </>
   );

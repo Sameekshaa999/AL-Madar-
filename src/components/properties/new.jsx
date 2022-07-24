@@ -27,7 +27,6 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
-// some dropdown styles need to be addressed with the styles API
 const dropdownStyles = {
   control: (base) => ({
     ...base,
@@ -52,199 +51,201 @@ const dropdownStyles = {
   }),
 };
 
-function Search(property, searchArray) {
-  var result = true;
-
-  console.log("property data", property);
-
-  for (let x in searchArray) {
-    console.log("x", x);
-    console.log("searchArray[x]", searchArray[x]);
-    console.log("search result BEFORE  " + x + result);
-    if (searchArray[x].length === 0) {
-      console.log("EMPTY PARAMETER");
-      continue;
-    }
-    var comparisonArray = searchArray[x].map((item) => item.value);
-    console.log("COMP ARRAY", comparisonArray);
-    if (x === "0" && !comparisonArray.includes(property.location)) {
-      console.log("false at location");
-      return null;
-    } else if (x === "1" && !comparisonArray.includes(property.type)) {
-      console.log("false at type");
-      return null;
-    } else if (x === "2" && !comparisonArray.includes(property.bedrooms)) {
-      console.log("false at rooms");
-      return null;
-    } else if (x === "3" && !comparisonArray.includes(property.furnished)) {
-      console.log("false at furnished");
-      return null;
-    } else if (x === "4") {
-      console.log("OOPS");
-      var temp = false;
-      for (let y in comparisonArray) {
-        if (
-          comparisonArray[y][0] < property.price &&
-          property.price <= comparisonArray[y][1]
-        ) {
-          temp = true;
-        }
-      }
-      if (!temp) {
-        return null;
-      }
-    } else {
-      console.log(x + " is clear");
-    }
-  }
-  console.log("search result after FINAL", result);
-
-  return property;
-}
-
-const PropertiesS1 = () => {
-  // const [searchArray, setSearchArray] = useState([]);
-  // console.log("initial user search\n", searchArray);
-  // dropdown selection data collectors
+const PropertiesS2 = () => {
+  //dropdown selection data collectors
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedBedrooms, setSelectedBedrooms] = useState([]);
   const [selectedFurnishings, setSelectedFurnishings] = useState([]);
   const [selectedPricings, setSelectedPricings] = useState([]);
+  const [searchArray, setSearchArray] = useState([]);
 
-  // gallery modal on/off
-  const [galleryid, setGalleryid] = useState(null);
-  function GalleryModal() {
-    console.log(galleryid);
-    return (
-      <div className="font-montserrat">
-        <div className="relative z-50" role="dialog" aria-modal="true">
-          {/* dark overlay */}
-          <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"></div>
+  function UpdateSearchArray() {
+    if (
+      selectedLocations.length !== 0 ||
+      selectedBedrooms.length !== 0 ||
+      selectedTypes.length !== 0 ||
+      selectedFurnishings.length !== 0 ||
+      selectedPricings.length !== 0
+    )
+      setSearchArray([
+        selectedLocations,
+        selectedTypes,
+        selectedBedrooms,
+        selectedFurnishings,
+        selectedPricings,
+      ]);
+  }
 
-          {/* gallery */}
-          <div className="fixed z-10 inset-0 bg-black bg-opacity-70 transition-opacity">
-            {/* <div className="flex justify-center h-screen"> */}
-            <div className="flex flex-col space-y-8 overflow-hidden sm:w-full sm:h-screen">
-              <div className="basis-5/6">
-                <div className="h-2/3 md:h-full w-full text-white">
-                  <Swiper
-                    loop={true}
-                    slidesPerView={1}
-                    breakpoints={{
-                      640: {
-                        slidesPerView: 1,
-                      },
+  // function clearSearch() {
+  //   setSelectedLocations(null);
+  //   setSelectedTypes(null);
+  //   setSelectedBedrooms(null);
+  //   setSelectedFurnishings(null);
+  //   setSelectedPricings(null);
+  // }
+  function PropertyPage() {
+    console.log("default user search\n", searchArray);
+    const [galleryid, setGalleryid] = useState(null);
+    const [render, setRender] = useState(0);
 
-                      768: {
-                        slidesPerView: 3,
-                      },
-                    }}
-                    navigation={true}
-                    effect={"coverflow"}
-                    coverflowEffect={{
-                      rotate: 60,
-                      stretch: 0,
-                      depth: 100,
-                      scale: 0.7,
-                      modifier: 1,
-                      slideShadows: false,
-                    }}
-                    autoplay={{
-                      delay: 3000,
-                      disableOnInteraction: true,
-                    }}
-                    pagination={{
-                      clickable: true,
-                      type: "fraction",
-                    }}
-                    modules={[
-                      EffectCoverflow,
-                      Autoplay,
-                      Pagination,
-                      Navigation,
-                    ]}
-                    className="top-[20%] md:top-[5%]"
-                  >
-                    {qatarPropertiesData[galleryid - 1].gallery.map((item) => (
-                      <SwiperSlide key={item}>
-                        <div className="property-gallery-item">
-                          <img
-                            src={item}
-                            className="h-2/3 md:h-auto object-cover"
-                            alt=""
-                          />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+    useEffect(() => {
+      setTimeout(() => {
+        setRender(0);
+      }, 1000);
+    });
+
+    function Search(property) {
+      var result = true;
+
+      console.log("property data", property);
+
+      for (let x in searchArray) {
+        console.log("x", x);
+        console.log("searchArray[x]", searchArray[x]);
+        console.log("search result BEFORE  " + x + result);
+        if (searchArray[x].length === 0) {
+          console.log("EMPTY PARAMETER");
+          continue;
+        }
+        var comparisonArray = searchArray[x].map((item) => item.value);
+        console.log("COMP ARRAY", comparisonArray);
+        if (x === "0" && !comparisonArray.includes(property.location)) {
+          console.log("false at location");
+          return null;
+        } else if (x === "1" && !comparisonArray.includes(property.type)) {
+          console.log("false at type");
+          return null;
+        } else if (x === "2" && !comparisonArray.includes(property.bedrooms)) {
+          console.log("false at rooms");
+          return null;
+        } else if (x === "3" && !comparisonArray.includes(property.furnished)) {
+          console.log("false at furnished");
+          return null;
+        } else if (x === "4") {
+          console.log("OOPS");
+          var temp = false;
+          for (let y in comparisonArray) {
+            if (
+              comparisonArray[y][0] < property.price &&
+              property.price <= comparisonArray[y][1]
+            ) {
+              temp = true;
+            }
+          }
+          if (!temp) {
+            return null;
+          }
+        } else {
+          console.log(x + " is clear");
+        }
+      }
+      console.log("search result after FINAL", result);
+
+      return property;
+    }
+
+    function RenderProperties() {
+      console.log("render properties called", typeof searchArray);
+
+      if (searchArray.length === 0) {
+        console.log("default search ON");
+
+        return qatarPropertiesData;
+      }
+
+      console.log("searching array", searchArray);
+      var searchData = qatarPropertiesData
+        .map((item) => Search(item))
+        .filter(Boolean);
+
+      console.log("searchData refined\n", searchData);
+      return searchData;
+    }
+
+    function GalleryModal() {
+      console.log(galleryid);
+      return (
+        <div className="font-montserrat">
+          <div className="relative z-50" role="dialog" aria-modal="true">
+            {/* dark overlay */}
+            <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"></div>
+
+            {/* gallery */}
+            <div className="fixed z-10 inset-0 bg-black bg-opacity-70 transition-opacity">
+              {/* <div className="flex justify-center h-screen"> */}
+              <div className="flex flex-col space-y-8 overflow-hidden sm:w-full sm:h-screen">
+                <div className="basis-5/6">
+                  <div className="h-2/3 md:h-full w-full text-white">
+                    <Swiper
+                      loop={true}
+                      slidesPerView={1}
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1,
+                        },
+
+                        768: {
+                          slidesPerView: 3,
+                        },
+                      }}
+                      navigation={true}
+                      effect={"coverflow"}
+                      coverflowEffect={{
+                        rotate: 60,
+                        stretch: 0,
+                        depth: 100,
+                        scale: 0.7,
+                        modifier: 1,
+                        slideShadows: false,
+                      }}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                      }}
+                      pagination={{
+                        clickable: true,
+                        type: "fraction",
+                      }}
+                      modules={[
+                        EffectCoverflow,
+                        Autoplay,
+                        Pagination,
+                        Navigation,
+                      ]}
+                      className="top-[20%] md:top-[5%]"
+                    >
+                      {qatarPropertiesData[galleryid - 1].gallery.map(
+                        (item) => (
+                          <SwiperSlide key={item}>
+                            <div className="property-gallery-item">
+                              <img
+                                src={item}
+                                className="h-2/3 md:h-auto object-cover"
+                                alt=""
+                              />
+                            </div>
+                          </SwiperSlide>
+                        )
+                      )}
+                    </Swiper>
+                  </div>
                 </div>
-              </div>
 
-              <div className="basis-1/6 flex items-center justify-center md:my-8">
-                <button
-                  onClick={() => setGalleryid(null)}
-                  type="button"
-                  className="inline-flex justify-center rounded px-6 py-2 bg-mpurple font-semibold text-white hover:scale-110 transition"
-                >
-                  Close
-                </button>
+                <div className="basis-1/6 flex items-center justify-center md:my-8">
+                  <button
+                    onClick={() => setGalleryid(null)}
+                    type="button"
+                    className="inline-flex justify-center rounded px-6 py-2 bg-mpurple font-semibold text-white hover:scale-110 transition"
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
-  // properties searching on/off
-  const [render, setRender] = useState(0);
-  const [renderData, setRenderData] = useState(qatarPropertiesData);
-  useEffect(() => {
-    setTimeout(() => {
-      setRender(0);
-    }, 3000);
-  });
-
-  function PropertyPage() {
-    function UpdateSearchArray() {
-      var searchArray = [];
-      if (
-        selectedLocations.length !== 0 ||
-        selectedBedrooms.length !== 0 ||
-        selectedTypes.length !== 0 ||
-        selectedFurnishings.length !== 0 ||
-        selectedPricings.length !== 0
-      ) {
-        searchArray = [
-          selectedLocations,
-          selectedTypes,
-          selectedBedrooms,
-          selectedFurnishings,
-          selectedPricings,
-        ];
-        RenderProperties(searchArray);
-        return true;
-      }
-      console.log("from updatesearcharray", searchArray);
-      setRenderData(qatarPropertiesData);
-    }
-    function RenderProperties(searchArray) {
-      console.log("render properties called", searchArray);
-      // console.log("selectedLocations", selectedLocations.length !== 0);
-
-      // if (searchArray.length === 0 && render) {
-      //   console.log("default search ON");
-
-      //   setRenderData(qatarPropertiesData);
-      // }
-
-      // console.log("searching array", searchArray);
-      var searchData = qatarPropertiesData
-        .map((item) => Search(item, searchArray))
-        .filter(Boolean);
-
-      console.log("searchData refined\n", searchData);
-      setRenderData(searchData);
+      );
     }
 
     return (
@@ -363,7 +364,6 @@ const PropertiesS1 = () => {
               onClick={() => {
                 setRender(render + 1);
                 UpdateSearchArray();
-                // RenderProperties();
               }}
               type="button"
               className="hover:animate-pulse py-2 px-4 mr-2 text-sm font-medium text-gray-900 bg-white bg-opacity-70 rounded-lg hover:bg-gray-100 hover:text-mpurple inline-flex items-center"
@@ -414,11 +414,11 @@ const PropertiesS1 = () => {
               modules={[Autoplay, Pagination]}
               className=""
             >
-              {console.log("render current value = ", render)}
-              {console.log("to be rendered", renderData)}
-              {/* {console.log()} */}
-              {renderData.map((item) => (
-                <SwiperSlide key={item.id}>
+              {console.log("render works", render)}
+              {console.log("to be rendered", RenderProperties())}
+
+              {RenderProperties().map((item) => (
+                <SwiperSlide id={item.id}>
                   <div className="group relative">
                     <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                       <img
@@ -492,4 +492,4 @@ const PropertiesS1 = () => {
   return <PropertyPage />;
 };
 
-export default PropertiesS1;
+export default PropertiesS2;
