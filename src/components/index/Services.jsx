@@ -4,9 +4,9 @@ import map from "../Zimages/index/qatarmap.png";
 
 const Services = () => {
   return (
-    <div className="flex flex-col md:flex-row my-3 md:my-10 md:h-1/2 ">
-      <div className="serviceSection-gradient flex flex-col justify-center items-left h-1/2 md:w-1/2 py-20 md:py-40 px-2 pb-54 float-left">
-        <div className="flex-col text-mpurple text-center md:text-right space-y-5 md:space-y-12 relative font-montserrat ">
+    <div className="flex flex-col lg:flex-row my-3 lg:my-10 lg:h-1/2 ">
+      <div className="serviceSection-gradient flex flex-col justify-center items-left h-1/2 lg:w-1/2 py-20 lg:py-40 px-2 pb-54 float-left">
+        <div className="flex-col text-mpurple text-center lg:text-right space-y-5 lg:space-y-12 relative font-montserrat ">
           <h2 className="text-2xl lg:text-4xl font-semibold text-white">
             Worried about <br /> managing your property?
           </h2>
@@ -21,15 +21,15 @@ const Services = () => {
           <button >
           <Link
             to="/services"
-            className="md:mt-20 px-4 md:px-6 py-3 text-mpurple font-semibold rounded-full md:rounded-lg text-sm md:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
+            className="lg:mt-20 px-4 lg:px-6 py-3 text-mpurple font-semibold rounded-full lg:rounded-lg text-sm lg:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
           >
             Explore Now!
           </Link>
           </button>
         </div>
       </div>
-      <div className="md:w-1/2 md:float-right flex justify-center items-center">
-        <img src={map} alt="mv3" className="h-96 md:h-auto" />
+      <div className="lg:w-1/2 lg:float-right flex justify-center items-center">
+        <img src={map} alt="mv3" className="h-96 lg:h-auto" />
       </div>
     </div> 
   );
