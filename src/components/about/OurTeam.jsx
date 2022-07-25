@@ -11,7 +11,7 @@ import Headings from "../Headings";
 
 const OurTeam = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-20 my-10 font-montserrat text-mpurple">
+    <div className="flex flex-col justify-center items-center mx-10 my-10 font-montserrat text-mpurple">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="flex justify-start items-center mx-20 mb-7">
           
