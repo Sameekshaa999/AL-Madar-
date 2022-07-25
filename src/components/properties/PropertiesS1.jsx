@@ -32,22 +32,29 @@ import "swiper/css/navigation";
 const dropdownStyles = {
   control: (base) => ({
     ...base,
-    // background: "#ffffff95",
-    fontSize: 14,
-    fontWeight: 500,
+    background: "#ffffff95",
+    fontSize: 12,
+    // minHeight: "20px",
+    // height: "30px",
+    fontWeight: 600,
     borderRadius: 2,
   }),
+
+  // indicatorsContainer: (base) => ({
+  //   ...base,
+  //   height: "30px",
+  // }),
   menu: (base) => ({
     ...base,
     // borderRadius: 5,
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: 500,
   }),
   menuList: (base) => ({
     ...base,
     padding: 0,
     marginTop: 2,
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: 500,
     borderRadius: "3px 3px 5px 5px",
   }),
@@ -259,7 +266,7 @@ const PropertiesS1 = () => {
               <div className="text-center">
                 <div className="flex px-4 justify-center">
                   <div className="mx-auto text-center">
-                    <h2 className="mt-40 mb-20 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 uppercase tracking-wide">
+                    <h2 className="mt-24 sm:mt-36 md:mt-28 lg:mt-32 mb-20 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 uppercase tracking-wide">
                       Your search starts here
                     </h2>
                   </div>
@@ -268,124 +275,115 @@ const PropertiesS1 = () => {
             </div>
           </header>
         </div>
-        <div className="flex flex-col justify-center font-montserrat max-w-[1000px] mx-auto -mt-28">
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center">
-            <div
-              id="locations dropdown"
-              className="search-dropdown-container text-mgrey"
-            >
-              <Select
-                options={dropdownLocations}
-                placeholder="Location"
-                value={selectedLocations}
-                onChange={(data) => setSelectedLocations(data)}
-                styles={dropdownStyles}
-                isSearchable={true}
-                isClearable={true}
-                isLoading={render}
-                blurInputOnSelect={true}
-                isMulti
-              />
+        <div className="my-4 px-4 md:px-20">
+          <div className="flex flex-col lg:space-y-8 justify-center font-montserrat max-w-[1000px] mx-auto -mt-40 lg:-mt-36">
+            <div className="flex flex-row flex-wrap justify-evenly lg:flex-nowrap text-xs md:space-y-0 md:space-x-4 ">
+              <div
+                id="locations dropdown"
+                className="search-dropdown-container"
+              >
+                <Select
+                  options={dropdownLocations}
+                  placeholder="Location"
+                  value={selectedLocations}
+                  onChange={(data) => setSelectedLocations(data)}
+                  styles={dropdownStyles}
+                  isSearchable={true}
+                  isClearable={true}
+                  isLoading={render && selectedLocations.length !== 0}
+                  blurInputOnSelect={true}
+                  isMulti
+                />
+              </div>
+              <div id="types dropdown" className="search-dropdown-container">
+                <Select
+                  options={dropdownTypes}
+                  placeholder="Unit Type"
+                  value={selectedTypes}
+                  onChange={(data) => setSelectedTypes(data)}
+                  styles={dropdownStyles}
+                  isSearchable={false}
+                  isClearable={true}
+                  isLoading={render && selectedTypes.length !== 0}
+                  blurInputOnSelect={true}
+                  isMulti
+                />
+              </div>
+              <div id="bedrooms dropdown" className="search-dropdown-container">
+                <Select
+                  options={dropdownBedrooms}
+                  placeholder="Rooms"
+                  value={selectedBedrooms}
+                  onChange={(data) => setSelectedBedrooms(data)}
+                  styles={dropdownStyles}
+                  isSearchable={false}
+                  isClearable={true}
+                  isLoading={render && selectedBedrooms.length !== 0}
+                  blurInputOnSelect={true}
+                  isMulti
+                />
+              </div>
+              <div
+                id="furnishings dropdown"
+                className="search-dropdown-container"
+              >
+                <Select
+                  options={dropdownFurnishings}
+                  placeholder="Furnishings"
+                  value={selectedFurnishings}
+                  onChange={(data) => setSelectedFurnishings(data)}
+                  styles={dropdownStyles}
+                  isSearchable={false}
+                  isClearable={true}
+                  isLoading={render && selectedFurnishings.length !== 0}
+                  blurInputOnSelect={true}
+                  isMulti
+                />
+              </div>
+              <div id="pricings dropdown" className="search-dropdown-container">
+                <Select
+                  options={dropdownPricings}
+                  placeholder="Rate"
+                  value={selectedPricings}
+                  onChange={(data) => setSelectedPricings(data)}
+                  styles={dropdownStyles}
+                  isSearchable={false}
+                  isClearable={true}
+                  isLoading={render && selectedPricings.length !== 0}
+                  blurInputOnSelect={true}
+                  isMulti
+                />
+              </div>
             </div>
-
-            <div
-              id="types dropdown"
-              className="search-dropdown-container text-mgrey"
-            >
-              <Select
-                options={dropdownTypes}
-                placeholder="Unit Type"
-                value={selectedTypes}
-                onChange={(data) => setSelectedTypes(data)}
-                styles={dropdownStyles}
-                isSearchable={false}
-                isClearable={true}
-                isLoading={render}
-                blurInputOnSelect={true}
-                isMulti
-              />
-            </div>
-
-            <div
-              id="bedrooms dropdown"
-              className="search-dropdown-container text-mgrey"
-            >
-              <Select
-                options={dropdownBedrooms}
-                placeholder="Rooms"
-                value={selectedBedrooms}
-                onChange={(data) => setSelectedBedrooms(data)}
-                styles={dropdownStyles}
-                isSearchable={false}
-                isClearable={true}
-                isLoading={render}
-                blurInputOnSelect={true}
-                isMulti
-              />
-            </div>
-
-            <div
-              id="furnishings dropdown"
-              className="search-dropdown-container text-mgrey"
-            >
-              <Select
-                options={dropdownFurnishings}
-                placeholder="Furnishings"
-                value={selectedFurnishings}
-                onChange={(data) => setSelectedFurnishings(data)}
-                styles={dropdownStyles}
-                isSearchable={false}
-                isClearable={true}
-                isLoading={render}
-                blurInputOnSelect={true}
-                isMulti
-              />
-            </div>
-
-            <div
-              id="pricings dropdown"
-              className="search-dropdown-container text-mgrey"
-            >
-              <Select
-                options={dropdownPricings}
-                placeholder="Rate"
-                value={selectedPricings}
-                onChange={(data) => setSelectedPricings(data)}
-                styles={dropdownStyles}
-                isSearchable={false}
-                isClearable={true}
-                isLoading={render}
-                blurInputOnSelect={true}
-                isMulti
-              />
+            <div className="z-10 mx-auto">
+              <button
+                onClick={() => {
+                  setRender(render + 1);
+                  UpdateSearchArray();
+                  // RenderProperties();
+                }}
+                type="button"
+                className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="#fff"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                Search
+              </button>
             </div>
           </div>
-          <button
-            onClick={() => {
-              setRender(render + 1);
-              UpdateSearchArray();
-              // RenderProperties();
-            }}
-            type="button"
-            className="hover:animate-pulse z-10 mx-auto md:my-4 py-2 px-4 text-sm font-medium inline-flex items-center text-gray-900 bg-white bg-opacity-70 rounded-lg hover:bg-gray-100 hover:text-mpurple"
-          >
-            <svg
-              aria-hidden="true"
-              className="w-4 h-4 mr-2 text-gray-900 "
-              fill="none"
-              stroke="#25215c"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="3"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              ></path>
-            </svg>
-            Search
-          </button>
         </div>
         <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-4 md:px-10">
           <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
