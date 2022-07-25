@@ -207,7 +207,7 @@ const PropertiesS1 = () => {
   }
 
   // property modal on/off
-  const [propertyid, setPropertyid] = useState(1);
+  const [propertyid, setPropertyid] = useState(null);
   function PropertyModal() {
     console.log(propertyid);
     return (
