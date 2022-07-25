@@ -278,7 +278,7 @@ const PropertiesS1 = () => {
         </div>
         <div className="my-4 px-4 md:px-20">
           <div className="flex flex-col lg:space-y-8 justify-center font-montserrat max-w-[1000px] mx-auto -mt-40 lg:-mt-36">
-            <div className="flex flex-row flex-wrap justify-evenly lg:flex-nowrap text-xs md:space-y-0 md:space-x-4 ">
+            <div className="flex flex-row flex-wrap justify-center lg:flex-nowrap text-xs md:space-y-0 md:space-x-4 ">
               <div
                 id="locations dropdown"
                 className="search-dropdown-container capital"
