@@ -12,6 +12,7 @@ import {
 
 //images and icons
 import skyline from "../Zimages/properties/doha-skyline-hd.png";
+import skyline2 from "../Zimages/properties/doha-skyline-hd2.png";
 import { FaBed, FaBath } from "react-icons/fa";
 
 import { BsGridFill } from "react-icons/bs";
@@ -249,16 +250,16 @@ const PropertiesS1 = () => {
 
     return (
       <>
-        <div className="pt-24 w-screen h-[35rem] font-montserrat">
+        <div className="pt-24 w-screen h-[35rem] font-montserrat relative">
           <header
             className="w-full h-full bg-origin-border bg-left md:bg-center bg-cover"
-            style={{ backgroundImage: `url(${skyline})` }}
+            style={{ backgroundImage: `url(${skyline2})` }}
           >
             <div className="flex justify-center w-full h-full bg-gray-900 bg-opacity-20 py-20">
               <div className="text-center">
                 <div className="flex px-4 justify-center">
                   <div className="mx-auto text-center">
-                    <h2 className="mt-48 mb-20 text-2xl sm:text-4xl md:text-6xl font-bold text-gray-100 uppercase tracking-wide">
+                    <h2 className="mt-40 mb-20 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 uppercase tracking-wide">
                       Your search starts here
                     </h2>
                   </div>
@@ -267,8 +268,8 @@ const PropertiesS1 = () => {
             </div>
           </header>
         </div>
-        <div className="w-screen font-montserrat max-w-[1000px] mx-auto ">
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center -mt-16">
+        <div className="flex flex-col justify-center font-montserrat max-w-[1000px] mx-auto -mt-28">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center">
             <div
               id="locations dropdown"
               className="search-dropdown-container text-mgrey"
@@ -358,34 +359,33 @@ const PropertiesS1 = () => {
                 isMulti
               />
             </div>
-
-            <button
-              onClick={() => {
-                setRender(render + 1);
-                UpdateSearchArray();
-                // RenderProperties();
-              }}
-              type="button"
-              className="hover:animate-pulse py-2 px-4 mr-2 text-sm font-medium text-gray-900 bg-white bg-opacity-70 rounded-lg hover:bg-gray-100 hover:text-mpurple inline-flex items-center"
-            >
-              <svg
-                aria-hidden="true"
-                className="w-4 h-4 mr-2 text-gray-900 "
-                fill="none"
-                stroke="#25215c"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="3"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-              Search
-            </button>
           </div>
+          <button
+            onClick={() => {
+              setRender(render + 1);
+              UpdateSearchArray();
+              // RenderProperties();
+            }}
+            type="button"
+            className="hover:animate-pulse z-10 mx-auto md:my-4 py-2 px-4 text-sm font-medium inline-flex items-center text-gray-900 bg-white bg-opacity-70 rounded-lg hover:bg-gray-100 hover:text-mpurple"
+          >
+            <svg
+              aria-hidden="true"
+              className="w-4 h-4 mr-2 text-gray-900 "
+              fill="none"
+              stroke="#25215c"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+            Search
+          </button>
         </div>
         <div className="max-w-[1200px] mx-auto font-montserrat text-mpurple my-4 px-4 md:px-10">
           <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
