@@ -39,19 +39,20 @@ const dropdownStyles = {
     fontWeight: 600,
     borderRadius: 2,
   }),
-
+  menuPortal: (provided) => ({ ...provided, zIndex: 9999 }),
   // indicatorsContainer: (base) => ({
   //   ...base,
   //   height: "30px",
   // }),
   menu: (base) => ({
     ...base,
-    // borderRadius: 5,
+    zIndex: 9999,
     fontSize: 10,
     fontWeight: 500,
   }),
   menuList: (base) => ({
     ...base,
+    zIndex: 30,
     padding: 0,
     marginTop: 2,
     fontSize: 10,
@@ -280,25 +281,30 @@ const PropertiesS1 = () => {
             <div className="flex flex-row flex-wrap justify-evenly lg:flex-nowrap text-xs md:space-y-0 md:space-x-4 ">
               <div
                 id="locations dropdown"
-                className="search-dropdown-container"
+                className="search-dropdown-container capital"
               >
                 <Select
                   options={dropdownLocations}
                   placeholder="Location"
+                  menuPortalTarget={document.body}
                   value={selectedLocations}
                   onChange={(data) => setSelectedLocations(data)}
                   styles={dropdownStyles}
-                  isSearchable={true}
+                  isSearchable={false}
                   isClearable={true}
                   isLoading={render && selectedLocations.length !== 0}
                   blurInputOnSelect={true}
                   isMulti
                 />
               </div>
-              <div id="types dropdown" className="search-dropdown-container">
+              <div
+                id="types dropdown"
+                className="search-dropdown-container capital"
+              >
                 <Select
                   options={dropdownTypes}
                   placeholder="Unit Type"
+                  menuPortalTarget={document.body}
                   value={selectedTypes}
                   onChange={(data) => setSelectedTypes(data)}
                   styles={dropdownStyles}
@@ -309,10 +315,14 @@ const PropertiesS1 = () => {
                   isMulti
                 />
               </div>
-              <div id="bedrooms dropdown" className="search-dropdown-container">
+              <div
+                id="bedrooms dropdown"
+                className="search-dropdown-container capital"
+              >
                 <Select
                   options={dropdownBedrooms}
                   placeholder="Rooms"
+                  menuPortalTarget={document.body}
                   value={selectedBedrooms}
                   onChange={(data) => setSelectedBedrooms(data)}
                   styles={dropdownStyles}
@@ -325,11 +335,12 @@ const PropertiesS1 = () => {
               </div>
               <div
                 id="furnishings dropdown"
-                className="search-dropdown-container"
+                className="search-dropdown-container capital"
               >
                 <Select
                   options={dropdownFurnishings}
                   placeholder="Furnishings"
+                  menuPortalTarget={document.body}
                   value={selectedFurnishings}
                   onChange={(data) => setSelectedFurnishings(data)}
                   styles={dropdownStyles}
@@ -340,10 +351,14 @@ const PropertiesS1 = () => {
                   isMulti
                 />
               </div>
-              <div id="pricings dropdown" className="search-dropdown-container">
+              <div
+                id="pricings dropdown"
+                className="search-dropdown-container capital"
+              >
                 <Select
                   options={dropdownPricings}
                   placeholder="Rate"
+                  menuPortalTarget={document.body}
                   value={selectedPricings}
                   onChange={(data) => setSelectedPricings(data)}
                   styles={dropdownStyles}

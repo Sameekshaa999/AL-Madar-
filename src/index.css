@@ -6,7 +6,11 @@
 @tailwind utilities;
 
 .search-dropdown-container {
-  @apply capitalize z-10 h-12 text-mgrey min-w-[160px] mx-auto md:mx-0;
+  @apply capitalize z-20 h-12 text-mgrey min-w-[160px] mx-auto md:mx-0;
+}
+
+.capital {
+  text-transform: capitalize;
 }
 
 .menu-card {
