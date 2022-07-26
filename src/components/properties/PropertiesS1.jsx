@@ -213,16 +213,18 @@ const PropertiesS1 = () => {
     console.log(propertyid);
     return (
       <div className="font-montserrat">
-        <span
-          className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 pl-1 pr-3"
-          onClick={() => {
-            setPropertyid(null);
-            console.log("back");
-          }}
-        >
-          <IoChevronBack className="w-5 h-5" />
-          Back
-        </span>
+        <Link to="renderArea" smooth={true} duration={500} offset={-48}>
+          <span
+            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 pl-1 pr-3"
+            onClick={() => {
+              setPropertyid(null);
+              console.log("back");
+            }}
+          >
+            <IoChevronBack className="w-5 h-5" />
+            Back
+          </span>
+        </Link>
         <div className="grid grid-cols-2 h-screen">
           <div className="mt-12 h-2/3 md:h-2/3 w-full text-white">
             <Swiper
@@ -260,10 +262,7 @@ const PropertiesS1 = () => {
   function PropertyList() {
     return (
       <>
-        <h1
-          name="renderArea"
-          className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold"
-        >
+        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
           Qatar Properties
         </h1>
         <div className="h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat mx-auto">
@@ -296,15 +295,22 @@ const PropertiesS1 = () => {
               <SwiperSlide key={item.id}>
                 <div className="group relative">
                   <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
-                      onClick={() => {
-                        setPropertyid(item.itemNumber);
-                        console.log("HAHA");
-                      }}
-                    />
+                    <Link
+                      to="renderArea"
+                      smooth={true}
+                      duration={500}
+                      offset={-48}
+                    >
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
+                        onClick={() => {
+                          setPropertyid(item.itemNumber);
+                          console.log("HAHA");
+                        }}
+                      />
+                    </Link>
                   </div>
                   <div className="flex flex-col w-full mt-4">
                     <h3 className="text-xl font-extrabold text-mgrey">
@@ -519,10 +525,12 @@ const PropertiesS1 = () => {
               </div>
             </div>
             <div className="z-10 mx-auto">
-              <Link to="renderArea" smooth={true} duration={500} offset={-100}>
+              <Link to="renderArea" smooth={true} duration={500} offset={-48}>
                 <button
+                  name="renderArea"
                   onClick={() => {
                     setRender(render + 1);
+                    setPropertyid(null);
                     UpdateSearchArray();
                     // RenderProperties();
                   }}
