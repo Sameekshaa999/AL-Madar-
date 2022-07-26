@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Select from "react-select";
 //data file
 import qatarPropertiesData from "./qatarPropertiesData";
@@ -219,16 +220,50 @@ const PropertiesS1 = () => {
             console.log("back");
           }}
         >
-          <IoChevronBack className="w-5 h-5 " />
+          <IoChevronBack className="w-5 h-5" />
           Back
         </span>
+        <div className="grid grid-cols-2 h-screen">
+          <div className="mt-12 h-2/3 md:h-2/3 w-full text-white">
+            <Swiper
+              loop={true}
+              slidesPerView={1}
+              navigation={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+              }}
+              pagination={{
+                clickable: true,
+                type: "fraction",
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
+              className=""
+            >
+              {qatarPropertiesData[propertyid - 1].gallery.map((item) => (
+                <SwiperSlide key={item}>
+                  <div className="property-gallery-item">
+                    <img
+                      src={item}
+                      className="h-2/3 md:h-auto object-cover"
+                      alt=""
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     );
   }
   function PropertyList() {
     return (
       <>
-        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
+        <h1
+          name="renderArea"
+          className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold"
+        >
           Qatar Properties
         </h1>
         <div className="h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat mx-auto">
@@ -266,7 +301,7 @@ const PropertiesS1 = () => {
                       alt=""
                       className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
                       onClick={() => {
-                        setPropertyid(item.refID);
+                        setPropertyid(item.itemNumber);
                         console.log("HAHA");
                       }}
                     />
@@ -484,32 +519,34 @@ const PropertiesS1 = () => {
               </div>
             </div>
             <div className="z-10 mx-auto">
-              <button
-                onClick={() => {
-                  setRender(render + 1);
-                  UpdateSearchArray();
-                  // RenderProperties();
-                }}
-                type="button"
-                className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+              <Link to="renderArea" smooth={true} duration={500} offset={-100}>
+                <button
+                  onClick={() => {
+                    setRender(render + 1);
+                    UpdateSearchArray();
+                    // RenderProperties();
+                  }}
+                  type="button"
+                  className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-                Search
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="#fff"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                  Search
+                </button>
+              </Link>
             </div>
           </div>
         </div>
