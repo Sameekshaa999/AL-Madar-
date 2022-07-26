@@ -7,6 +7,7 @@ const Contact = () => {
     <>
       <Section1 />
       <Section2 />
+      <email />
     </>
   );
 };

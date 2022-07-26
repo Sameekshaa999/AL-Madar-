@@ -17,7 +17,7 @@ const Hero = () => {
         className="md:hidden top-6.5 w-full z-0"
       />
       <div className="mx-auto absolute mt-24">
-        <h1 className="text-center text-mpurple font-extrabold px-20 md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-12 lg:mb-16">
+        <h1 className=" text-center text-mpurple font-extrabold px-20 md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-12 lg:mb-16">
           Exceeding Expectations <br></br>One Property at A Time
         </h1>
         <div className="flex justify-center items-center space-x-4">
