@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import services1_TM from "../Zimages/services1/services1_TM.jpg";
 import TM_icon from "../Zimages/services1/TM_icon.jpg";
-import check from "../Zimages/services1/check_icon.jpg";
+import check from "../Zimages/services1/check_icon.png";
 import { Link } from "react-router-dom";
 import PopUp from "../PopUp";
 

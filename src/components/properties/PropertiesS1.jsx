@@ -34,7 +34,7 @@ import "swiper/css/navigation";
 const dropdownStyles = {
   control: (base) => ({
     ...base,
-    background: "#ffffff95",
+    background: "rgba(255, 255, 255, 0.85)",
     fontSize: 12,
     // minHeight: "20px",
     // height: "30px",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import services1_FM from "../Zimages/services1/services1_FM.jpg";
 import FM_icon from "../Zimages/services1/FM_icon.jpg";
-import check from "../Zimages/services1/check_icon.jpg";
+import check from "../Zimages/services1/check_icon.png";
 import { Link } from "react-router-dom";
 import PopUp from "../PopUp";
 
@@ -34,7 +34,7 @@ const FM = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col space-y-5 lg:space-y-12 items-center lg:w-1/2">
+      <div className="flex flex-col space-y-5 lg:space-y-12 justify-center items-left lg:w-1/2">
       <button onClick={() => setButtonPopup(true)} className="lg:ml-60 px-16 py-4 bg-mpurple lg:w-96 text-white font-montserrat font-light text-base lg:text-lg">
           Make An Appointment
         </button>
