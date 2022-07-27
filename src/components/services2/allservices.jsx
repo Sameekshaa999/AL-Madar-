@@ -36,7 +36,7 @@ const AllServices = () => {
       </div>
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:space-x-20 mx-20 my-10">
         <div className="flex flex-col space-y-5">
-        <h1 className="font-bold text-2xl">Facility <span>Management</span></h1>
+        <h1 className="font-bold text-2xl">Facility <span className="text-mblue">Management</span></h1>
           <div className="flex flex-col lg:flex-row lg:space-x-16" >
           <ul className="flex flex-col space-y-2 text-sm md:text-base">
             <li className="flex space-x-2"><img src={checked} alt="checked" className="h-5"/><p>Energy management services</p></li>
