@@ -34,12 +34,13 @@ import "swiper/css/navigation";
 const dropdownStyles = {
   control: (base) => ({
     ...base,
-    background: "#ffffff95",
+    background: "rgba(255, 255, 255, 0.70)",
     fontSize: 12,
     // minHeight: "20px",
     // height: "30px",
     fontWeight: 600,
     borderRadius: 2,
+    textTranform: "capitalize",
   }),
   menuPortal: (provided) => ({ ...provided, zIndex: 9999 }),
   // indicatorsContainer: (base) => ({
@@ -49,17 +50,19 @@ const dropdownStyles = {
   menu: (base) => ({
     ...base,
     zIndex: 9999,
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: 500,
+    textTranform: "capitalize",
   }),
   menuList: (base) => ({
     ...base,
     zIndex: 30,
     padding: 0,
     marginTop: 2,
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: 500,
     borderRadius: "3px 3px 5px 5px",
+    textTranform: "capitalize",
   }),
 };
 
@@ -246,8 +249,8 @@ const PropertiesS1 = () => {
             >
               {currentProperty.gallery.map((item) => (
                 <>
-                  <SwiperSlide key={item} className="-z-10">
-                    <div className="property-gallery-item">
+                  <SwiperSlide key={item} className="-z-10 flex items-center">
+                    <div className="relative w-full min-h-80 sm:aspect-w-1 sm:aspect-h-1 md:aspect-w-16 md:aspect-h-10 overflow-hidden group-hover:opacity-75 lg:h-80 ">
                       <img
                         src={item}
                         className="h-2/3 md:h-auto object-cover"
@@ -260,51 +263,60 @@ const PropertiesS1 = () => {
             </Swiper>
           </div>
           <div>
-            <div className="flex flex-col w-full mt-16 ml-10">
+            <div className="flex flex-col w-full mt-20 ml-10">
               <h3 className="text-2xl font-extrabold text-mgrey">
                 QAR {currentProperty.price}
               </h3>
               <h3 className="mt-2 text-xl font-bold text-mgrey uppercase">
                 {currentProperty.title}
               </h3>
-              <div className="flex flex-col space-y-2 p-1 mt-8 text-mpurple text-base font-mono font-semibold relative">
-                <div className="flex flex-row items-center">
-                  <span className="scale-125">
-                    <FaBed />
-                  </span>
-                  <span className="ml-2">
-                    {currentProperty.bedrooms} Bedrooms
-                  </span>
 
-                  <span className="ml-[5.5rem] scale-125">
+              <div className="grid grid-cols-2 p-1 mt-12 text-mpurple text-base font-mono font-semibold relative">
+                <div className="inline-flex items-center">
+                  <span className="scale-125">
                     <IoLocationSharp />
                   </span>
                   <span className="ml-2 capitalize">
                     {currentProperty.location}
                   </span>
                 </div>
-                <div className="flex flex-row items-center">
+
+                <div className="inline-flex items-center">
                   <span className="scale-125">
-                    <FaBath />
+                    <FaBed />
                   </span>
-                  <span className="ml-2 mt-1">
-                    {currentProperty.bathrooms} Bathrooms
+                  <span className="ml-2">
+                    {currentProperty.bedrooms} Bedrooms
                   </span>
-                  <span className="ml-20 scale-125">
+                </div>
+
+                <div className="inline-flex items-center">
+                  <span className="scale-125">
                     <TbBuildingSkyscraper />
                   </span>
                   <span className="ml-2 capitalize">
                     {currentProperty.type}
                   </span>
                 </div>
-                <div className="flex flex-row items-center">
+
+                <div className="inline-flex items-center">
+                  <span className="scale-125">
+                    <FaBath />
+                  </span>
+                  <span className="ml-2 mt-1 capitalize">
+                    {currentProperty.bathrooms} Bathrooms
+                  </span>
+                </div>
+
+                <div className="inline-flex items-center">
                   <span className="scale-125">
                     <BsGridFill />
                   </span>
                   <span className="ml-2 mt-1">{currentProperty.area} sqm.</span>
                 </div>
               </div>
-              <p className="mt-4 text-lg text-black">
+
+              <p className="mt-16 text-lg text-black">
                 {currentProperty.description}
               </p>
             </div>
@@ -489,7 +501,7 @@ const PropertiesS1 = () => {
             <div className="flex flex-row flex-wrap justify-center lg:flex-nowrap text-xs md:space-y-0 md:space-x-4 ">
               <div
                 id="locations dropdown"
-                className="search-dropdown-container capital"
+                className="search-dropdown-container"
               >
                 <Select
                   options={dropdownLocations}
@@ -503,12 +515,10 @@ const PropertiesS1 = () => {
                   isLoading={render && selectedLocations.length !== 0}
                   blurInputOnSelect={true}
                   isMulti
+                  classNamePrefix={dropdownStyles}
                 />
               </div>
-              <div
-                id="types dropdown"
-                className="search-dropdown-container capital"
-              >
+              <div id="types dropdown" className="search-dropdown-container">
                 <Select
                   options={dropdownTypes}
                   placeholder="Unit Type"
@@ -523,10 +533,7 @@ const PropertiesS1 = () => {
                   isMulti
                 />
               </div>
-              <div
-                id="bedrooms dropdown"
-                className="search-dropdown-container capital"
-              >
+              <div id="bedrooms dropdown" className="search-dropdown-container">
                 <Select
                   options={dropdownBedrooms}
                   placeholder="Rooms"
@@ -543,7 +550,7 @@ const PropertiesS1 = () => {
               </div>
               <div
                 id="furnishings dropdown"
-                className="search-dropdown-container capital"
+                className="search-dropdown-container"
               >
                 <Select
                   options={dropdownFurnishings}
@@ -559,10 +566,7 @@ const PropertiesS1 = () => {
                   isMulti
                 />
               </div>
-              <div
-                id="pricings dropdown"
-                className="search-dropdown-container capital"
-              >
+              <div id="pricings dropdown" className="search-dropdown-container">
                 <Select
                   options={dropdownPricings}
                   placeholder="Rate"
