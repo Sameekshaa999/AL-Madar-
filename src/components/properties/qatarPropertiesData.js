@@ -46,6 +46,7 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+    description: null,
   },
 
   {
@@ -68,6 +69,8 @@ const qatarPropertiesData = [
       prop_2_img_5,
       prop_2_img_6,
     ],
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -81,7 +84,7 @@ const qatarPropertiesData = [
     bathrooms: 1,
     price: 3950,
     location: "lusail",
-    image: prop_3_img_1,
+    image: prop_3_img_8,
     gallery: [
       prop_3_img_1,
       prop_3_img_2,
@@ -94,6 +97,8 @@ const qatarPropertiesData = [
       prop_3_img_9,
       prop_3_img_10,
     ],
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -116,6 +121,8 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -138,6 +145,9 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -160,6 +170,9 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -208,6 +221,9 @@ const qatarPropertiesData = [
       prop_3_img_9,
       prop_3_img_10,
     ],
+
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -230,6 +246,9 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 
   {
@@ -252,6 +271,8 @@ const qatarPropertiesData = [
       prop_1_img_5,
       prop_1_img_6,
     ],
+    description:
+      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
   },
 ];
 

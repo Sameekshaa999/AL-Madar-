@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import Select from "react-select";
 //data file
 import qatarPropertiesData from "./qatarPropertiesData";
@@ -17,7 +17,8 @@ import skyline2 from "../Zimages/properties/doha-skyline-hd2.png";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { IoMdPhotos } from "react-icons/io";
-import { IoChevronBack } from "react-icons/io5";
+import { IoChevronBack, IoLocationSharp } from "react-icons/io5";
+import { TbBuildingSkyscraper } from "react-icons/tb";
 
 // Import Swiper components
 import { Autoplay, Pagination, EffectCoverflow, Navigation } from "swiper";
@@ -211,11 +212,12 @@ const PropertiesS1 = () => {
   const [propertyid, setPropertyid] = useState(null);
   function PropertyModal() {
     console.log(propertyid);
+    const currentProperty = qatarPropertiesData[propertyid - 1];
     return (
       <div className="font-montserrat">
         <Link to="renderArea" smooth={true} duration={500} offset={-48}>
           <span
-            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 pl-1 pr-3"
+            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 mt-4 pl-1 pr-3"
             onClick={() => {
               setPropertyid(null);
               console.log("back");
@@ -226,7 +228,7 @@ const PropertiesS1 = () => {
           </span>
         </Link>
         <div className="grid grid-cols-2 h-screen">
-          <div className="mt-12 h-2/3 md:h-2/3 w-full text-white">
+          <div className="mt-4 md:h-[60%] w-full text-white">
             <Swiper
               loop={true}
               slidesPerView={1}
@@ -240,20 +242,72 @@ const PropertiesS1 = () => {
                 type: "fraction",
               }}
               modules={[Autoplay, Pagination, Navigation]}
-              className=""
+              className="text-mgrey font-bold"
             >
-              {qatarPropertiesData[propertyid - 1].gallery.map((item) => (
-                <SwiperSlide key={item}>
-                  <div className="property-gallery-item">
-                    <img
-                      src={item}
-                      className="h-2/3 md:h-auto object-cover"
-                      alt=""
-                    />
-                  </div>
-                </SwiperSlide>
+              {currentProperty.gallery.map((item) => (
+                <>
+                  <SwiperSlide key={item} className="-z-10">
+                    <div className="property-gallery-item">
+                      <img
+                        src={item}
+                        className="h-2/3 md:h-auto object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </SwiperSlide>
+                </>
               ))}
             </Swiper>
+          </div>
+          <div>
+            <div className="flex flex-col w-full mt-16 ml-10">
+              <h3 className="text-2xl font-extrabold text-mgrey">
+                QAR {currentProperty.price}
+              </h3>
+              <h3 className="mt-2 text-xl font-bold text-mgrey uppercase">
+                {currentProperty.title}
+              </h3>
+              <div className="flex flex-col space-y-2 p-1 mt-8 text-mpurple text-base font-mono font-semibold relative">
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <FaBed />
+                  </span>
+                  <span className="ml-2">
+                    {currentProperty.bedrooms} Bedrooms
+                  </span>
+
+                  <span className="ml-[5.5rem] scale-125">
+                    <IoLocationSharp />
+                  </span>
+                  <span className="ml-2 capitalize">
+                    {currentProperty.location}
+                  </span>
+                </div>
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <FaBath />
+                  </span>
+                  <span className="ml-2 mt-1">
+                    {currentProperty.bathrooms} Bathrooms
+                  </span>
+                  <span className="ml-20 scale-125">
+                    <TbBuildingSkyscraper />
+                  </span>
+                  <span className="ml-2 capitalize">
+                    {currentProperty.type}
+                  </span>
+                </div>
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <BsGridFill />
+                  </span>
+                  <span className="ml-2 mt-1">{currentProperty.area} sqm.</span>
+                </div>
+              </div>
+              <p className="mt-4 text-lg text-black">
+                {currentProperty.description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -261,7 +315,7 @@ const PropertiesS1 = () => {
   }
   function PropertyList() {
     return (
-      <>
+      <div className="h-screen">
         <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
           Qatar Properties
         </h1>
@@ -364,7 +418,7 @@ const PropertiesS1 = () => {
           </Swiper>
         </div>
         {galleryid ? <GalleryModal /> : <div></div>}
-      </>
+      </div>
     );
   }
   // properties searching on/off
