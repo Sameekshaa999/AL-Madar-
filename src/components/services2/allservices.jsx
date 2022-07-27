@@ -5,10 +5,11 @@ import rectangle from "../Zimages/services2/Rectangle.png";
 import settings from "../Zimages/services2/settings-gears.png";
 import broom from "../Zimages/services2/flying-broom.png";
 
+
 const AllServices = () => {
   return (
-    <div className=" my-10 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 justify-center items-center">
-      <div className="relative border-2 w-max  md:ml-0">
+    <div className=" my-10 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 justify-center items-center">
+      <div className="relative border-2 w-max  lg:ml-0">
         <img src={polygon} alt="polygon" className="" />
         <h1 className="absolute top-10 left-16 font-montserrat text-xl text-white font-bold">
           Tenancy Management
@@ -16,7 +17,7 @@ const AllServices = () => {
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={homeinsurance} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm lg:text-base font-normal list-disc">
           <li>Property Manager</li>
           <li>Tenant profiling</li>
           <li>Rent collection renewals</li>
@@ -46,7 +47,7 @@ const AllServices = () => {
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={settings} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm lg:text-base font-normal list-disc">
           <li>
             Energy management <br /> services
           </li>
@@ -78,7 +79,7 @@ const AllServices = () => {
         <div className="absolute top-20 left-[7.5rem] bg-[#25215c] rounded-full w-24 h-24 flex justify-center items-center">
           <img src={broom} alt="" className="h-14" />
         </div>
-        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm md:text-base font-normal list-disc">
+        <ul className="mt-10 mb-5 ml-16 font-montserrat text-mpurple text-sm lg:text-base font-normal list-disc">
           <li>
             {" "}
             Mechanical, Electrical and <br /> Plumbing
