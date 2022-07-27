@@ -11,7 +11,7 @@ const Services21 = () => {
         <h1 className="font-semibold text:xl md:text-3xl lg:text-6xl">
           People are <br /> our priority{" "}
         </h1>
-        <button className="bg-mpurple md:py-3 md:px-4 text-white font-montserrat font-light text-sm lg:text-lg">
+        <button className="bg-mpurple py-1 px-2 md:py-3 md:px-4 text-white font-montserrat font-light text-sm lg:text-lg">
           call : +974 44675405
         </button>
       </div>

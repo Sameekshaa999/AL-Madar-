@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import services1_TM from "../Zimages/services1/services1_TM.jpg";
 import TM_icon from "../Zimages/services1/TM_icon.jpg";
 import check from "../Zimages/services1/check_icon.jpg";
 import { Link } from "react-router-dom";
+import PopUp from "../PopUp";
 
 const TM = () => {
+  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <div className="flex flex-col lg:flex-row font-montserrat text-mpurple px-20 pt-10">
       <div className="flex-col lg:w-1/2">
@@ -32,9 +34,11 @@ const TM = () => {
         </div>
       </div>
       <div className="flex flex-col space-y-5 lg:space-y-12 items-center lg:w-1/2">
-        <button className="lg:ml-60 px-16 py-4 bg-mpurple lg:w-96 text-white font-montserrat font-light text-base lg:text-lg">
+        <button onClick={() => setButtonPopup(true)} className="lg:ml-60 px-16 py-4 bg-mpurple lg:w-96 text-white font-montserrat font-light text-base lg:text-lg">
           Make An Appointment
         </button>
+        <PopUp trigger={buttonPopup} setTrigger={setButtonPopup}>
+        </PopUp>
         <div className="flex flex-col justify-center lg:w-[30rem] my-1">
           <div className="flex space-x-2 py-7  border-b-2 border-mpurple">
             <img src={check} alt="check" className="h-7" />

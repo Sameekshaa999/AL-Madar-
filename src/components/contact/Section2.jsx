@@ -1,16 +1,12 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import MessageButton from "../MessageButton.jsx"
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import office from "../Zimages/contact/Al-Madar-office.jpg";
 import client2 from "../Zimages/index/client2.png";
 import client3 from "../Zimages/index/client3.png";
 import client4 from "../Zimages/index/client4.png";
 
-// toast.configure()
 const Section2 = () => {
-  // const notify = () => toast("Message Sent!");
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -58,10 +54,11 @@ const Section2 = () => {
           <p className="text-white text-lg md:text-2xl font-normal mb-3">
             Get In Touch
           </p>
-          <form ref={form} onSubmit={sendEmail} className="flex-col justify-evenly">
+          <form ref={form} onSubmit={sendEmail} className="flex-col justify-evenly font-montserrat text-mpurple">
             <input
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="name"
+              required
               name="Name"
               type="text"
               placeholder="Name *"
@@ -70,6 +67,7 @@ const Section2 = () => {
             <input
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="email"
+              required
               name="Email"
               type="text"
               placeholder="Email *"
@@ -78,14 +76,16 @@ const Section2 = () => {
             <input
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="number"
+              required
               name="Number"
-              type="Number"
+              type="tel"
               placeholder="Number *"
             />
             <br />
             <textarea
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               name="message"
+              required
               rows="7"
               cols="47"
               type="text"
