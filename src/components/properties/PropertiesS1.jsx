@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import Select from "react-select";
 //data file
 import qatarPropertiesData from "./qatarPropertiesData";
@@ -16,7 +17,8 @@ import skyline2 from "../Zimages/properties/doha-skyline-hd2.png";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { IoMdPhotos } from "react-icons/io";
-import { IoChevronBack } from "react-icons/io5";
+import { IoChevronBack, IoLocationSharp } from "react-icons/io5";
+import { TbBuildingSkyscraper } from "react-icons/tb";
 
 // Import Swiper components
 import { Autoplay, Pagination, EffectCoverflow, Navigation } from "swiper";
@@ -210,24 +212,110 @@ const PropertiesS1 = () => {
   const [propertyid, setPropertyid] = useState(null);
   function PropertyModal() {
     console.log(propertyid);
+    const currentProperty = qatarPropertiesData[propertyid - 1];
     return (
       <div className="font-montserrat">
-        <span
-          className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 pl-1 pr-3"
-          onClick={() => {
-            setPropertyid(null);
-            console.log("back");
-          }}
-        >
-          <IoChevronBack className="w-5 h-5 " />
-          Back
-        </span>
+        <Link to="renderArea" smooth={true} duration={500} offset={-48}>
+          <span
+            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 mt-4 pl-1 pr-3"
+            onClick={() => {
+              setPropertyid(null);
+              console.log("back");
+            }}
+          >
+            <IoChevronBack className="w-5 h-5" />
+            Back
+          </span>
+        </Link>
+        <div className="grid grid-cols-2 h-screen">
+          <div className="mt-4 md:h-[60%] w-full text-white">
+            <Swiper
+              loop={true}
+              slidesPerView={1}
+              navigation={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+              }}
+              pagination={{
+                clickable: true,
+                type: "fraction",
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="text-mgrey font-bold"
+            >
+              {currentProperty.gallery.map((item) => (
+                <>
+                  <SwiperSlide key={item} className="-z-10">
+                    <div className="property-gallery-item">
+                      <img
+                        src={item}
+                        className="h-2/3 md:h-auto object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </SwiperSlide>
+                </>
+              ))}
+            </Swiper>
+          </div>
+          <div>
+            <div className="flex flex-col w-full mt-16 ml-10">
+              <h3 className="text-2xl font-extrabold text-mgrey">
+                QAR {currentProperty.price}
+              </h3>
+              <h3 className="mt-2 text-xl font-bold text-mgrey uppercase">
+                {currentProperty.title}
+              </h3>
+              <div className="flex flex-col space-y-2 p-1 mt-8 text-mpurple text-base font-mono font-semibold relative">
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <FaBed />
+                  </span>
+                  <span className="ml-2">
+                    {currentProperty.bedrooms} Bedrooms
+                  </span>
+
+                  <span className="ml-[5.5rem] scale-125">
+                    <IoLocationSharp />
+                  </span>
+                  <span className="ml-2 capitalize">
+                    {currentProperty.location}
+                  </span>
+                </div>
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <FaBath />
+                  </span>
+                  <span className="ml-2 mt-1">
+                    {currentProperty.bathrooms} Bathrooms
+                  </span>
+                  <span className="ml-20 scale-125">
+                    <TbBuildingSkyscraper />
+                  </span>
+                  <span className="ml-2 capitalize">
+                    {currentProperty.type}
+                  </span>
+                </div>
+                <div className="flex flex-row items-center">
+                  <span className="scale-125">
+                    <BsGridFill />
+                  </span>
+                  <span className="ml-2 mt-1">{currentProperty.area} sqm.</span>
+                </div>
+              </div>
+              <p className="mt-4 text-lg text-black">
+                {currentProperty.description}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
   function PropertyList() {
     return (
-      <>
+      <div className="h-screen">
         <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
           Qatar Properties
         </h1>
@@ -261,15 +349,22 @@ const PropertiesS1 = () => {
               <SwiperSlide key={item.id}>
                 <div className="group relative">
                   <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
-                      onClick={() => {
-                        setPropertyid(item.refID);
-                        console.log("HAHA");
-                      }}
-                    />
+                    <Link
+                      to="renderArea"
+                      smooth={true}
+                      duration={500}
+                      offset={-48}
+                    >
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
+                        onClick={() => {
+                          setPropertyid(item.itemNumber);
+                          console.log("HAHA");
+                        }}
+                      />
+                    </Link>
                   </div>
                   <div className="flex flex-col w-full mt-4">
                     <h3 className="text-xl font-extrabold text-mgrey">
@@ -323,7 +418,7 @@ const PropertiesS1 = () => {
           </Swiper>
         </div>
         {galleryid ? <GalleryModal /> : <div></div>}
-      </>
+      </div>
     );
   }
   // properties searching on/off
@@ -484,32 +579,36 @@ const PropertiesS1 = () => {
               </div>
             </div>
             <div className="z-10 mx-auto">
-              <button
-                onClick={() => {
-                  setRender(render + 1);
-                  UpdateSearchArray();
-                  // RenderProperties();
-                }}
-                type="button"
-                className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+              <Link to="renderArea" smooth={true} duration={500} offset={-48}>
+                <button
+                  name="renderArea"
+                  onClick={() => {
+                    setRender(render + 1);
+                    setPropertyid(null);
+                    UpdateSearchArray();
+                    // RenderProperties();
+                  }}
+                  type="button"
+                  className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-                Search
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="#fff"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                  Search
+                </button>
+              </Link>
             </div>
           </div>
         </div>
