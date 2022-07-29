@@ -526,10 +526,10 @@ const PropertiesS1 = () => {
   function PropertyList() {
     return (
       <div className="min-h-screen">
-        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl pt-8 pl-0 md:pl-0 font-bold">
+        <h1 className="uppercase text-md mx-4 sm:mx-16 md:mx-0 text-xl md:text-2xl lg:text-3xl pt-8 font-extrabold">
           Qatar Properties
         </h1>
-        <div className="h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat mx-auto">
+        <div className="hidden md:flex mt-8 h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat mx-auto">
           <Swiper
             navigation={true}
             spaceBetween={20}
@@ -620,7 +620,7 @@ const PropertiesS1 = () => {
                         </div>
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-mgrey">
+                    <h3 className="text-xl font-semibold text-mgrey capitalize">
                       {item.title}
                     </h3>
                   </div>
@@ -628,6 +628,66 @@ const PropertiesS1 = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className="grid grid-cols-1 md:hidden mt-8 gap-y-10">
+          {renderData.map((item) => (
+            <div className="flex flex-col justify-center mx-4 sm:mx-16">
+              <div className="relative h-full items-center ">
+                <Link to="renderArea" smooth={true} duration={500} offset={-48}>
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="object-center object-cover shadow-lg cursor-pointer"
+                    onClick={() => {
+                      setPropertyid(item.itemNumber);
+                    }}
+                  />
+                </Link>
+              </div>
+              <div className="flex flex-col mt-4">
+                <h3 className="text-xl font-bold md:font-extrabold text-mgrey">
+                  QAR {item.price}
+                </h3>
+                <div className="flex flex-row p-1 text-mpurple text-base font-mono font-semibold relative">
+                  <div className="flex flex-row items-center">
+                    <span className="mr-2 text-black">{item.bedrooms}</span>
+                    <span className="scale-125">
+                      <FaBed />
+                    </span>
+                    <span className="mx-2 text-xl text-black">|</span>
+                  </div>
+                  <div className="flex flex-row items-center">
+                    <span className="mr-2 text-black">{item.bathrooms}</span>
+                    <span className="scale-125">
+                      <FaBath />
+                    </span>
+                    <span className="mx-2 text-xl text-black">|</span>
+                  </div>
+                  <div className="flex flex-row items-center">
+                    <span className="mr-2 text-black">{item.area} sqm.</span>
+                    <span className="scale-125">
+                      <BsGridFill />
+                    </span>
+                  </div>
+                  <div className="absolute inline-flex right-1 top-0">
+                    <div
+                      onClick={() => setGalleryid(item.itemNumber)}
+                      className="flex flex-row items-center hover:cursor-pointer mt-1"
+                    >
+                      {/* Gallery */}
+                      <span className="mr-2 ">{item.gallery.length}</span>
+                      <span className="animate-pulse scale-[1.5]">
+                        <IoMdPhotos />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-mgrey capitalize">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          ))}
         </div>
         {galleryid ? <GalleryModal /> : <div></div>}
       </div>
