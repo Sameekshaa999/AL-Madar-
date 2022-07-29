@@ -45,7 +45,7 @@
 }
 
 .property-gallery-item {
-  @apply flex h-full w-full justify-center items-center;
+  @apply flex h-full w-full justify-center items-center p-4;
 }
 
 .h-30vh {

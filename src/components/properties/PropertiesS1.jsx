@@ -144,30 +144,34 @@ const PropertiesS1 = () => {
                 type="button"
                 className="justify-center text-white hover:scale-110 transition"
               >
-                <IoMdClose className="mt-12 mr-12 h-8 w-8" />
+                <IoMdClose className="my-4 md:my-8 md:mr-12 h-8 w-8" />
               </button>
             </div>
-            <div className="h-full w-full text-white">
+            <div className="mx-auto w-11/12 sm:h-2/3 md:h-full md:w-full text-white">
               <Swiper
                 loop={true}
                 slidesPerView={1}
                 breakpoints={{
                   640: {
                     slidesPerView: 1,
+                    spaceBetween: 20,
                   },
 
                   768: {
                     slidesPerView: 3,
+                    coverflowEffect: {
+                      rotate: 0,
+                      stretch: -30,
+                      depth: 100,
+                      scale: 0.3,
+                      modifier: 1,
+                      slideShadows: false,
+                    },
                   },
                 }}
                 navigation={true}
                 effect={"coverflow"}
                 coverflowEffect={{
-                  rotate: 0,
-                  stretch: -80,
-                  depth: 100,
-                  scale: 0.3,
-                  modifier: 1,
                   slideShadows: false,
                 }}
                 autoplay={{
@@ -179,14 +183,14 @@ const PropertiesS1 = () => {
                   type: "fraction",
                 }}
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
-                className="flex items-start"
+                className=""
               >
                 {qatarPropertiesData[galleryid - 1].gallery.map((item) => (
                   <SwiperSlide key={item}>
                     <div className="property-gallery-item">
                       <img
                         src={item}
-                        className=" object-cover scale-150"
+                        className="w-2/3 md:w-auto object-cover md:scale-150"
                         alt=""
                       />
                     </div>
@@ -374,7 +378,7 @@ const PropertiesS1 = () => {
         </Link>
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 mb-12">
           <div className="font-montserrat">
-            <div className=" md:h-[22rem] lg:h-[30rem] w-full text-white">
+            <div className="h-[20rem] sm:h-[22rem] lg:h-[30rem] w-full text-white">
               <Swiper
                 loop={true}
                 slidesPerView={1}
@@ -399,10 +403,10 @@ const PropertiesS1 = () => {
                         alt=""
                       />
                       <div
-                        className="flex items-end justify-end"
+                        className="flex items-start justify-end"
                         onClick={() => setGalleryid(currentProperty.itemNumber)}
                       >
-                        <MdOutlineFullscreen className="h-10 w-10 -mt-12 mb-2 mr-2 cursor-pointer hover:scale-125 hover:text-mpurple transition bg-black hover:bg-white hover:bg-opacity-60 rounded-lg bg-opacity-30 text-white" />
+                        <MdOutlineFullscreen className="h-10 w-10 -mt-16 sm:-mt-[22rem] md:mt-4 md:mb-2 mr-2 cursor-pointer hover:scale-125 hover:text-mpurple transition bg-black hover:bg-white hover:bg-opacity-60 rounded-lg bg-opacity-30 text-white" />
                       </div>
                     </div>
                   </SwiperSlide>
@@ -538,7 +542,10 @@ const PropertiesS1 = () => {
             {console.log("to be rendered", renderData)}
             {/* {console.log()} */}
             {renderData.map((item) => (
-              <SwiperSlide key={item.id} className="flex h-full items-center">
+              <SwiperSlide
+                key={item.id}
+                className="flex h-full w-full items-start"
+              >
                 <div className="group relative">
                   <div className="relative w-full h-full group-hover:opacity-75 ">
                     <Link
