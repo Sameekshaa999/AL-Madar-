@@ -231,37 +231,47 @@ const PropertiesS1 = () => {
     };
     console.log(propertyEmail);
     return (
-      <div className="flex flex-col fixed z-50 w-screen h-screen top-0 left-0 bg-black bg-opacity-80 font-montserrat">
-        <div className="flex justify-end">
+      <div className="flex flex-col fixed z-50 w-screen min-h-screen top-0 left-0 bg-black bg-opacity-80 font-montserrat overflow-y-auto">
+        <div className="hidden md:flex justify-end">
           <button
             onClick={() => setPropertyEmail(null)}
             type="button"
             className="text-white hover:scale-110 transition"
           >
-            <IoMdClose className="mt-12 mr-12 h-8 w-8" />
+            <IoMdClose className="my-4 md:mt-12 mr-4 md:mr-12 h-8 w-8" />
           </button>
         </div>
-        <div className="flex h-full items-center">
-          <div className="relative w-auto mx-auto bg-white max-w-[800px] rounded-xl p-5">
-            <div className="grid grid-cols-2 gap-x-12 p-4 py-6">
-              <div className="flex flex-col text-mgrey">
-                <div className="flex w-full justify-start">
-                  <img src={propertyEmail.image} alt="" className="w-96" />
+        <div className="flex h-full items-center p-2 sm:px-10">
+          <div className="relative w-auto mx-auto bg-white max-w-[800px] rounded-xl p-5 ">
+            <button
+              onClick={() => setPropertyEmail(null)}
+              className="flex md:hidden justify-end w-full"
+            >
+              <IoMdClose className="h-8 w-8" />
+            </button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-0 md:gap-x-12 p-4 py-6 overflow-y-auto">
+              <div className="flex flex-col text-mgrey space-y-1 md:space-y-4">
+                <div className="flex w-full justify-center">
+                  <img
+                    src={propertyEmail.image}
+                    alt=""
+                    className="h-32 w-11/12 sm:h-48 sm:w-full md:h-auto md:w-96"
+                  />
                 </div>
-                <div className=" mt-4 text-xl inline-flex items-center font-bold text-mpurple">
-                  <span className="scale-125">
+                <div className="mt-4 text-xl inline-flex items-center font-bold text-mpurple">
+                  <span className="md:scale-125">
                     <IoMdPricetag />
                   </span>
-                  <span className="ml-2 ">
+                  <span className="text-sm md:text-base ml-2 ">
                     Reference: {propertyEmail.refID}
                   </span>
                 </div>
-                <h3 className="mt-2 ml-7 text-lg font-extrabold ">
+                <h3 className="md:mt-2 ml-7 text-sm md:text-lg font-extrabold ">
                   QAR {propertyEmail.price}
                 </h3>
-                <div className="grid grid-cols-2 gap-y-2 mt-8 ml-7 text-sm text-mpurple font-mono font-semibold relative">
+                <div className="grid grid-cols-2 md:gap-y-2 md:mt-8 ml-7 text-sm text-mpurple font-mono font-semibold relative">
                   <div className="inline-flex items-center">
-                    <span className="scale-125">
+                    <span className="md:scale-125">
                       <IoLocationSharp />
                     </span>
                     <span className="ml-2 capitalize">
@@ -269,7 +279,7 @@ const PropertiesS1 = () => {
                     </span>
                   </div>
                   <div className="inline-flex items-center">
-                    <span className="scale-125">
+                    <span className="md:scale-125">
                       <FaBed />
                     </span>
                     <span className="ml-2">
@@ -277,7 +287,7 @@ const PropertiesS1 = () => {
                     </span>
                   </div>
                   <div className="inline-flex items-center">
-                    <span className="scale-125">
+                    <span className="md:scale-125">
                       <TbBuildingSkyscraper />
                     </span>
                     <span className="ml-2 capitalize">
@@ -285,7 +295,7 @@ const PropertiesS1 = () => {
                     </span>
                   </div>
                   <div className="inline-flex items-center">
-                    <span className="scale-125">
+                    <span className="md:scale-125">
                       <FaBath />
                     </span>
                     <span className="ml-2 mt-1 capitalize">
@@ -293,7 +303,7 @@ const PropertiesS1 = () => {
                     </span>
                   </div>
                   <div className="inline-flex items-center">
-                    <span className="scale-125">
+                    <span className="md:scale-125">
                       <BsGridFill />
                     </span>
                     <span className="ml-2 mt-1">{propertyEmail.area} sqm.</span>
@@ -303,11 +313,13 @@ const PropertiesS1 = () => {
               <form
                 ref={form}
                 onSubmit={sendEmail}
-                className="flex flex-col space-y-4 -mt-6"
+                className="flex flex-col space-y-2 md:space-y-4 -mt-4 md:-mt-6"
               >
-                Reference ID
+                <span className="text-sm md:text-base font-medium text-black">
+                  Reference ID
+                </span>
                 <input
-                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
                   id="referenceID"
                   readOnly
                   name="referenceID"
@@ -315,7 +327,7 @@ const PropertiesS1 = () => {
                   value={propertyEmail.refID}
                 />
                 <input
-                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
                   id="name"
                   required
                   name="Name"
@@ -323,7 +335,7 @@ const PropertiesS1 = () => {
                   placeholder="Name *"
                 />
                 <input
-                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
                   id="email"
                   required
                   name="Email"
@@ -331,7 +343,7 @@ const PropertiesS1 = () => {
                   placeholder="Email *"
                 />
                 <input
-                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
                   id="number"
                   required
                   name="Number"
@@ -339,15 +351,17 @@ const PropertiesS1 = () => {
                   placeholder="Number *"
                 />
                 <textarea
-                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
                   name="message"
                   required
-                  rows="7"
+                  rows="5"
                   cols="47"
                   type="text"
                   placeholder="Message *"
                 ></textarea>
-                <MessageButton className="" />
+                <div className="flex justify-center md:justify-end w-full">
+                  <MessageButton className="" />
+                </div>
               </form>
             </div>
           </div>
@@ -779,7 +793,7 @@ const PropertiesS1 = () => {
                     // RenderProperties();
                   }}
                   type="button"
-                  className="mt-4 sm:mt-0 py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
+                  className="mt-4 sm:mt-0 py-0.5 sm:py-1 md:py-2 px-3 text-sm font-medium inline-flex items-center text-white bg-mpurple sm:bg-white sm:bg-opacity-30 rounded-lg"
                 >
                   <svg
                     aria-hidden="true"
