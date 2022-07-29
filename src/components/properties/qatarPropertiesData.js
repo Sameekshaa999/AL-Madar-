@@ -70,7 +70,7 @@ const qatarPropertiesData = [
       prop_2_img_6,
     ],
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum. ",
   },
 
   {
@@ -84,7 +84,7 @@ const qatarPropertiesData = [
     bathrooms: 1,
     price: 3950,
     location: "lusail",
-    image: prop_3_img_8,
+    image: prop_3_img_1,
     gallery: [
       prop_3_img_1,
       prop_3_img_2,
@@ -98,7 +98,7 @@ const qatarPropertiesData = [
       prop_3_img_10,
     ],
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -122,7 +122,7 @@ const qatarPropertiesData = [
       prop_1_img_6,
     ],
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -147,7 +147,7 @@ const qatarPropertiesData = [
     ],
 
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -172,7 +172,7 @@ const qatarPropertiesData = [
     ],
 
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -223,7 +223,7 @@ const qatarPropertiesData = [
     ],
 
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -248,7 +248,7 @@ const qatarPropertiesData = [
     ],
 
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 
   {
@@ -272,7 +272,7 @@ const qatarPropertiesData = [
       prop_1_img_6,
     ],
     description:
-      "Est velit egestas dui id ornare arcu. Adipiscing elit ut aliquam purus sit amet luctus. In metus vulputate eu scelerisque felis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Nisl rhoncus mattis rhoncus urna. Cras fermentum odio eu feugiat pretium nibh. Facilisi etiam dignissim diam quis. Sed elementum tempus egestas sed sed risus. Suspendisse potenti nullam ac tortor vitae. Mattis vulputate enim nulla aliquet porttitor lacus luctus.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus semper. Platea dictumst quisque sagittis purus sit amet volutpat. Neque viverra justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus orci ac. Id volutpat lacus laoreet non curabitur gravida arcu ac. Bibendum neque egestas congue quisque egestas diam. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nunc congue nisi vitae suscipit tellus. Vitae aliquet nec ullamcorper sit amet risus. Eu consequat ac felis donec et odio pellentesque diam. Purus non enim praesent elementum.",
   },
 ];
 

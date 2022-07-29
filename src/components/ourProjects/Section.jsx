@@ -1,5 +1,5 @@
 import React from "react";
-import projectsData from "./projectsData.tsx";
+import projectsData from "./projectsData";
 import Headings from "../Headings";
 import defaultImage from "../Zimages/projects/default.jpg";
 

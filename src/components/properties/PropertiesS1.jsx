@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Select from "react-select";
+import emailjs from "@emailjs/browser";
+import MessageButton from "../MessageButton";
+
 //data file
 import qatarPropertiesData from "./qatarPropertiesData";
 import {
@@ -16,9 +19,10 @@ import {
 import skyline2 from "../Zimages/properties/doha-skyline-hd2.png";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
-import { IoMdPhotos } from "react-icons/io";
-import { IoChevronBack, IoLocationSharp } from "react-icons/io5";
+import { IoMdPhotos, IoMdPricetag, IoMdClose } from "react-icons/io";
+import { IoChevronBack, IoLocationSharp, IoCall } from "react-icons/io5";
 import { TbBuildingSkyscraper } from "react-icons/tb";
+import { MdEmail, MdOutlineFullscreen } from "react-icons/md";
 
 // Import Swiper components
 import { Autoplay, Pagination, EffectCoverflow, Navigation } from "swiper";
@@ -133,77 +137,62 @@ const PropertiesS1 = () => {
     return (
       <div className="font-montserrat">
         <div className="relative z-50" role="dialog" aria-modal="true">
-          {/* dark overlay */}
-          <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"></div>
+          <div className="fixed z-10 inset-0 bg-black bg-opacity-90 transition-opacity">
+            <div className="flex w-screen justify-end">
+              <button
+                onClick={() => setGalleryid(null)}
+                type="button"
+                className="justify-center text-white hover:scale-110 transition"
+              >
+                <IoMdClose className="mt-12 mr-12 h-8 w-8" />
+              </button>
+            </div>
+            <div className="h-full w-full text-white">
+              <Swiper
+                loop={true}
+                slidesPerView={1}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                  },
 
-          {/* gallery */}
-          <div className="fixed z-10 inset-0 bg-black bg-opacity-70 transition-opacity">
-            {/* <div className="flex justify-center h-screen"> */}
-            <div className="flex flex-col space-y-8 overflow-hidden sm:w-full sm:h-screen">
-              <div className="basis-5/6">
-                <div className="h-2/3 md:h-full w-full text-white">
-                  <Swiper
-                    loop={true}
-                    slidesPerView={1}
-                    breakpoints={{
-                      640: {
-                        slidesPerView: 1,
-                      },
-
-                      768: {
-                        slidesPerView: 3,
-                      },
-                    }}
-                    navigation={true}
-                    effect={"coverflow"}
-                    coverflowEffect={{
-                      rotate: 60,
-                      stretch: 0,
-                      depth: 100,
-                      scale: 0.7,
-                      modifier: 1,
-                      slideShadows: false,
-                    }}
-                    autoplay={{
-                      delay: 3000,
-                      disableOnInteraction: true,
-                    }}
-                    pagination={{
-                      clickable: true,
-                      type: "fraction",
-                    }}
-                    modules={[
-                      EffectCoverflow,
-                      Autoplay,
-                      Pagination,
-                      Navigation,
-                    ]}
-                    className="top-[20%] md:top-[5%]"
-                  >
-                    {qatarPropertiesData[galleryid - 1].gallery.map((item) => (
-                      <SwiperSlide key={item}>
-                        <div className="property-gallery-item">
-                          <img
-                            src={item}
-                            className="h-2/3 md:h-auto object-cover"
-                            alt=""
-                          />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
-              </div>
-
-              <div className="basis-1/6 flex items-center justify-center md:my-8">
-                <button
-                  onClick={() => setGalleryid(null)}
-                  type="button"
-                  className="inline-flex justify-center rounded px-6 py-2 bg-mpurple font-semibold text-white hover:scale-110 transition"
-                >
-                  Close
-                </button>
-              </div>
+                  768: {
+                    slidesPerView: 3,
+                  },
+                }}
+                navigation={true}
+                effect={"coverflow"}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: -80,
+                  depth: 100,
+                  scale: 0.3,
+                  modifier: 1,
+                  slideShadows: false,
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: true,
+                }}
+                pagination={{
+                  clickable: true,
+                  type: "fraction",
+                }}
+                modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+                className="flex items-start"
+              >
+                {qatarPropertiesData[galleryid - 1].gallery.map((item) => (
+                  <SwiperSlide key={item}>
+                    <div className="property-gallery-item">
+                      <img
+                        src={item}
+                        className=" object-cover scale-150"
+                        alt=""
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
@@ -213,57 +202,246 @@ const PropertiesS1 = () => {
 
   // property modal on/off
   const [propertyid, setPropertyid] = useState(null);
+  const [propertyEmail, setPropertyEmail] = useState(null);
+  function EmailModal() {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+
+      emailjs
+        .sendForm(
+          "service_9gsoihm",
+          "template_rmasnn8",
+          form.current,
+          "dkUcOspLFMfktkd7D"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    };
+    console.log(propertyEmail);
+    return (
+      <div className="flex flex-col fixed z-50 w-screen h-screen top-0 left-0 bg-black bg-opacity-80 font-montserrat">
+        <div className="flex justify-end">
+          <button
+            onClick={() => setPropertyEmail(null)}
+            type="button"
+            className="text-white hover:scale-110 transition"
+          >
+            <IoMdClose className="mt-12 mr-12 h-8 w-8" />
+          </button>
+        </div>
+        <div className="flex h-full items-center">
+          <div className="relative w-auto mx-auto bg-white max-w-[800px] rounded-xl p-5">
+            <div className="grid grid-cols-2 gap-x-12 p-4 py-6">
+              <div className="flex flex-col text-mgrey">
+                <div className="flex w-full justify-start">
+                  <img src={propertyEmail.image} alt="" className="w-96" />
+                </div>
+                <div className=" mt-4 text-xl inline-flex items-center font-bold text-mpurple">
+                  <span className="scale-125">
+                    <IoMdPricetag />
+                  </span>
+                  <span className="ml-2 ">
+                    Reference: {propertyEmail.refID}
+                  </span>
+                </div>
+                <h3 className="mt-2 ml-7 text-lg font-extrabold ">
+                  QAR {propertyEmail.price}
+                </h3>
+                <div className="grid grid-cols-2 gap-y-2 mt-8 ml-7 text-sm text-mpurple font-mono font-semibold relative">
+                  <div className="inline-flex items-center">
+                    <span className="scale-125">
+                      <IoLocationSharp />
+                    </span>
+                    <span className="ml-2 capitalize">
+                      {propertyEmail.location}
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center">
+                    <span className="scale-125">
+                      <FaBed />
+                    </span>
+                    <span className="ml-2">
+                      {propertyEmail.bedrooms} Bedrooms
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center">
+                    <span className="scale-125">
+                      <TbBuildingSkyscraper />
+                    </span>
+                    <span className="ml-2 capitalize">
+                      {propertyEmail.type}
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center">
+                    <span className="scale-125">
+                      <FaBath />
+                    </span>
+                    <span className="ml-2 mt-1 capitalize">
+                      {propertyEmail.bathrooms} Bathrooms
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center">
+                    <span className="scale-125">
+                      <BsGridFill />
+                    </span>
+                    <span className="ml-2 mt-1">{propertyEmail.area} sqm.</span>
+                  </div>
+                </div>
+              </div>
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="flex flex-col space-y-4 -mt-6"
+              >
+                Reference ID
+                <input
+                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  id="referenceID"
+                  readOnly
+                  name="referenceID"
+                  type="text"
+                  value={propertyEmail.refID}
+                />
+                <input
+                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  required
+                  name="Name"
+                  type="text"
+                  placeholder="Name *"
+                />
+                <input
+                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  required
+                  name="Email"
+                  type="text"
+                  placeholder="Email *"
+                />
+                <input
+                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  id="number"
+                  required
+                  name="Number"
+                  type="tel"
+                  placeholder="Number *"
+                />
+                <textarea
+                  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
+                  name="message"
+                  required
+                  rows="7"
+                  cols="47"
+                  type="text"
+                  placeholder="Message *"
+                ></textarea>
+                <MessageButton className="" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   function PropertyModal() {
-    console.log(propertyid);
     const currentProperty = qatarPropertiesData[propertyid - 1];
     return (
-      <div className="font-montserrat">
-        <Link to="renderArea" smooth={true} duration={500} offset={-48}>
+      <div className="mx-auto font-montserrat px-4 sm:px-10">
+        <Link
+          to="renderArea"
+          smooth={true}
+          duration={500}
+          offset={-48}
+          className="relative"
+        >
           <span
-            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 mt-4 pl-1 pr-3"
+            className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 mt-4 pl-1 pr-3 mb-10 md:mb-0"
             onClick={() => {
               setPropertyid(null);
-              console.log("back");
             }}
           >
             <IoChevronBack className="w-5 h-5" />
             Back
           </span>
         </Link>
-        <div className="grid grid-cols-2 h-screen">
-          <div className="mt-4 md:h-[60%] w-full text-white">
-            <Swiper
-              loop={true}
-              slidesPerView={1}
-              navigation={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: true,
-              }}
-              pagination={{
-                clickable: true,
-                type: "fraction",
-              }}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="text-mgrey font-bold"
-            >
-              {currentProperty.gallery.map((item) => (
-                <>
-                  <SwiperSlide key={item} className="-z-10 flex items-center">
-                    <div className="relative w-full min-h-80 sm:aspect-w-1 sm:aspect-h-1 md:aspect-w-16 md:aspect-h-10 overflow-hidden group-hover:opacity-75 lg:h-80 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 mb-12">
+          <div className="font-montserrat">
+            <div className=" md:h-[22rem] lg:h-[30rem] w-full text-white">
+              <Swiper
+                loop={true}
+                slidesPerView={1}
+                navigation={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: true,
+                }}
+                pagination={{
+                  clickable: true,
+                  type: "fraction",
+                }}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="text-mgrey font-bold"
+              >
+                {currentProperty.gallery.map((item) => (
+                  <SwiperSlide key={item} className="flex items-center">
+                    <div className="relative w-full md:aspect-w-16 md:aspect-h-10 overflow-hidden group-hover:opacity-75 lg:h-80 ">
                       <img
                         src={item}
-                        className="h-2/3 md:h-auto object-cover"
+                        className="sm:h-3/4 lg:h-11/12 object-cover"
                         alt=""
                       />
+                      <div
+                        className="flex items-end justify-end"
+                        onClick={() => setGalleryid(currentProperty.itemNumber)}
+                      >
+                        <MdOutlineFullscreen className="h-10 w-10 -mt-12 mb-2 mr-2 cursor-pointer hover:scale-125 hover:text-mpurple transition bg-black hover:bg-white hover:bg-opacity-60 rounded-lg bg-opacity-30 text-white" />
+                      </div>
                     </div>
                   </SwiperSlide>
-                </>
-              ))}
-            </Swiper>
+                ))}
+              </Swiper>
+            </div>
+            <div className="inline-flex items-center font-semibold text-mgrey mt-4 md:mt-0">
+              <span className="scale-125">
+                <IoMdPricetag />
+              </span>
+              <span className="ml-2">
+                Reference ID: {currentProperty.refID}
+              </span>
+            </div>
+            <div className="text-mgrey font-medium">
+              Contact us and get a quote today!
+            </div>
+
+            <div className="grid grid-cols-2 justify-items-center md:justify-items-start mt-4 font-semibold relative">
+              <a href="tel:+974 6644 9748">
+                <span className="inline-flex items-center font-normal cursor-pointer rounded text-white bg-mpurple mt-4 pl-1 py-1.5 px-6 hover:scale-110 transition">
+                  <IoCall className="w-4 h-4 mx-2" />
+                  Call
+                </span>
+              </a>
+              <span
+                className="inline-flex items-center font-normal cursor-pointer rounded text-white bg-mpurple mt-4 pl-1 py-1.5 px-4 hover:scale-110 transition"
+                onClick={() => {
+                  setPropertyEmail(currentProperty);
+                  console.log(propertyEmail);
+                }}
+              >
+                <MdEmail className="w-4 h-4 mx-2" />
+                Email
+              </span>
+            </div>
           </div>
           <div>
-            <div className="flex flex-col w-full mt-20 ml-10">
+            <div className="flex flex-col w-full mt-16">
               <h3 className="text-2xl font-extrabold text-mgrey">
                 QAR {currentProperty.price}
               </h3>
@@ -271,7 +449,7 @@ const PropertiesS1 = () => {
                 {currentProperty.title}
               </h3>
 
-              <div className="grid grid-cols-2 p-1 mt-12 text-mpurple text-base font-mono font-semibold relative">
+              <div className="grid grid-cols-2 gap-y-2 p-1 mt-12 text-mpurple text-base font-mono font-semibold relative">
                 <div className="inline-flex items-center">
                   <span className="scale-125">
                     <IoLocationSharp />
@@ -316,18 +494,20 @@ const PropertiesS1 = () => {
                 </div>
               </div>
 
-              <p className="mt-16 text-lg text-black">
+              <p className="mt-8 lg:mt-12 md:text-sm lg:text-lg text-black text-justify">
                 {currentProperty.description}
               </p>
             </div>
           </div>
         </div>
+        {galleryid ? <GalleryModal /> : <div></div>}
+        {propertyEmail ? <EmailModal /> : <div></div>}
       </div>
     );
   }
   function PropertyList() {
     return (
-      <div className="h-screen">
+      <div className="min-h-screen">
         <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
           Qatar Properties
         </h1>
@@ -358,7 +538,7 @@ const PropertiesS1 = () => {
             {console.log("to be rendered", renderData)}
             {/* {console.log()} */}
             {renderData.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} className="">
                 <div className="group relative">
                   <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                     <Link
@@ -373,7 +553,6 @@ const PropertiesS1 = () => {
                         className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
                         onClick={() => {
                           setPropertyid(item.itemNumber);
-                          console.log("HAHA");
                         }}
                       />
                     </Link>
@@ -478,9 +657,9 @@ const PropertiesS1 = () => {
 
     return (
       <>
-        <div className="pt-24 w-screen h-[35rem] font-montserrat relative">
+        <div className="pt-24 overflow-x-hiden h-[35rem] font-montserrat relative">
           <header
-            className="w-full h-full bg-origin-border bg-left md:bg-center bg-cover"
+            className="w-full h-full bg-left md:bg-center bg-cover"
             style={{ backgroundImage: `url(${skyline2})` }}
           >
             <div className="flex justify-center w-full h-full bg-gray-900 bg-opacity-20 py-20">
