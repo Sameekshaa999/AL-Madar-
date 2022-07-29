@@ -508,7 +508,7 @@ const PropertiesS1 = () => {
   function PropertyList() {
     return (
       <div className="min-h-screen">
-        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl p-4 md:p-8 pl-0 md:pl-0 font-bold">
+        <h1 className="uppercase text-md sm:text-lg md:text-xl lg:text-2xl pt-8 pl-0 md:pl-0 font-bold">
           Qatar Properties
         </h1>
         <div className="h-[42rem] sm:h-[50rem] md:h-[36rem] lg:h-[31rem] font-montserrat mx-auto">
@@ -538,9 +538,9 @@ const PropertiesS1 = () => {
             {console.log("to be rendered", renderData)}
             {/* {console.log()} */}
             {renderData.map((item) => (
-              <SwiperSlide key={item.id} className="">
+              <SwiperSlide key={item.id} className="flex h-full items-center">
                 <div className="group relative">
-                  <div className="relative w-full min-h-80 bg-gray-200 sm:aspect-w-1 sm:aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                  <div className="relative w-full h-full group-hover:opacity-75 ">
                     <Link
                       to="renderArea"
                       smooth={true}
@@ -550,7 +550,7 @@ const PropertiesS1 = () => {
                       <img
                         src={item.image}
                         alt=""
-                        className="object-center object-cover lg:w-full lg:h-full shadow-lg cursor-pointer"
+                        className="object-center object-cover w-full max-h-64 shadow-lg cursor-pointer"
                         onClick={() => {
                           setPropertyid(item.itemNumber);
                         }}
