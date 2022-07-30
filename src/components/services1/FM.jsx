@@ -34,7 +34,7 @@ const FM = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col space-y-10 justify-center items-center lg:items-left lg:w-1/3">
+      <div className="flex flex-col space-y-10 justify-center items-center lg:w-1/3">
         <button
           onClick={() => setButtonPopup(true)}
           className="px-10 py-3 bg-mpurple text-white font-montserrat font-light text-sm lg:text-base"

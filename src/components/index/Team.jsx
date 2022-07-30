@@ -18,7 +18,7 @@ const Team = () => {
              shortest timepossible to our clients
         </p>
       </div>
-      <div className="visible lg:invisible mt-10 w-full h-10 lg:h-60 flex flex-col justify-center items-center">
+      <div className="lg:hidden mt-10 w-full h-10 lg:h-60 flex flex-col justify-center items-center">
       <button>
           <Link
             to="/services"
@@ -28,7 +28,7 @@ const Team = () => {
           </Link>
           </button>
       </div>
-      <div className="invisible lg:visible team-gradient w-full h-10 lg:h-60 flex flex-col justify-center items-center">
+      <div className="hidden team-gradient w-full h-10 lg:h-60 lg:flex flex-col justify-center items-center">
       <button>
           <Link
             to="/services"

@@ -18,7 +18,8 @@ const AboutSection = () => {
            want to provide outstanding service to property owners in the
            local and regional markets.</p>
       </div>
-      {/* <div className="lg:w-4/5 "><img  src={Group} alt="Group" /></div> */}
+      <img  src={Group} alt="Group" className="w-1/3"/>
+      <div className=""></div>
       </div>
   );
 };
