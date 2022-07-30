@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import MessageButton from "../MessageButton.jsx"
+import MessageButton from "../MessageButton.jsx";
 import office from "../Zimages/contact/Al-Madar-office.jpg";
 import client2 from "../Zimages/index/client2.png";
 import client3 from "../Zimages/index/client3.png";
@@ -12,16 +12,24 @@ const Section2 = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_9gsoihm', 'template_mdxtz2p', form.current, 'dkUcOspLFMfktkd7D')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_9gsoihm",
+        "template_mdxtz2p",
+        form.current,
+        "dkUcOspLFMfktkd7D"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
   return (
     <div className="font-montserrat">
-    
       <div className="contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
         <div>
           <img
@@ -54,7 +62,11 @@ const Section2 = () => {
           <p className="text-white text-lg md:text-2xl font-normal mb-3">
             Get In Touch
           </p>
-          <form ref={form} onSubmit={sendEmail} className="flex-col justify-evenly font-montserrat text-mpurple">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex-col justify-evenly font-montserrat text-mpurple"
+          >
             <input
               className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"
               id="name"
@@ -91,9 +103,8 @@ const Section2 = () => {
               type="text"
               placeholder="Message *"
             ></textarea>
-            <MessageButton/>
+            <MessageButton />
           </form>
-          
         </div>
         <div className="mt-5 md:mt-0 text-mpurple inline-block lg:w-1/3">
           <h1 className="font-medium text-lg md:text-2xl">
@@ -102,7 +113,7 @@ const Section2 = () => {
           <div className="mt-3">
             <div className="flex">
               <img src={client2} alt="1" className="w-12 h-12 md:w-14" />
-              <h2 className="m-4">Anna Smith</h2>
+              <h2 className="m-4 font-medium">Anna Smith</h2>
             </div>
             <p className="text-xs md:text-sm ">
               “I have given my property to them for rental management for the
@@ -114,7 +125,7 @@ const Section2 = () => {
           <div className="mt-3">
             <div className="flex">
               <img src={client3} alt="2" className="w-12 h-12 md:w-14" />
-              <h2 className="m-4">Mohammad Ali</h2>
+              <h2 className="m-4 font-medium">Mohammad Ali</h2>
             </div>
             <p className="text-xs md:text-sm">
               "My property is rented in a week and the whole process is taken
@@ -125,7 +136,7 @@ const Section2 = () => {
           <div className="mt-3">
             <div className="flex">
               <img src={client4} alt="3" className="w-12 h-12 md:w-14" />
-              <h2 className="m-4">Sara Khan</h2>
+              <h2 className="m-4 font-medium">Sara Khan</h2>
             </div>
             <p className="text-xs md:text-sm">
               Fantastic working with these guys! They understood the
