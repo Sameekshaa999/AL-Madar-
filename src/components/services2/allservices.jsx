@@ -7,7 +7,7 @@ import { IoChevronBack } from "react-icons/io5";
 
 const AllServices = () => {
   return (
-    <div className="max-w-[1200px] pt-24 font-montserrat text-mpurple px-4  mx-auto">
+    <div className="snap-start max-w-[1200px] pt-24 font-montserrat text-mpurple px-4  mx-auto">
       <Link to="/services">
         <span className="inline-flex items-center font-semibold cursor-pointer rounded hover:text-mblue hover:bg-gray-200 mt-4 pl-1 pr-3">
           <IoChevronBack className="w-5 h-5" />

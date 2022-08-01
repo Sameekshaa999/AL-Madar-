@@ -4,11 +4,11 @@ import team from "../Zimages/index/team.png";
 
 const Team = () => {
   return (
-    <div className="relative flex flex-col justify-center items-center font-montserrat text-mpurple">
-      <h1 className="visible lg:invisible  text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-10 relative flex flex-col justify-center items-center font-montserrat text-mpurple">
+      <h1 className="flex lg:hidden text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
       <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="h-1/2 w-1/2 "/></div>
-      <div className="md:absolute lg:mt-28 team-bg flex flex-col justify-center items-center px-5 lg:px-10 lg:py-1 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
-      <h1 className="invisible lg:visible text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
+      <div className="lg:absolute lg:mt-28 team-bg flex flex-col justify-center items-center px-5 lg:px-10 lg:py-1 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
+      <h1 className="hidden lg:flex text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
         <p className="text-center inline-flex mt-0 lg:mt-4 text-sm lg:text-lg lg:leading-relaxed">
             We have highly trained personnel who are 
             carefully selected to assure the client's satisfaction.

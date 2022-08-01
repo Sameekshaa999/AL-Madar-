@@ -8,7 +8,7 @@ import PopUp from "../PopUp";
 const FM = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
-    <div className="flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-20 lg:mx-40 pt-10">
+    <div className="snap-align-none lg:snap-start pt-10 lg:pt-24 flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-20 lg:mx-40">
       <div className="flex-col">
         <div className="flex flex-col sm:flex-row space-y-6 sm:space-x-6 items-center">
           <img src={FM_icon} alt="icon" className="h-20" />

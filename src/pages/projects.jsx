@@ -3,10 +3,10 @@ import Section from "../components/ourProjects/Section";
 
 const Projects = () => {
   return (
-    <>
+    <div className="snap-y snap-mandatory h-screen scrolling">
       <Section />
       
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import heroMobile from "../Zimages/index/hero_mobile.jpg";
 
 const Hero = () => {
   return (
-    <div className="pt-24 h-screen w-full flex justify-center font-montserrat">
+    <div className="snap-align-none lg:snap-start relative pt-24 h-screen w-full flex justify-center font-montserrat">
       <img
         src={hero}
         alt="hero"
@@ -32,7 +32,7 @@ const Hero = () => {
           <button>
           <Link
             to="/contact"
-            className="text-center px-4 md:px-10 py-2 md:py-3 text-mpurple font-semibold border-3 border-mpurple rounded-full md:rounded-lg text-sm md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out "
+            className="text-center px-4 md:px-6 py-2 md:py-3 text-mpurple font-semibold border-3 border-mpurple rounded-full md:rounded-lg text-sm md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out "
           >
             Know More
           </Link>

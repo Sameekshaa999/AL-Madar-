@@ -5,11 +5,11 @@ import AboutMV from "../components/about/AboutMV";
 
 const About = () => {
   return (
-    <>
+    <div className="snap-y snap-mandatory h-screen scrolling">
       <AboutUs />
       <OurTeam />
       <AboutMV />
-    </>
+    </div>
   );
 };
 
