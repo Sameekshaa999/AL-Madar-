@@ -111,7 +111,7 @@ const CustomerReview = () => {
       </div>
       <div className="lg:w-1/2 lg:float-right flex flex-row lg:flex-col-reverse justify-center items-center space-x-2 lg:space-y-20 my-20">
        
-        <h1 className="mx-auto font-bold text-3xl lg:text-6xl text-mpurple tracking-[.1em]">
+        <h1 className="mx-auto font-bold text-2xl lg:text-6xl text-mpurple tracking-[.1em]">
           Customer <br />
           <span className="font-light tracking-[.4em]"> Review</span>
         </h1>

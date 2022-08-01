@@ -7,10 +7,10 @@ import Headings from "../Headings";
 
 const Properties = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col justify-center items-center space-y-5 font-montserrat text-mpurple mx-20 lg:mx-40 my-10">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col justify-center items-center space-y-5 font-montserrat text-mpurple mx-4 lg:mx-40 my-10">
       <div className="flex flex-col justify-center items-center space-y-2 lg:space-y-5 ">
         <Headings first="Our" second="Properties" />
-        <p className="text-center lg:text-justify text-sm lg:text-lg leading-loose inline-block">
+        <p className="text-center lg:text-justify text-sm lg:text-lg lg:leading-loose inline-block">
         We want to make your experience in finding your next dream home an enjoyable one!</p>
       </div>
       <div className="flex flex-col lg:flex-row">
