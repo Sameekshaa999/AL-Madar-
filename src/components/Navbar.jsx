@@ -78,6 +78,14 @@ const Navbar = () => {
             >
               Contact Us
             </NavLink>
+            <NavLink
+              to="/test"
+              className={({ isActive }) =>
+                isActive ? "nav-items-active" : "nav-items"
+              }
+            >
+              Test
+            </NavLink>
           </div>
 
           {/* mobile menu */}

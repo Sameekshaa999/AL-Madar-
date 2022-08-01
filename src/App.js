@@ -8,6 +8,7 @@ import Projects from "./pages/projects";
 import Properties from "./pages/properties";
 import Contact from "./pages/contact";
 import Services2 from "./pages/services2";
+import Test from "./pages/test";
 import Spinner from "./components/spinner";
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
         <Spinner />
       ) : (
         <>
-          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -33,8 +33,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/properties" element={<Properties />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
-          
         </>
       )}
     </>
