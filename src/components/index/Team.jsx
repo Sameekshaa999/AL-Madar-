@@ -1,44 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import team from "../Zimages/team.png";
+import team from "../Zimages/index/team.png";
 
 const Team = () => {
   return (
-    <div className="h-screen mx-auto flex flex-col font-montserrat relative">
-      <div className="basis-2/3">
-        <img
-          src={team}
-          alt="team"
-          className="absolute -z-10 scale-75 bottom-90"
-        />
-        <div className="flex justify-center">
-          <div className="max-w-[500px] pt-2 pb-6 px-4 flex flex-col absolute bottom-40 bg-white opacity-90">
-            <span className="inline-flex mx-auto">
-              <h2 className="my-4 text-center text-mpurple font-semibold text-4xl ">
-                Meet The
-              </h2>
-              <div className="w-2"></div>
-              <h2 className="my-4 text-center text-mblue font-bold text-4xl">
-                Team
-              </h2>
-            </span>
-            <p className="text-center z-20 text-lg text-mpurple">
-              We have highly trained personnel who are carefully selected to
-              assure the client's satisfaction. Our teamwork allows us to bring
-              together the best thinking and advice from our professionals and
-              deliver the best and highest solutions in the shortest time
-              possible to our clients.
-            </p>
-          </div>
-        </div>
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-10 relative flex flex-col justify-center items-center font-montserrat text-mpurple">
+      <h1 className="flex lg:hidden text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
+      <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="h-1/2 w-1/2 "/></div>
+      <div className="lg:absolute lg:mt-28 team-bg flex flex-col justify-center items-center px-5 lg:px-10 lg:py-1 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
+      <h1 className="hidden lg:flex text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
+        <p className="text-center inline-flex mt-0 lg:mt-4 text-sm lg:text-lg lg:leading-relaxed">
+            We have highly trained personnel who are 
+            carefully selected to assure the client's satisfaction.
+            Our teamwork allows us to bring together the best
+            thinking and advice from our professionals and
+             deliver the best and highest solutions in the 
+             shortest timepossible to our clients
+        </p>
       </div>
-      <div className="basis-1/3 meet-team-gradient flex items-center justify-center h-full">
-        <Link
-          to="/services"
-          className="mx-auto text-center mt-4 px-4 md:px-12 py-3 text-mpurple font-semibold rounded-full md:rounded-lg text-sm md:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
-        >
-          More Info
-        </Link>
+      <div className="lg:hidden mt-10 w-full h-10 lg:h-60 flex flex-col justify-center items-center">
+      <button>
+          <Link
+            to="/services"
+            className=" px-4 lg:px-6 py-2 lg:py-3 text-mpurple font-semibold rounded-full lg:rounded-lg text-sm lg:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
+          >
+            More Info
+          </Link>
+          </button>
+      </div>
+      <div className="hidden team-gradient w-full h-10 lg:h-60 lg:flex flex-col justify-center items-center">
+      <button>
+          <Link
+            to="/services"
+            className=" px-4 lg:px-6 py-2 lg:py-3 text-mpurple font-semibold rounded-full lg:rounded-lg text-sm lg:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
+          >
+            More Info
+          </Link>
+          </button>
       </div>
     </div>
   );

@@ -1,10 +1,9 @@
 import React from "react";
-import projectsData from "./projectsData.tsx";
+import projectsData from "./projectsData";
 import Headings from "../Headings";
-import defaultImage from "../Zimages/default.png";
+import defaultImage from "../Zimages/projects/default.jpg";
 
 function Projects(props) {
-  console.log(projectsData[0].location);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-6 sm:px-6 md:px-10 lg:px-14 my-12">
       {projectsData.map((item) => (

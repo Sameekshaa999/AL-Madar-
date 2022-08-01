@@ -1,16 +1,15 @@
 import React from "react";
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import AllServices from "../components/services2/allservices";
-import Download from "../components/services2/Download";
-import Services21 from "../components/services2/services2.1";
 
 const Services2 = () => {
   return (
-    <>
-      <Services21 />
+    <div className="snap-y snap-mandatory h-screen scrolling">
+      <Navbar />
       <AllServices />
-      <Download />
-    </>
+      <Footer />
+    </div>
   );
 };
 
