@@ -205,8 +205,11 @@ const PropertiesS1 = () => {
   }
 
   // property modal on/off
+  var emailStatus = null;
   const [propertyid, setPropertyid] = useState(null);
   const [propertyEmail, setPropertyEmail] = useState(null);
+  // const [isError, setIsError] = useState(false);
+
   function EmailModal() {
     const form = useRef();
 
@@ -222,13 +225,16 @@ const PropertiesS1 = () => {
         )
         .then(
           (result) => {
+            // setIsError(true);
             console.log(result.text);
           },
           (error) => {
+            // setIsError(false);
             console.log(error.text);
           }
         );
     };
+
     console.log(propertyEmail);
     return (
       <div className="flex flex-col fixed z-50 w-screen min-h-screen top-0 left-0 bg-black bg-opacity-80 font-montserrat overflow-y-auto">
@@ -310,6 +316,7 @@ const PropertiesS1 = () => {
                   </div>
                 </div>
               </div>
+
               <form
                 ref={form}
                 onSubmit={sendEmail}
@@ -360,7 +367,7 @@ const PropertiesS1 = () => {
                   placeholder="Message *"
                 ></textarea>
                 <div className="flex justify-center md:justify-end w-full">
-                  <MessageButton className="" />
+                  <MessageButton status={emailStatus} />
                 </div>
               </form>
             </div>
