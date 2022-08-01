@@ -18,7 +18,7 @@ import client4 from "../Zimages/index/client4.png";
 
 const CustomerReview = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24  flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
     <div className="customer-review-gradient parallelogram w-96 lg:w-1/2 py-52 lg:py-72 "></div>
       <div className="absolute w-96 lg:w-1/2 mt-52 lg:mt-40 lg:left-2">
         <Swiper

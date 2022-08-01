@@ -744,7 +744,7 @@ const PropertiesS1 = () => {
     }
 
     return (
-      <div className="snap-align-none lg:snap-start ">
+      <div className="">
         <div className="pt-24 overflow-x-hiden h-[35rem] font-montserrat relative">
           <header
             className="w-full h-full bg-left md:bg-center bg-cover"

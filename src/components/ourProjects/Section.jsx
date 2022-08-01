@@ -43,7 +43,7 @@ Projects.defaultProps = {
 
 const Section = () => {
   return (
-    <div className="snap-start  max-w-[1200px] mx-auto font-montserrat pt-24 px-10">
+    <div className="max-w-[1200px] mx-auto font-montserrat pt-24 px-10">
       <div className="flex flex-col pt-8">
         <Headings first="Our" second="Projects" />
         <p className="text-sm md:text-sm lg:text-base text-justify md:text-left text-mpurple mt-6 sm:mx-6 md:mx-10 lg:mx-14">
