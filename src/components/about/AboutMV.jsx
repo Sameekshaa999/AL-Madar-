@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMV = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center my-10 font-montserrat text-mpurple">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col md:flex-row justify-center items-center my-10 font-montserrat text-mpurple">
       <div className="pb-12 md:pl-16 md:pr-24 md:py-28 w-64 h-64 md:w-96 md:h-96 flex flex-col justify-center items-left space-y-2 md:space-y-5 bg-mpurple rounded-full z-0">
         <h1 className="text-mblue text-sm md:text-2xl lg:text-4xl font-semibold text-center md:text-left"> Vision</h1>
         <p className="text-xs md:text-sm text-white text-center md:text-left px-8 md:px-0">

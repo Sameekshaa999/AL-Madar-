@@ -5,7 +5,7 @@ import email from "../Zimages/services1/email.jpg";
 
 const ServicesExtra = () => {
   return (
-    <div className="flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
+    <div className="snap-align-none lg:snap-start flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
       <div className="flex flex-col justify-center items-center">
         <img
           src={office_building}

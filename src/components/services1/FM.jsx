@@ -8,7 +8,7 @@ import PopUp from "../PopUp";
 const FM = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
-    <div className="flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-20 lg:mx-40 pt-10">
+    <div className="snap-align-none lg:snap-start pt-10 lg:pt-24 flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-20 lg:mx-40">
       <div className="flex-col">
         <div className="flex flex-col sm:flex-row space-y-6 sm:space-x-6 items-center">
           <img src={FM_icon} alt="icon" className="h-20" />
@@ -34,7 +34,7 @@ const FM = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col space-y-10 justify-center items-center lg:items-left lg:w-1/3">
+      <div className="flex flex-col space-y-10 justify-center items-center lg:w-1/3">
         <button
           onClick={() => setButtonPopup(true)}
           className="px-10 py-3 bg-mpurple text-white font-montserrat font-light text-sm lg:text-base"

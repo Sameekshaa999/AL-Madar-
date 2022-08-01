@@ -11,7 +11,7 @@ import Headings from "../Headings";
 
 const OurTeam = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-10 my-10 font-montserrat text-mpurple">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col justify-center items-center mx-10 my-10 font-montserrat text-mpurple">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="flex justify-start items-center mx-20 mb-7">
           
@@ -40,7 +40,7 @@ const OurTeam = () => {
         <div className="flex flex-row-reverse md:flex-row justify-between items-center space-x-4 ourTeam-bg w-72 lg:w-96 drop-shadow-lg hover:drop-shadow-2xl transition duration-200 transform hover:-translate-y-2">
           <img src={legal} alt="p" className="w-36 lg:w-48" />
           <div className="w-36 lg:w-48">
-            <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-base lg:text-base lg:text-xl py-2 mx-7 ml-0 lg:text-left  ">
+            <h1 className="border-t-2 border-mpurple font-montserrat text-mpurple font-semibold text-base lg:text-xl py-2 mx-7 ml-0 lg:text-left  ">
               Legal <br /> Team
             </h1>
           </div>

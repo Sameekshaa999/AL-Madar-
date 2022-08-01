@@ -18,9 +18,9 @@ import client4 from "../Zimages/index/client4.png";
 
 const CustomerReview = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
-    <div className="customer-review-gradient parallelogram w-96 lg:w-1/2 py-40 lg:py-72 "></div>
-      <div className="absolute w-96 lg:w-1/2 mt-32 lg:left-2">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24  flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
+    <div className="customer-review-gradient parallelogram w-96 lg:w-1/2 py-52 lg:py-72 "></div>
+      <div className="absolute w-96 lg:w-1/2 mt-52 lg:mt-40 lg:left-2">
         <Swiper
           spaceBetween={30}
           centeredSlides={false}
@@ -33,7 +33,7 @@ const CustomerReview = () => {
         >
           <SwiperSlide id="client 1">
             <div className="flex flex-col justify-center items-center space-y-3 lg:space-y-10">
-              <div className="flex justify-center items-center space-x-5">
+              <div className="flex justify-left items-center space-x-5">
                 <img src={client1} alt="client" className="h-16" />
                 <p className=" font-semibold text-sm lg:text-base">
                   Diana Williams <br />
@@ -109,12 +109,13 @@ const CustomerReview = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="lg:w-1/2 lg:float-right flex flex-row-reverse lg:flex-col space-x-28 lg:space-y-20 justify-center items-center">
-        <img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-2" />
-        <h1 className="mx-auto ml-20 font-bold text-2xl lg:text-6xl text-mpurple tracking-[.1em]">
+      <div className="lg:w-1/2 lg:float-right flex flex-row lg:flex-col-reverse justify-center items-center space-x-2 lg:space-y-20 my-20">
+       
+        <h1 className="mx-auto font-bold text-3xl lg:text-6xl text-mpurple tracking-[.1em]">
           Customer <br />
           <span className="font-light tracking-[.4em]"> Review</span>
         </h1>
+        <img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-2" />
       </div>
     </div>
   );

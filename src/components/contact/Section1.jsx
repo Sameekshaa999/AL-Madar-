@@ -4,8 +4,8 @@ import contactArrow from "../Zimages/contact/arrow.jpg";
 
 const Section1 = () => {
   return (
-    <div className="pt-24 font-montserrat text-mpurple font-normal ">
-      <div className="contact-gradient1 pt-10 py-5 text-center text-white">
+    <div className="snap-align-none lg:snap-start pt-24 font-montserrat text-mpurple font-normal ">
+      <div className="contact-gradient1 pt-20 py-5 text-center text-white">
         <h1 className=" text-3xl md:text-5xl font-bold">Contact Al-Madar</h1>
         <p>call us at : +974 44675405</p>
         <div className="flex-wrap md:flex-nowrap flex justify-around space-x-10 items-center my-10 mx-14">
