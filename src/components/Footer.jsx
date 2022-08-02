@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Brochure from "../components/Zimages/services2/brochure.png";
 import Logo from "../components/Zimages/navbar/almadar-logo.jpg";
 import Time from "../components/Zimages/footer/time_footer.png";

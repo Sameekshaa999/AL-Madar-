@@ -8,10 +8,10 @@ const Section1 = () => {
       <div className="contact-gradient1 pt-20 py-5 text-center text-white">
         <h1 className=" text-3xl md:text-5xl font-bold">Contact Al-Madar</h1>
         <p>call us at : +974 44675405</p>
-        <div className="flex-wrap md:flex-nowrap flex justify-around space-x-10 items-center my-10 mx-14">
-          <div className="inline-block w-1/2">
+        <div className="flex-wrap md:flex-nowrap flex justify-center  lg:space-x-10 items-center my-10 mx-2 lg:mx-14">
+          <div className="inline-block 2xl:w-1/4">
             <h1 className="mt-5 md:mt-0 text-center text-sm font-bold md:mb-4 md:text-xl">
-              Existing Tenants
+              Existing Tenants 
             </h1>
             <p className="text-xs md:text-base ">
               For our current residents we have a complete set of tools and
@@ -19,7 +19,7 @@ const Section1 = () => {
               rewarding.
             </p>
           </div>
-          <div className="inline-block w-1/2">
+          <div className="inline-block 2xl:w-1/4">
             <h1 className="mt-5 md:mt-0 text-center text-sm font-bold md:mb-4 md:text-xl">
               Prospective Residents
             </h1>
@@ -28,7 +28,7 @@ const Section1 = () => {
               finding and applying for the home of your dreams.
             </p>
           </div>
-          <div className="inline-block w-1/2">
+          <div className="inline-block 2xl:w-1/4">
             <h1 className="mt-5 md:mt-0 text-center text-sm font-bold md:mb-4 md:text-xl">
               Existing Clients/Owners
             </h1>

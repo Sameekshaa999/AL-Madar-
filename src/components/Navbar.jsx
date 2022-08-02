@@ -5,9 +5,10 @@ import FB from "../components/Zimages/navbar/facebook.png";
 import Insta from "../components/Zimages/navbar/instagram.png";
 import Twitter from "../components/Zimages/navbar/twitter.png";
 import Linkedin from "../components/Zimages/navbar/linkedin.png";
+
+
 const Navbar = () => {
   // responsive toggle function
-
   return (
     <nav className="bg-white font-montserrat h-18 w-screen fixed z-50">
       <div className="justify-around px-2 lg:px-10 mx-auto max-w-[1225px]">

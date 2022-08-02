@@ -7,7 +7,7 @@ import vision from "../Zimages/index/vision.png";
 
 const MV = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col lg:flex-row-reverse justify-center mx-10 lg:mx-20 my-10 font-montserrat text-mpurple ">
+    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col lg:flex-row-reverse justify-center mx-4 lg:mx-20 my-10 font-montserrat text-mpurple ">
       <div className="flex flex-col justify-center items-left space-y-1 lg:space-y-20 lg:w-1/2 float-right">
         <div className="flex mb-5">
           <img src={target} alt="vision" className="h-12 lg:h-28" />
@@ -34,13 +34,13 @@ const MV = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap lg:flex-nowrap lg:flex-col justify-center lg:justify-start items-center lg:items-start space-x-2 lg:space-x-0 lg:w-1/2 lg:float-left my-5 lg:my-0 ">
+      <div className="flex flex-wrap lg:flex-col justify-center lg:justify-start items-center lg:items-start  lg:w-1/2 lg:float-left my-5 lg:my-0 ">
         <img
           src={mv1}
           alt="mv1"
-          className="h-32 lg:h-56"/>
-        <img src={mv2} alt="mv2" className="h-32 lg:h-56 lg:pl-40" />
-        <img src={mv3} alt="mv3" className="h-32 lg:h-56" />
+          className="h-24 md:h-40 lg:h-56 p-1 lg:p-0"/>
+        <img src={mv2} alt="mv2" className="h-24 md:h-40 lg:h-56 lg:pl-40 p-1 lg:p-0" />
+        <img src={mv3} alt="mv3" className="h-24 md:h-40 lg:h-56 p-1 lg:p-0" />
       </div>
     </div>
   );

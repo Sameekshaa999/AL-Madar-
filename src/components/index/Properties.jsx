@@ -27,7 +27,7 @@ const Properties = () => {
             <img src={qatar2} alt="qatar property 2" className="p-0.5 md:p-1" />
             <div className="p-0.5 md:p-1">
               <div className="our-properties-gradient w-full h-full">
-                <h4 className="flex items-center justify-center h-full text-white text-center text-sm md:text-lg lg:text-2xl uppercase font-normal">
+                <h4 className="flex items-center justify-center h-full text-white text-center text-xs md:text-lg lg:text-2xl uppercase font-normal">
                   Properties <br />
                   in Qatar
                 </h4>
@@ -46,7 +46,7 @@ const Properties = () => {
           <div className="order-2 lg:order-1 basis-1/3 grid grid-rows-2 lg:grid-rows-1 grid-cols-1 lg:grid-cols-2">
             <div className="p-0.5 md:p-1">
               <div className="our-properties-gradient w-full h-full">
-                <h4 className="flex items-center justify-center h-full text-white text-center text-sm md:text-lg lg:text-2xl uppercase font-normal">
+                <h4 className="flex items-center justify-center h-full text-white text-center text-xs md:text-lg lg:text-2xl uppercase font-normal">
                   Properties <br />
                   in Dubai
                 </h4>
