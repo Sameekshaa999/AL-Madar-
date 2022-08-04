@@ -126,7 +126,7 @@ const CustomerReview = () => {
           Customer <br />
           <span className="font-light tracking-[.4em]"> Review</span>
         </h1>
-        <img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-2" />
+        <img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-10" />
       </div>
     </div>
   );

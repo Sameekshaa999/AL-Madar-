@@ -3,7 +3,7 @@ import office from "../Zimages/contact/Al-Madar-office.jpg";
 
 const Section2 = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-32 font-montserrat contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
+    <div className="snap-align-none lg:snap-start pt-10 lg:pt-32 font-montserrat contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
         <div>
           <img
             src={office}

@@ -5,10 +5,10 @@ import contactArrow from "../Zimages/contact/arrow.jpg";
 const Section1 = () => {
   return (
     <div className="snap-align-none lg:snap-start pt-24 font-montserrat text-mpurple font-normal ">
-      <div className="contact-gradient1 pt-20 py-5 text-center text-white">
+      <div className="contact-gradient1 lg:pt-20 py-5 text-center text-white">
         <h1 className=" text-3xl md:text-5xl font-bold">Contact Al-Madar</h1>
         <p>call us at : +974 44675405</p>
-        <div className="flex-wrap md:flex-nowrap flex justify-center  lg:space-x-10 items-center my-10 mx-2 lg:mx-14">
+        <div className="flex-wrap md:flex-nowrap flex justify-center  lg:space-x-10 items-center my-5 lg:my-10 mx-4 lg:mx-14">
           <div className="inline-block 2xl:w-1/4">
             <h1 className="mt-5 md:mt-0 text-center text-sm font-bold md:mb-4 md:text-xl">
               Existing Tenants 
