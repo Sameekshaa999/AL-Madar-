@@ -1,5 +1,6 @@
 {
-  "name": "my-project",
+  "name": "al-madar-property-management",
+  "homepage": "https://web2.qatar.cmu.edu/~deepc/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
