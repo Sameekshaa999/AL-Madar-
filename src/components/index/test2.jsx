@@ -25,12 +25,14 @@ const AboutSection = () => {
           </p>
         </Fade>
       </div>
-
+      <Fade right>
       <img
         src={Group}
         alt="Group"
         className="md:w-1/2 lg:w-1/2 h-[27rem] md:h-1/2 lg:h-[43.5rem]"
       />
+      </Fade>
+      
     </div>
   );
 };
