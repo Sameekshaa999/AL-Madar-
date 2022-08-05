@@ -10,6 +10,7 @@ import FB from "../components/Zimages/navbar/facebook.png";
 import Insta from "../components/Zimages/navbar/instagram.png";
 import Twitter from "../components/Zimages/navbar/twitter.png";
 import Linkedin from "../components/Zimages/navbar/linkedin.png";
+import Brochure_ from "../components/Zimages/footer/Brochure_.pdf"
 
 const Footer = () => {
   return (
@@ -198,9 +199,10 @@ const Footer = () => {
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-                <Link to="/" className="text-center py-2">
+                <a href={Brochure_} download="Al-Madar Property Management ">Download </a>
+                {/* <Link to={Brochure_} className="text-center py-2">
                   Download
-                </Link>
+                </Link> */}
               </div>
             </button>
           </div>
