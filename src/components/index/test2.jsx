@@ -1,5 +1,4 @@
 import React from "react";
-import 'animate.css';
 import Group from "../Zimages/index/Group-83.png";
 import Headings from "../Headings";
 
@@ -8,7 +7,7 @@ const AboutSection = () =>  {
 
     return (
       <div className="snap-align-none pt-0 lg:pt-24 lg:snap-start flex flex-col md:flex-row md:justify-center font-montserrat lg:space-x-12 text-mpurple">
-        <div className="flex flex-col justify-start lg:justify-center items-left my-4 mr-10 lg:mr-0 ml-10 lg:ml-40">
+         <div className="flex flex-col justify-start lg:justify-center items-left my-4 mr-10 lg:mr-0 ml-10 lg:ml-40">
           <div className="">
             <Headings first="About" second="us" />
           </div>
