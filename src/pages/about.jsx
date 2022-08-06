@@ -8,7 +8,7 @@ import AboutMV from "../components/about/AboutMV";
 
 const About = () => {
   return (
-    <div className="snap-y snap-mandatory h-screen scrolling">
+    <div>
       <Navbar />
       <AboutUs />
       <OurTeam />

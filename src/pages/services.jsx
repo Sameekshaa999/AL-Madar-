@@ -8,7 +8,7 @@ import TM from "../components/services1/TM";
 
 const Services = () => {
   return (
-    <div className="snap-y snap-mandatory h-screen scrolling">
+    <div>
       <Navbar />
       <ServicesSection1 />
       <TM />

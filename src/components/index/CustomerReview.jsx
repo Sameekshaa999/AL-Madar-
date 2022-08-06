@@ -15,12 +15,13 @@ import client2 from "../Zimages/index/client2.png";
 import client3 from "../Zimages/index/client3.png";
 import client4 from "../Zimages/index/client4.png";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { Slide } from "react-reveal";
 
 const CustomerReview = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
-    <div className="customer-review-gradient parallelogram w-96 lg:w-1/2 h-[27rem] lg:h-[40rem]  "></div>
-      <div className="absolute w-96 lg:w-1/2 mt-60 md:mt-80 lg:mt-20 lg:left-2">
+    <div className="2xl:max-w-[1200px] mx-auto flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
+    <div className="customer-review-gradient parallelogram w-[21rem] md:w-96 lg:w-1/2 h-[27rem] lg:h-[40rem]"></div>
+      <div className="absolute  w-96 lg:w-1/2 mt-60 md:mt-80 lg:mt-20 lg:left-2">
         <Swiper
           spaceBetween={30}
           centeredSlides={false}
@@ -120,14 +121,16 @@ const CustomerReview = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="lg:w-1/2 lg:float-right flex flex-row lg:flex-col-reverse justify-center items-center space-x-2 lg:space-y-20 my-20">
+      
+      <div className="lg:w-1/2 lg:float-right flex flex-row lg:flex-col-reverse justify-center items-center space-x-2 lg:space-y-0  my-20">
        
-        <h1 className="mx-auto font-bold text-2xl md:text-3xl lg:text-6xl text-mpurple tracking-[.1em]">
-          Customer <br />
-          <span className="font-light tracking-[.4em]"> Review</span>
-        </h1>
-        <img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-10" />
-      </div>
+      <Slide right><h1 className="mx-auto font-bold text-2xl md:text-3xl lg:text-6xl text-mpurple tracking-[.1em]">
+         Customer <br />
+         <span className="font-light tracking-[.4em]"> Review</span>
+       </h1></Slide>
+       <Slide right><img src={stars} alt="review" className=" w-1/2 lg:w-2/6 lg:absolute right-0 top-10 2xl:top-0" /></Slide>
+     </div>
+      
     </div>
   );
 };

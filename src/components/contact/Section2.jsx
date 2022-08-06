@@ -1,9 +1,11 @@
 import React from "react";
+import { Bounce } from "react-reveal";
 import office from "../Zimages/contact/Al-Madar-office.jpg";
 
 const Section2 = () => {
   return (
-    <div className=" font-montserrat contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
+    <div className="font-montserrat contact-gradient2 flex flex-col sm:flex-row space-y-6 sm:space-x-6 justify-center items-center py-8 px-10">
+        <Bounce left>
         <div>
           <img
             src={office}
@@ -11,6 +13,8 @@ const Section2 = () => {
             className="h-40 md:h-48 lg:h-60 rounded-xl"
           />
         </div>
+        </Bounce>
+        <Bounce right cascade>
         <div className="flex flex-col justify-center">
           <p className="text-white text-center sm:text-left text-sm md:text-base">
             Bldg. No. 161 - Al Muntazah St. <br /> 330 <br /> Al Hilal Area 41 -
@@ -23,12 +27,13 @@ const Section2 = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="border-2 rounded-md mt-4 md:mt-8 p-1 px-2 md:px-3 sm:mx-0 text-white text-xs md:text-base animate-bounce">
+              <button className="border-2 rounded-md mt-4 md:mt-8 p-1 px-2 md:px-3 sm:mx-0 text-white text-xs md:text-base">
                 View on Map
               </button>
             </a>
           </div>
         </div>
+        </Bounce>
       </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Zoom } from "react-reveal";
 import projectsData from "./projectsData";
 import Headings from "../Headings";
 import defaultImage from "../Zimages/projects/default.jpg";
@@ -21,11 +22,13 @@ function Projects(props) {
           </div>
           <div className="relative">
             <div className="">
+              <Zoom>
               <img
                 src={item.image ? item.image : props.image}
                 alt="project"
                 className="max-h-72 sm:h-auto"
               />
+              </Zoom>
             </div>
           </div>
         </div>

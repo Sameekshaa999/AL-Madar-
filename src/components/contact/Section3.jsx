@@ -5,6 +5,7 @@ import client3 from "../Zimages/index/client3.png";
 import client4 from "../Zimages/index/client4.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Fade } from "react-reveal";
 
 const Section2 = () => {
   const sentSucces = () => toast.success("Message Sent!", { autoClose: 2000 });
@@ -32,8 +33,9 @@ const Section2 = () => {
       );
   };
   return (
-    <div className=" font-montserrat">
+    <div className="max-w-[1440px] mx-auto font-montserrat">
       <div className="lg:flex lg:justify-center lg:space-x-20 m-auto mx-10 lg:mx-0 py-3 lg:py-5">
+        <Fade left>
         <div className="w-auto bg-mpurple rounded-xl p-5 ">
           <p className="text-white text-lg md:text-2xl font-normal mb-3">
             Get In Touch
@@ -90,6 +92,8 @@ const Section2 = () => {
             <ToastContainer />
           </form>
         </div>
+        </Fade>
+        <Fade right cascade>
         <div className="mt-5 md:mt-0 text-mpurple inline-block lg:w-1/3">
           <h1 className="font-medium text-lg md:text-2xl">
             Our Happy Customers
@@ -130,6 +134,7 @@ const Section2 = () => {
             </p>
           </div>
         </div>
+        </Fade>
       </div>
     </div>
   );

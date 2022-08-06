@@ -1,12 +1,12 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
-import hero from "../Zimages/index/1.1.jpg";
-import heroMobile from "../Zimages/index/hero_mobile.jpg";
+import hero from "../Zimages/index/Hero.jpg";
+import heroMobile from "../Zimages/index/Heromobile.jpg";
 
 const Hero = () => {
   return (
-    <div className="snap-align-none lg:snap-start relative pt-24 h-screen w-full flex justify-center font-montserrat">
+    <div className="relative pt-24 h-screen w-full flex justify-center font-montserrat">
       <img
         src={hero}
         alt="hero"
@@ -18,8 +18,8 @@ const Hero = () => {
         className="md:hidden top-6.5 w-full z-0"
       />
       <Fade top >
-      <div className="mx-auto absolute mt-24">
-        <h1 className=" text-center text-mpurple font-extrabold  md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-12 lg:mb-16">
+      <div className="mx-auto absolute mt-24 xl:mt-40">
+        <h1 className="text-center text-mpurple font-extrabold md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl mb-12 lg:mb-16">
           Exceeding Expectations <br></br>One Property at A Time
         </h1>
         <div className="flex justify-center items-center space-x-4">

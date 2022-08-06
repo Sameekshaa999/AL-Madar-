@@ -6,7 +6,7 @@ import PropertiesS1 from "../components/properties/PropertiesS1";
 
 const Properties = () => {
   return (
-    <div className="">
+    <div>
       <Navbar />
       <PropertiesS1 />
       <Footer />

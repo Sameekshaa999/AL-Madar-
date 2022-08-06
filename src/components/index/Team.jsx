@@ -1,13 +1,16 @@
 import React from "react";
+import { Zoom } from "react-reveal";
 import { Link } from "react-router-dom";
 import team from "../Zimages/index/team.png";
 
 const Team = () => {
   return (
-    <div className="snap-align-none lg:snap-start pt-0 lg:pt-10 relative flex flex-col justify-center items-center font-montserrat text-mpurple">
+    <div className="flex flex-col justify-center items-center font-montserrat text-mpurple">
+      <div className="max-w-[1440px] mx-auto relative flex flex-col justify-center items-center">
       <h1 className="flex lg:hidden text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
       <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="h-1/2 w-1/2 "/></div>
-      <div className="lg:absolute lg:mt-28 team-bg flex flex-col justify-center items-center px-5 lg:px-10 lg:py-1 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
+      <Zoom>
+      <div className="lg:absolute lg:mt-72 team-bg flex flex-col justify-center items-center px-5 lg:px-10 lg:py-6 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
       <h1 className="hidden lg:flex text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
         <p className="text-center inline-flex mt-0 lg:mt-4 text-sm lg:text-lg lg:leading-relaxed">
             We have highly trained personnel who are 
@@ -17,6 +20,8 @@ const Team = () => {
              deliver the best and highest solutions in the 
              shortest timepossible to our clients
         </p>
+      </div>
+      </Zoom>
       </div>
       <div className="lg:hidden mt-10 w-full h-10 lg:h-60 flex flex-col justify-center items-center">
       <button>

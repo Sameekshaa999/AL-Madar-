@@ -9,7 +9,7 @@ import { Fade, Slide } from "react-reveal";
 const TM = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
-    <div className="flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-20 lg:mx-40 pt-10">
+    <div className="max-w-[1200px] 2xl:mx-auto flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-4 lg:mx-40 mt-10">
       <div className="flex-col">
         <Fade left>
         <div className="flex flex-col sm:flex-row space-y-6 sm:space-x-6 items-center">
@@ -19,7 +19,7 @@ const TM = () => {
           </h1>
         </div>
         </Fade>
-        <div className="md:flex-col inline-block">
+        <div className="lg:flex-col inline-block">
           <Fade left>
           <p className="mt-5 mb-0 text-sm md:text-base text-justify ">
             Years of expertise in real estate ensure landlords will have over a
@@ -40,7 +40,7 @@ const TM = () => {
           </Fade>
         </div>
       </div>
-      <div className="flex flex-col space-y-10 justify-center items-center lg:w-1/3">
+      <div className="flex flex-col space-y-10 justify-center items-center lg:items-end lg:w-1/3">
         <button
           onClick={() => setButtonPopup(true)}
           className="px-10 py-3 bg-mpurple text-white font-montserrat font-light text-sm lg:text-base"
@@ -49,7 +49,7 @@ const TM = () => {
         </button>
         <PopUp trigger={buttonPopup} setTrigger={setButtonPopup}></PopUp>
         <Slide right cascade>
-        <div className="flex flex-col justify-center w-96">
+        <div className="flex flex-col justify-center md:w-96">
           <div className="flex space-x-2 pb-5 border-b-2 border-mpurple">
             <img src={check} alt="check" className="h-7" />
             <p className="text-sm lg:text-base font-normal">

@@ -11,7 +11,7 @@ import Hero from "../components/index/Hero";
 
 const Home = () => {
   return (
-    <div className="snap-y snap-mandatory h-screen scrolling">
+    <div>
       <Navbar />
       <Hero />
       <AboutSection />

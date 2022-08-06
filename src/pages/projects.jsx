@@ -5,7 +5,7 @@ import Section from "../components/ourProjects/Section";
 
 const Projects = () => {
   return (
-    <div className="">
+    <div>
       <Navbar />
       <Section />
       <Footer />

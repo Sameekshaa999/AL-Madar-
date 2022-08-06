@@ -13,8 +13,8 @@ import Headings from "../Headings";
 const OurTeam = () => {
   return (
     <div className=" flex flex-col justify-center items-center mx-10 my-10 font-montserrat text-mpurple">
-      <div className="flex flex-col lg:flex-row justify-center items-center">
-        <div className="flex justify-start items-center mx-20 mb-7">
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:space-x-20 justify-center items-center">
+        <div className="flex justify-start items-center mb-7">
           
           <Headings first="Our" second="Team" />
           

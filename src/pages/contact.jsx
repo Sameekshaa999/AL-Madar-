@@ -7,7 +7,7 @@ import Section3 from "../components/contact/Section3";
 
 const Contact = () => {
   return (
-    <div className="snap-y snap-mandatory h-screen scrolling">
+    <div>
       <Navbar />
       <Section1 />
       <Section2 />
