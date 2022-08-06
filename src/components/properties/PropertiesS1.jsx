@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Select from "react-select";
 import emailjs from "@emailjs/browser";
-import MessageButton from "../MessageButton";
+// import MessageButton from "../MessageButton";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //data file
 import qatarPropertiesData from "./qatarPropertiesData";
@@ -205,12 +207,15 @@ const PropertiesS1 = () => {
   }
 
   // property modal on/off
-  var emailStatus = null;
+  // var emailStatus = null;
   const [propertyid, setPropertyid] = useState(null);
   const [propertyEmail, setPropertyEmail] = useState(null);
   // const [isError, setIsError] = useState(false);
 
   function EmailModal() {
+    const sentSucces = () => toast.success("Message Sent!", { autoClose: 2000 });
+  const sentError = () =>
+    toast.error("Error, Please try again!", { autoClose: 2000 });
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -225,12 +230,10 @@ const PropertiesS1 = () => {
         )
         .then(
           (result) => {
-            // setIsError(true);
-            console.log(result.text);
+            sentSucces();
           },
           (error) => {
-            // setIsError(false);
-            console.log(error.text);
+            sentError();
           }
         );
     };
@@ -367,7 +370,16 @@ const PropertiesS1 = () => {
                   placeholder="Message *"
                 ></textarea>
                 <div className="flex justify-center md:justify-end w-full">
-                  <MessageButton status={emailStatus} />
+                <button
+              // onClick={sentSucces}
+              type="submit"
+              value="Submit"
+              className="cursor-pointer m-auto bg-mblue hover:bg-mblue text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send
+            </button>
+            <ToastContainer />
+                  {/* <MessageButton status={emailStatus} /> */}
                 </div>
               </form>
             </div>

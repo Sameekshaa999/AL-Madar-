@@ -1,4 +1,5 @@
 import React from "react";
+import { Flip } from "react-reveal";
 import mv1 from "../Zimages/index/mv1.jpeg";
 import mv2 from "../Zimages/index/mv2.jpg";
 import mv3 from "../Zimages/index/mv3.jpg";
@@ -34,6 +35,7 @@ const MV = () => {
           </div>
         </div>
       </div>
+      <Flip top cascade>
       <div className="flex flex-wrap lg:flex-col justify-center lg:justify-start items-center lg:items-start  lg:w-1/2 lg:float-left my-5 lg:my-0 ">
         <img
           src={mv1}
@@ -42,6 +44,8 @@ const MV = () => {
         <img src={mv2} alt="mv2" className="h-24 md:h-40 lg:h-56 lg:pl-40 p-1 lg:p-0" />
         <img src={mv3} alt="mv3" className="h-24 md:h-40 lg:h-56 p-1 lg:p-0" />
       </div>
+      </Flip>
+      
     </div>
   );
 }

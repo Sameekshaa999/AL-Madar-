@@ -1,8 +1,12 @@
 import React, { useRef } from "react";
-import MessageButton from "./MessageButton.jsx";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function PopUp(props) {
+  const sentSucces = () => toast.success("Message Sent!", { autoClose: 2000 });
+  const sentError = () =>
+    toast.error("Error, Please try again!", { autoClose: 2000 });
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,10 +21,10 @@ function PopUp(props) {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          sentSucces();
         },
         (error) => {
-          console.log(error.text);
+          sentError();
         }
       );
   };
@@ -92,7 +96,15 @@ function PopUp(props) {
             type="text"
             placeholder="Message *"
           ></textarea>
-          <MessageButton />
+          <button
+          // onClick={sentSucces}
+            type="submit"
+            value="Submit"
+            className="cursor-pointer m-auto bg-mblue hover:bg-mblue text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Send
+          </button>
+          <ToastContainer />
         </form>
       </div>
     </div>

@@ -1,11 +1,15 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import MessageButton from "../MessageButton.jsx";
 import client2 from "../Zimages/index/client2.png";
 import client3 from "../Zimages/index/client3.png";
 import client4 from "../Zimages/index/client4.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Section2 = () => {
+  const sentSucces = () => toast.success("Message Sent!", { autoClose: 2000 });
+  const sentError = () =>
+    toast.error("Error, Please try again!", { autoClose: 2000 });
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -20,15 +24,15 @@ const Section2 = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          sentSucces();
         },
         (error) => {
-          console.log(error.text);
+          sentError();
         }
       );
   };
   return (
-    <div className="snap-align-none lg:snap-start font-montserrat">
+    <div className=" font-montserrat">
       <div className="lg:flex lg:justify-center lg:space-x-20 m-auto mx-10 lg:mx-0 py-3 lg:py-5">
         <div className="w-auto bg-mpurple rounded-xl p-5 ">
           <p className="text-white text-lg md:text-2xl font-normal mb-3">
@@ -75,7 +79,15 @@ const Section2 = () => {
               type="text"
               placeholder="Message *"
             ></textarea>
-            <MessageButton />
+            <button
+              // onClick={sentSucces}
+              type="submit"
+              value="Submit"
+              className="cursor-pointer m-auto bg-mblue hover:bg-mblue text-mpurple text-xs md:text-base font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send
+            </button>
+            <ToastContainer />
           </form>
         </div>
         <div className="mt-5 md:mt-0 text-mpurple inline-block lg:w-1/3">

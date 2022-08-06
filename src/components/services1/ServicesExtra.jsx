@@ -2,10 +2,12 @@ import React from "react";
 import office_building from "../Zimages/services1/office_building.jpg";
 import telephone from "../Zimages/services1/telephone.jpg";
 import email from "../Zimages/services1/email.jpg";
+import { Zoom } from "react-reveal";
 
 const ServicesExtra = () => {
   return (
-    <div className="snap-align-none lg:snap-start flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
+    <div className="flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
+      <Zoom>
       <div className="flex flex-col justify-center items-center">
         <img
           src={office_building}
@@ -17,6 +19,8 @@ const ServicesExtra = () => {
           Al Muntazah, Doha, Qatar
         </p>
       </div>
+      </Zoom>
+      <Zoom>
       <div className="flex flex-col justify-center items-center">
         <img
           src={telephone}
@@ -26,6 +30,8 @@ const ServicesExtra = () => {
         <h1 className="text-xs lg:text-base">Call us</h1>
         <p className="font-semibold text-xs lg:text-base">+974 44675405</p>
       </div>
+      </Zoom>
+      <Zoom>
       <div className="flex flex-col justify-center items-center">
         <img
           src={email}
@@ -37,6 +43,7 @@ const ServicesExtra = () => {
           realestate@almadar-holding.com
         </p>
       </div>
+      </Zoom>
     </div>
   );
 };

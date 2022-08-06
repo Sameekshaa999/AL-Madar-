@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 import hero from "../Zimages/index/1.1.jpg";
 import heroMobile from "../Zimages/index/hero_mobile.jpg";
@@ -16,6 +17,7 @@ const Hero = () => {
         alt="hero"
         className="md:hidden top-6.5 w-full z-0"
       />
+      <Fade top >
       <div className="mx-auto absolute mt-24">
         <h1 className=" text-center text-mpurple font-extrabold  md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-12 lg:mb-16">
           Exceeding Expectations <br></br>One Property at A Time
@@ -40,6 +42,7 @@ const Hero = () => {
           
         </div>
       </div>
+      </Fade>
     </div>
   );
 };

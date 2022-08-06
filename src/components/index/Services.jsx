@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 import map from "../Zimages/index/qatarmap.png";
 
@@ -6,6 +7,7 @@ const Services = () => {
   return (
     <div className="snap-align-none lg:snap-start pt-0 lg:pt-24 flex flex-col lg:flex-row my-3 lg:my-10">
       <div className="serviceSection-gradient flex flex-col justify-center items-left h-1/2 lg:w-1/2 py-20 lg:py-40 px-2 pb-54 float-left">
+        <Fade left cascade>
         <div className="flex-col text-mpurple text-center lg:text-right space-y-5 lg:space-y-12 relative font-montserrat ">
           <h2 className="text-2xl lg:text-4xl font-semibold text-white">
             Worried about <br /> managing your property?
@@ -26,8 +28,9 @@ const Services = () => {
             Explore Now!
           </Link>
           </button>
-        </div>
-      </div>
+        </div></Fade>
+       
+      </div> 
       <div className="lg:w-1/2 lg:float-right flex justify-center items-center">
         <img src={map} alt="mv3" className="h-96 lg:h-auto" />
       </div>
