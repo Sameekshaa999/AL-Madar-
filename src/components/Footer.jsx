@@ -7,10 +7,9 @@ import Time from "../components/Zimages/footer/time_footer.png";
 import Phone from "../components/Zimages/footer/phone_footer.png";
 import Email from "../components/Zimages/footer/email_footer.png";
 import Help from "../components/Zimages/footer/help_footer.png";
-import FB from "../components/Zimages/navbar/facebook.png";
-import Insta from "../components/Zimages/navbar/instagram.png";
-import Twitter from "../components/Zimages/navbar/twitter.png";
-import Linkedin from "../components/Zimages/navbar/linkedin.png";
+
+import { ImFacebook2, ImLinkedin } from "react-icons/im";
+import { FaTwitterSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -28,6 +27,8 @@ const Footer = () => {
             <div className="flex flex-col space-y-2">
               <a
                 href="https://www.google.com/maps/place/Al+Madar+Holding/@25.2556694,51.522565,17z/data=!3m1!4b1!4m5!3m4!1s0x3e45cffa11911a65:0x32a2632a55fc537c!8m2!3d25.2556694!4d51.5247537"
+                rel="noreferrer"
+                target="_blank"
                 className="sm:p-2 pl-4"
                 alt="location"
               >
@@ -37,64 +38,59 @@ const Footer = () => {
                 </span>
               </a>
               <div className="sm:hidden flex flex-row space-x-6 pl-4">
-                <a href="/">
-                  <img
-                    className="h-6 rounded-sm"
-                    src={FB}
-                    alt="facebook page"
-                  />
+                <a
+                  href="http://www.facebook.com/pages/Almadar-Holding/368129056608301"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="bg-white rounded-lg"
+                >
+                  <ImFacebook2 className="w-6 h-6" fill="#4267B2" />
                 </a>
-                <a href="/">
-                  <img
-                    className="h-6 rounded-sm"
-                    src={Insta}
-                    alt="instagram page"
-                  />
+                <a
+                  href="https://twitter.com/AlmadarHolding"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex justify-center items-center bg-white rounded-lg w-6 h-6"
+                >
+                  <FaTwitterSquare className="w-8 h-8" fill="#1DA1F2" />
                 </a>
-
-                <a href="/">
-                  <img
-                    className="h-6 rounded-sm"
-                    src={Twitter}
-                    alt="twitter page"
-                  />
-                </a>
-                <a href="/">
-                  <img
-                    className="h-6 rounded-sm"
-                    src={Linkedin}
-                    alt="linkedin page"
-                  />
+                <a
+                  href="http://www.linkedin.com/company/almadar-holding"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex justify-center items-center bg-white rounded-lg w-6 h-6"
+                >
+                  <ImLinkedin className="w-6 h-6" fill="#0072b1" />
                 </a>
               </div>
             </div>
           </div>
 
           <div className="hidden sm:flex sm:flex-row sm:space-x-6 sm:items-start">
-            <a href="/">
-              <img className="h-6 rounded-sm" src={FB} alt="facebook page" />
-            </a>
-            <a href="/">
-              <img
-                className="h-6 rounded-sm"
-                src={Insta}
-                alt="instagram page"
-              />
+            <a
+              href="http://www.facebook.com/pages/Almadar-Holding/368129056608301"
+              rel="noreferrer"
+              target="_blank"
+              className="bg-white rounded-lg"
+            >
+              <ImFacebook2 className="w-8 h-8" fill="#4267B2" />
             </a>
 
-            <a href="/">
-              <img
-                className="h-6 rounded-sm"
-                src={Twitter}
-                alt="twitter page"
-              />
+            <a
+              href="https://twitter.com/AlmadarHolding"
+              rel="noreferrer"
+              target="_blank"
+              className="flex justify-center items-center bg-white rounded-lg w-8 h-8"
+            >
+              <FaTwitterSquare className="w-10 h-10" fill="#1DA1F2" />
             </a>
-            <a href="/">
-              <img
-                className="h-6 rounded-sm"
-                src={Linkedin}
-                alt="linkedin page"
-              />
+            <a
+              href="http://www.linkedin.com/company/almadar-holding"
+              rel="noreferrer"
+              target="_blank"
+              className="flex justify-center items-center bg-white rounded-lg w-8 h-8"
+            >
+              <ImLinkedin className="w-8 h-8" fill="#0072b1" />
             </a>
           </div>
         </div>
