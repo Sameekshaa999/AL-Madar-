@@ -14,10 +14,10 @@ const Properties = () => {
         <p className="text-center lg:text-justify text-sm lg:text-lg lg:leading-loose inline-block">
         We want to make your experience in finding your next dream home an enjoyable one!</p>
       </div>
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row h-1/2 md:h-auto">
 
       <div className="flex flex-row lg:flex-col">
-          <div className="order-2 lg:order-1 basis-2/3">
+          <div className="order-2 lg:order-1 basis-2/3 h-fit">
             <Slide top>
             <img
               src={qatar1}
@@ -40,7 +40,7 @@ const Properties = () => {
         </div>
 
         <div className="flex flex-row lg:flex-col">
-          <div className="order-1 lg:order-2 basis-2/3">
+          <div className="order-1 lg:order-2 basis-2/3 h-fit">
             <Slide bottom>
             <img
               src={dubai1}
