@@ -22,7 +22,7 @@ const Hero = () => {
         <h1 className="text-center text-mpurple font-extrabold md:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-12 lg:mb-16">
           Exceeding Expectations <br></br>One Property at A Time
         </h1>
-        <div className="flex justify-center items-center space-x-4 p-6">
+        <div className="flex justify-center items-center space-x-4 h-20">
         <button>
           <Link
             to="/contact"
