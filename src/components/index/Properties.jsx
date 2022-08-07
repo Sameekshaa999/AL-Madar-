@@ -10,7 +10,7 @@ import { Slide } from "react-reveal";
 
 const Properties = () => {
   return (
-    <div className="2xl:max-w-[1440px] 2xl:mx-auto overflow-x-hidden overflow-y-scroll flex flex-col justify-center items-center space-y-5 font-montserrat text-mpurple mx-4 lg:mx-40 my-10">
+    <div className="2xl:max-w-[1440px] 2xl:mx-auto overflow-x-hidden overflow-y-hidden flex flex-col justify-center items-center space-y-5 font-montserrat text-mpurple mx-4 lg:mx-40 my-10">
       <div className="flex flex-col justify-center items-center space-y-2 lg:space-y-5 ">
         <Headings first="Our" second="Properties" />
         <p className="text-center lg:text-justify text-sm lg:text-lg lg:leading-loose inline-block">
