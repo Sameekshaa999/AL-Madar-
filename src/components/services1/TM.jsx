@@ -9,7 +9,7 @@ import { Fade, Slide } from "react-reveal";
 const TM = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
-    <div className="2xl:max-w-[1200px] 2xl:mx-auto flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-4 lg:mx-40 mt-10">
+    <div className="2xl:max-w-[1440px] 2xl:mx-auto flex flex-col lg:flex-row font-montserrat lg:space-x-32 text-mpurple mx-4 2xl:pl-40 2xl:pr-40 lg:mx-40 mt-10">
       <div className="flex-col">
         <Fade left>
         <div className="flex flex-col sm:flex-row space-y-6 sm:space-x-6 items-center">
