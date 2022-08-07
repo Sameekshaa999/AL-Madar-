@@ -544,7 +544,7 @@ const PropertiesS1 = () => {
   }
   function PropertyList() {
     return (
-      <div className="min-h-screen">
+      <div className="">
         <h1 className="uppercase text-md mx-4 sm:mx-16 md:mx-0 text-xl md:text-2xl lg:text-3xl pt-8 font-extrabold">
           Qatar Properties
         </h1>
@@ -757,7 +757,7 @@ const PropertiesS1 = () => {
 
     return (
       <div className="">
-        <div className="pt-24 overflow-x-hiden h-[35rem] font-montserrat relative">
+        <div className="pt-24 overflow-x-hidden h-[35rem] font-montserrat relative">
           <header
             className="w-full h-full bg-left md:bg-center bg-cover"
             style={{ backgroundImage: `url(${skyline2})` }}

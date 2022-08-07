@@ -19,12 +19,12 @@ const Properties = () => {
       <div className="flex flex-col lg:flex-row h-1/2 md:h-auto">
 
       <div className="flex flex-row lg:flex-col">
-          <div className="order-2 lg:order-1 basis-2/3 h-fit">
+          <div className="order-2 lg:order-1 basis-2/3">
             <Slide top>
             <img
               src={prop_1_img_1}
               alt="qatar property 1"
-              className="p-0.5 md:p-1 h-full"
+              className="p-0.5 md:p-1"
             />
             </Slide>
           </div>
@@ -42,12 +42,12 @@ const Properties = () => {
         </div>
 
         <div className="flex flex-row lg:flex-col">
-          <div className="order-1 lg:order-2 basis-2/3 h-fit">
+          <div className="order-1 lg:order-2 basis-2/3">
             <Slide bottom>
             <img
               src={prop_1_img_3}
               alt="dubai property 1"
-              className="p-0.5 md:p-1 h-full"/>
+              className="p-0.5 md:p-1"/>
             </Slide>
           </div>
           <div className="order-2 lg:order-1 basis-1/3 grid grid-rows-2 lg:grid-rows-1 grid-cols-1 lg:grid-cols-2">
