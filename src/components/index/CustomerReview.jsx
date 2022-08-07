@@ -20,8 +20,8 @@ import { Slide } from "react-reveal";
 const CustomerReview = () => {
   return (
     <div className="2xl:max-w-[1200px] mx-auto flex flex-col-reverse lg:flex-row font-montserrat text-white justify-center items-center bg-s relative ">
-    <div className="customer-review-gradient parallelogram w-[21rem] md:w-96 lg:w-1/2 h-[27rem] lg:h-[40rem]"></div>
-      <div className="absolute  w-96 lg:w-1/2 mt-60 md:mt-80 lg:mt-20 lg:left-2">
+    <div className="customer-review-gradient md:parallelogram w-[21rem] md:w-96 lg:w-1/2 h-[27rem] lg:h-[40rem]"></div>
+      <div className="absolute w-96 lg:w-1/2 mt-60 md:mt-80 lg:mt-20 lg:left-2">
         <Swiper
           spaceBetween={30}
           centeredSlides={false}

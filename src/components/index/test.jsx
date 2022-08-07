@@ -9,7 +9,7 @@ import vision from "../Zimages/index/vision.png";
 const MV = () => {
   return (
     <div className="2xl:max-w-[1200px] 2xl:mx-auto flex flex-col lg:flex-row-reverse justify-center items-center mx-4 my-10 font-montserrat text-mpurple ">
-      <div className="flex flex-col justify-center items-center space-y-1 lg:space-y-20 w-1/2 mr-0 lg:mr-20 2xl-mr-0">
+      <div className="flex flex-col justify-center items-center space-y-1 lg:space-y-20 lg:w-1/2 mr-0 lg:mr-20 2xl-mr-0">
         <div className="flex mb-5">
           <Slide bottom><img src={target} alt="vision" className="h-12 lg:h-28" /></Slide>
           <Fade right cascade>
@@ -40,7 +40,7 @@ const MV = () => {
         </div>
       </div>
       <Flip top cascade>
-      <div className="flex flex-wrap lg:flex-col justify-center items-center w-1/2 my-5 lg:my-0 ">
+      <div className="flex flex-wrap lg:flex-col justify-center items-center lg:w-1/2 my-5 lg:my-0 ">
         <img
           src={mv1}
           alt="mv1"
