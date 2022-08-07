@@ -6,7 +6,7 @@ import { Zoom } from "react-reveal";
 
 const ServicesExtra = () => {
   return (
-    <div className="2xl:max-w-[1440px] 2xl:mx-auto flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
+    <div className="overflow-x-hidden 2xl:max-w-[1440px] 2xl:mx-auto flex flex-col md:flex-row md:space-x-32 md:justify-center font-montserrat text-mpurple font-normal m-auto my-7 md:my-20 bg-white">
       <Zoom>
       <div className="flex flex-col justify-center items-center">
         <img

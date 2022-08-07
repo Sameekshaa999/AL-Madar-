@@ -5,7 +5,7 @@ import map from "../Zimages/index/qatarmap.png";
 
 const Services = () => {
   return (
-    <div className="2xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-center items-center space-x-10 my-3 lg:my-10">
+    <div className="overflow-x-hidden 2xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-center items-center space-x-10 my-3 lg:my-10">
       <div className="serviceSection-gradient flex flex-col justify-center items-left h-1/2 lg:w-1/2 py-20 lg:py-40 px-2 pb-54 ">
         <Fade left cascade>
         <div className="flex-col text-mpurple text-center lg:text-right space-y-5 lg:space-y-12 relative font-montserrat ">

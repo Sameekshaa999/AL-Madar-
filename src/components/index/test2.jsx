@@ -7,7 +7,7 @@ import { Slide } from "react-reveal";
 const AboutSection = () =>  {
 
     return (
-      <div className="2xl:max-w-[1440px] 2xl:mx-auto flex flex-col md:flex-row md:justify-center font-montserrat lg:space-x-12 text-mpurple">
+      <div className="overflow-x-hidden 2xl:max-w-[1440px] 2xl:mx-auto flex flex-col md:flex-row md:justify-center font-montserrat lg:space-x-12 text-mpurple">
          <Slide left cascade>
          <div className="flex flex-col justify-start lg:justify-center items-left my-4 mr-10 lg:mr-0 ml-10 lg:ml-40 ">
           <div className="">

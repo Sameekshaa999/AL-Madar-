@@ -5,7 +5,7 @@ import team from "../Zimages/index/team.png";
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center items-center font-montserrat text-mpurple">
+    <div className="overflow-x-hidden flex flex-col justify-center items-center font-montserrat text-mpurple">
       <div className="2xl:max-w-[1440px] mx-auto relative flex flex-col justify-center items-center">
       <h1 className="flex lg:hidden text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
       <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="lg:h-1/2 lg:w-1/2 2xl:h-auto 2xl:w-auto"/></div>

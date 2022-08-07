@@ -6,7 +6,7 @@ import heroMobile from "../Zimages/index/Heromobile.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative pt-24 h-screen w-full flex justify-center font-montserrat">
+    <div className="relative pt-24 h-screen w-full flex justify-center font-montserrat overflow-x-hidden">
       <img
         src={hero}
         alt="hero"
