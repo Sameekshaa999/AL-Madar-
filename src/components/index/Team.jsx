@@ -8,11 +8,11 @@ const Team = () => {
     <div className="overflow-x-hidden flex flex-col justify-center items-center font-montserrat text-mpurple">
       <div className="2xl:max-w-[1440px] mx-auto relative flex flex-col justify-center items-center">
       <h1 className="flex lg:hidden text-2xl lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
-      <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="lg:h-1/2 lg:w-1/2 2xl:h-auto 2xl:w-auto"/></div>
+      <div className="flex justify-center items-center mt-5 px-10"><img src={team} alt="team" className="h-3/4 w-3/4 2xl:h-auto 2xl:w-auto"/></div>
       <Zoom>
-      <div className="lg:absolute lg:mt-72 2xl:mt-[30rem] team-bg flex flex-col justify-center items-center px-5 lg:px-10 2xl:px-20 2xl:py-12 lg:py-6 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
-      <h1 className="hidden lg:flex text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue">team</span> </h1>
-        <p className="text-center inline-flex mt-0 lg:mt-4 text-sm lg:text-lg lg:leading-relaxed">
+      <div className="lg:absolute mt-[33rem] 2xl:mt-[45rem] team-bg flex flex-col justify-center items-center px-5 lg:px-10 2xl:px-20 2xl:py-12 lg:py-6 space-y-3 lg:space-y-0 lg:max-w-[500px]" >
+      <h1 className="hidden lg:flex text-sm lg:text-4xl font-semibold"> Meet the <span className="text-mblue px-2"> team</span> </h1>
+        <p className="text-center inline-flex mt-0 lg:mt-4 text-sm lg:text-lg lg:leading-relaxed py-5">
             We have highly trained personnel who are 
             carefully selected to assure the client's satisfaction.
             Our teamwork allows us to bring together the best

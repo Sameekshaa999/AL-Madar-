@@ -26,7 +26,7 @@ const Hero = () => {
         <button>
           <Link
             to="/contact"
-            className="text-center px-2 md:px-6 py-1 md:py-3 text-mpurple font-semibold border-3 border-mpurple rounded-full md:rounded-lg text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out "
+            className="mt-4 md:mt-8 px-2 md:px-6 py-1 md:py-3 text-mpurple md:font-semibold border-2 md:border-4 border-mpurple rounded-md text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out"
           >
             Contact Us
           </Link>
@@ -34,7 +34,7 @@ const Hero = () => {
           <button>
           <Link
             to="/about"
-            className="text-center px-2 md:px-6 py-1 md:py-3 text-mpurple font-semibold border-3 border-mpurple rounded-full md:rounded-lg text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out "
+            className="mt-4 md:mt-8 px-2 md:px-6 py-1 md:py-3 text-mpurple md:font-semibold border-2 md:border-4 border-mpurple rounded-md text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out"
           >
             Know More
           </Link>
