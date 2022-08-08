@@ -20,14 +20,23 @@ const Services = () => {
             management, maintenance, and general monitoring of the properties,
             all while assuring quality and transparency in all that is done.
           </p>
-          <button >
+          <button>
+          <Link
+            to="/contact"
+            className="mt-4 md:mt-8 px-2 md:px-6 py-1 md:py-3 text-mpurple md:font-semibold border-2 md:border-4 bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
+          >
+            Contact Us
+          </Link>
+          </button>
+          <button></button>
+          {/* <button >
           <Link
             to="/services"
             className="lg:mt-20 px-4 lg:px-6 py-3 text-mpurple font-semibold rounded-full lg:rounded-lg text-sm lg:text-xl bg-mblue hover:bg-white hover:text-mblue transition duration-300 ease-in out "
           >
             Explore Now!
           </Link>
-          </button>
+          </button> */}
         </div></Fade>
        
       </div> 
