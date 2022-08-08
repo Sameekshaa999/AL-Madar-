@@ -23,22 +23,24 @@ const Hero = () => {
           Exceeding Expectations <br></br>One Property at A Time
         </h1>
         <div className="flex justify-center items-center space-x-4 h-auto">
-        <button>
-          <Link
-            to="/contact"
-            className="mt-4 md:mt-8 px-2 md:px-6 py-1 md:py-3 text-mpurple md:font-semibold border-2 md:border-4 border-mpurple rounded-md text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out"
-          >
-            Contact Us
-          </Link>
-          </button>
-          <button>
-          <Link
-            to="/about"
-            className="mt-4 md:mt-8 px-2 md:px-6 py-1 md:py-3 text-mpurple md:font-semibold border-2 md:border-4 border-mpurple rounded-md text-xs md:text-2xl hover:bg-mpurple hover:text-white transition duration-300 ease-in out"
-          >
-            Know More
-          </Link>
-          </button>
+
+        <Link to="/contact">
+              <button
+                type="button"
+                className="inline-flex items-center px-2 md:px-6 py-1 md:py-2 font-semibold text-mpurple border-2 md:border-[3px] border-mpurple rounded-md text-xs md:text-xl  hover:bg-mpurple hover:text-white transition duration-300 ease-in-out"
+              >
+                Contact Us
+              </button>
+            </Link>
+
+            <Link to="/about">
+              <button
+                type="button"
+                className="inline-flex items-center px-2 md:px-6 py-1 md:py-2 font-semibold text-mpurple border-2 md:border-[3px] border-mpurple rounded-md text-xs md:text-xl  hover:bg-mpurple hover:text-white transition duration-300 ease-in-out"
+              >
+                Know More
+              </button>
+            </Link>
           
         </div>
       </div>
