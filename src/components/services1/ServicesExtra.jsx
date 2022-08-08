@@ -40,7 +40,7 @@ const ServicesExtra = () => {
         />
         <h1 className="text-xs lg:text-base">Email us</h1>
         <p className="font-semibold text-xs lg:text-base">
-          realestate@almadar-holding.com
+        ampm@almadar-holding.com
         </p>
       </div>
       </Zoom>

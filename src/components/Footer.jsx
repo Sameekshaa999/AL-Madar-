@@ -115,7 +115,7 @@ const Footer = () => {
             <span className="flex py-2">
               <img className="h-4 w-auto mt-0.5" src={Email} alt="email" />
               <span href="/" className="pl-2 text-white  hover:text-mblue">
-                realestate@almadar-holding
+              ampm@almadar-holding
                 <br />
                 .com
               </span>
