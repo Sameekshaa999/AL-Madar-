@@ -6,6 +6,7 @@ import Time from "../components/Zimages/footer/time_footer.png";
 import Phone from "../components/Zimages/footer/phone_footer.png";
 import Email from "../components/Zimages/footer/email_footer.png";
 import Help from "../components/Zimages/footer/help_footer.png";
+import Brochure_ from "../components/Zimages/footer/Brochure_.pdf"
 
 import { ImFacebook2, ImLinkedin } from "react-icons/im";
 import { FaTwitterSquare } from "react-icons/fa";
@@ -194,9 +195,7 @@ const Footer = () => {
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-                <Link to="/" className="text-center py-2">
-                  Download
-                </Link>
+                <a href={Brochure_} download="Al-Madar Property Management ">Download </a>
               </div>
             </button>
           </div>
