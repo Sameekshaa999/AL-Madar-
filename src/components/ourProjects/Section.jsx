@@ -6,7 +6,7 @@ import defaultImage from "../Zimages/projects/default.jpg";
 
 function Projects(props) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-6 sm:px-6 md:px-10 lg:px-14 my-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-6 sm:px-6 md:px-10 lg:px-14 my-12">
       {projectsData.map((item) => (
         <div className="relative flex mx-auto fit-content font-montserrat">
           <div className="flex flex-col absolute inset-0 pl-4 pb-4 z-10 bg-black text-white justify-end opacity-0 hover:opacity-100 bg-opacity-60 duration-300">

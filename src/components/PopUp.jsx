@@ -84,7 +84,7 @@ function PopUp(props) {
             required
             name="Number"
             type="tel"
-            placeholder="Number *"
+            placeholder="Mobile Number *"
           />
           <br />
           <textarea

@@ -3,7 +3,7 @@ import project2 from "../Zimages/projects/project2.jpg";
 import project3 from "../Zimages/projects/project3.jpg";
 import project4 from "../Zimages/projects/project4.jpg";
 import project5 from "../Zimages/projects/project5.jpg";
-import project6 from "../Zimages/projects/project6.jpg";
+// import project6 from "../Zimages/projects/project6.jpg";
 
 const projectsData = [
   {
@@ -46,13 +46,13 @@ const projectsData = [
     image: project5
   },
 
-  {
-    id: "6",
-    service: "Property Management",
-    name: "Al Madar Office Building",
-    location: "Dubai",
-    image: project6
-  },
+  // {
+  //   id: "6",
+  //   service: "Property Management",
+  //   name: "Al Madar Office Building",
+  //   location: "Dubai",
+  //   image: project6
+  // },
 
   // {
   //   id: "7",

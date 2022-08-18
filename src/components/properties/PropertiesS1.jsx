@@ -358,7 +358,7 @@ const PropertiesS1 = () => {
                   required
                   name="Number"
                   type="tel"
-                  placeholder="Number *"
+                  placeholder="Mobile Number *"
                 />
                 <textarea
                   className="shadow appearance-none border rounded py-0.5 sm:py-1 md:py-2 px-3 text-gray-700 text-xs md:text-base leading-tight focus:outline-none focus:shadow-outline"

@@ -69,7 +69,7 @@ const Section2 = () => {
               required
               name="Number"
               type="tel"
-              placeholder="Number *"
+              placeholder="Mobile Number *"
             />
             <br />
             <textarea
